@@ -1,0 +1,709 @@
+focus_tree = { 
+id = CNT_postwar
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = SPR 
+} 
+} 
+#Focus for Victory for the Workers
+focus = { 
+id = SPR_victoryfortheworkers
+icon = GFX_focus_prc_agrarian_socialism
+x = 5
+y = 0
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The First Worker's Congress
+focus = { 
+id = SPR_thefirstworkerscongress
+icon = GFX_thefirstworkerscongress
+x = 5
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_victoryfortheworkers } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Marginalize the FAI
+focus = { 
+id = SPR_marginalizethefai
+icon = GFX_goal_support_communism
+x = 3
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thefirstworkerscongress } 
+mutually_exclusive = { focus = SPR_embracethefai } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Co-Operative Industry
+focus = { 
+id = SPR_cooperativeindustry
+icon = GFX_goal_unknown
+x = 17
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_theindustrialdilemma } 
+mutually_exclusive = { focus = SPR_centralizedindustrialauthority } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Communal Agricultural Research
+focus = { 
+id = SPR_communalagriculturalresearch
+icon = GFX_goal_unknown
+x = 11
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_modernizeiberianfarming } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unionized Road-Workers
+focus = { 
+id = SPR_unionizedroadworkers
+icon = GFX_goal_generic_construct_civilian
+x = 19
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_transiberianrailway } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Centralized Industrial Authority
+focus = { 
+id = SPR_centralizedindustrialauthority
+icon = GFX_goal_generic_construct_mil_factory
+x = 13
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_theindustrialdilemma } 
+mutually_exclusive = { focus = SPR_cooperativeindustry } 
+mutually_exclusive = { focus = SPR_cooperativeindustry } 
+mutually_exclusive = { focus = SPR_cooperativeindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Trans-Iberian Railway
+focus = { 
+id = SPR_transiberianrailway
+icon = GFX_goal_generic_construct_infrastructure
+x = 19
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_organizedpublicworks } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Modernize Iberian Farming
+focus = { 
+id = SPR_modernizeiberianfarming
+icon = GFX_goal_unknown
+x = 11
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_organizedpublicworks } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Organized Public Works
+focus = { 
+id = SPR_organizedpublicworks
+icon = GFX_goal_generic_soviet_construction
+x = 15
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Arm the People
+focus = { 
+id = SPR_armthepeople
+icon = GFX_goal_generic_small_arms
+x = 6
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_decentralizedmeansofcontrol focus = SPR_supremepowertothecnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Empower the Unions
+focus = { 
+id = SPR_empowertheunions
+icon = GFX_focus_generic_support_the_left_right
+x = 5
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_embracethefai focus = SPR_marginalizethefai } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Supreme Power to the CNT
+focus = { 
+id = SPR_supremepowertothecnt
+icon = GFX_focus_generic_soviet_politics
+x = 3
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_marginalizethefai } 
+prerequisite = { focus = SPR_empowertheunions } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Decentralized Means of Control
+focus = { 
+id = SPR_decentralizedmeansofcontrol
+icon = GFX_goal_tripartite_pact
+x = 7
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_embracethefai } 
+prerequisite = { focus = SPR_empowertheunions } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Regional Devolution
+focus = { 
+id = SPR_regionaldevolution
+icon = GFX_goal_generic_national_unity
+x = 8
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_decentralizedmeansofcontrol } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Deal with the Statists
+focus = { 
+id = SPR_dealwiththestatists
+icon = GFX_goal_generic_military_deal
+x = 2
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_supremepowertothecnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Worker's Morality
+focus = { 
+id = SPR_workersmorality
+icon = GFX_goal_generic_demand_territory
+x = 4
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_decentralizedmeansofcontrol focus = SPR_supremepowertothecnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Embrace the FAI
+focus = { 
+id = SPR_embracethefai
+icon = GFX_goal_generic_national_unity
+x = 7
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thefirstworkerscongress } 
+mutually_exclusive = { focus = SPR_marginalizethefai } 
+mutually_exclusive = { focus = SPR_marginalizethefai } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Implement the Program
+focus = { 
+id = SPR_implementtheprogram
+icon = GFX_goal_generic_neutrality_focus
+x = 15
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_centralizedindustrialauthority focus = SPR_cooperativeindustry } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Comforts for the People
+focus = { 
+id = SPR_comfortsforthepeople
+icon = GFX_goal_generic_national_unity
+x = 17
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_asturiansteel } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Armaments for the Proletariat
+focus = { 
+id = SPR_armamentsfortheproletariat
+icon = GFX_goal_generic_soviet_construction
+x = 13
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_asturiansteel } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Liberate the Peoples of Italy
+focus = { 
+id = SPR_liberatethepeoplesofitaly
+icon = GFX_focus_ger_assassinate_mussolini
+x = 24
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_endthenewstate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Death To Colonialism
+focus = { 
+id = SPR_deathtocolonialism
+icon = GFX_goal_unknown
+x = 26
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_endthenewstate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Subversive Warfare
+focus = { 
+id = SPR_subversivewarfare
+icon = GFX_focus_prc_infiltration
+x = 30
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_therevolutionalone } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for End the New State
+focus = { 
+id = SPR_endthenewstate
+icon = GFX_goal_unknown
+x = 26
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_callforsocialistunity focus = SPR_therevolutionalone } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Solidarity, Forever!
+focus = { 
+id = SPR_solidarityforever
+icon = GFX_goal_support_communism
+x = 22
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_callforsocialistunity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Revolution, Alone
+focus = { 
+id = SPR_therevolutionalone
+icon = GFX_goal_unknown
+x = 28
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_exportingtherevolution } 
+mutually_exclusive = { focus = SPR_callforsocialistunity } 
+mutually_exclusive = { focus = SPR_callforsocialistunity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Call for Socialist Unity
+focus = { 
+id = SPR_callforsocialistunity
+icon = GFX_goal_unknown
+x = 24
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_exportingtherevolution } 
+mutually_exclusive = { focus = SPR_therevolutionalone } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for European Revolutionary Spirit
+focus = { 
+id = SPR_europeanrevolutionaryspirit
+icon = GFX_focus_ger_great_red_menace
+x = 28
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_endthenewstate } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Synthetic Oil
+focus = { 
+id = SPR_syntheticoil
+icon = GFX_goal_unknown
+x = 19
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_implementtheprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Portuguese Tungsten
+focus = { 
+id = SPR_portuguesetungsten
+icon = GFX_goal_unknown
+x = 11
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_implementtheprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Exporting the Revolution
+focus = { 
+id = SPR_exportingtherevolution
+icon = GFX_goal_unknown
+x = 26
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Asturian Steel
+focus = { 
+id = SPR_asturiansteel
+icon = GFX_goal_unknown
+x = 15
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_implementtheprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Industrial Dilemma
+focus = { 
+id = SPR_theindustrialdilemma
+icon = GFX_goal_unknown
+x = 15
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_organizedpublicworks } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Communal Military
+focus = { 
+id = SPR_thecommunalmilitary
+icon = GFX_goal_unknown
+x = 42
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Re-Organize the Militias
+focus = { 
+id = SPR_reorganizethemilitias
+icon = GFX_focus_generic_little_entente
+x = 35
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thecommunalmilitary } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for People's Air Force
+focus = { 
+id = SPR_peoplesairforce
+icon = GFX_goal_unknown
+x = 42
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thecommunalmilitary } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Re-Establish the Navy
+focus = { 
+id = SPR_reestablishthenavy
+icon = GFX_goal_unknown
+x = 48
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thecommunalmilitary } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Standardize the People's Army
+focus = { 
+id = SPR_standardizethepeoplesarmy
+icon = GFX_goal_generic_allies_build_infantry
+x = 33
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_reorganizethemilitias } 
+mutually_exclusive = { focus = SPR_expandthemilitias focus = SPR_ }ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand the Militias
+focus = { 
+id = SPR_expandthemilitias
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 36
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_reorganizethemilitias } 
+mutually_exclusive = { focus = SPR_standardizethepeoplesarmy }mutually_exclusive = { focus = SPR_ focus = SPR_standardizethepeoplesarmy }ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Established Officer Corps
+focus = { 
+id = SPR_establishedofficercorps
+icon = GFX_focus_generic_military_academy
+x = 33
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_standardizethepeoplesarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Small-Unit Tactics
+focus = { 
+id = SPR_smallunittactics
+icon = GFX_goal_generic_position_armies
+x = 37
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_expandthemilitias } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Inter-Branch Coordination
+focus = { 
+id = SPR_interbranchcoordination
+icon = GFX_goal_generic_CAS
+x = 38
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_establishedofficercorps } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Artillery Primacy
+focus = { 
+id = SPR_artilleryprimacy
+icon = GFX_goal_generic_army_artillery2
+x = 32
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_smallunittactics } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A Mechanized Force
+focus = { 
+id = SPR_amechanizedforce
+icon = GFX_goal_generic_army_motorized
+x = 35
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_establishedofficercorps focus = SPR_smallunittactics } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Tanks of Our Own
+focus = { 
+id = SPR_tanksofourown
+icon = GFX_goal_generic_army_tanks
+x = 35
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_amechanizedforce } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }
