@@ -1,0 +1,4 @@
+SPN	= "countries/NatSpain.txt"
+BSQ = "countries/Basque.txt"
+CTL = "countries/Catalonia.txt"
+MRC = "countries/Morocco.txt"

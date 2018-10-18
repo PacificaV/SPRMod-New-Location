@@ -1,0 +1,105 @@
+﻿division_template = {
+	name = "Corpo Truppe Voluntare - Motorized"			
+	is_locked = yes
+	division_names_group = ITA_CAV_02
+	regiments = {
+		motorized = { x = 0 y = 0 }											
+		motorized = { x = 0 y = 1 } 
+		motorized = { x = 1 y = 0 }											
+		motorized = { x = 1 y = 1 } 		
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Corpo Truppe Voluntare"			
+	is_locked = yes
+	division_names_group = ITA_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }											
+		infantry = { x = 0 y = 1 } 				
+		infantry = { x = 0 y = 2 }											
+		infantry = { x = 0 y = 3 } 			
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = { 
+	name = "Condor Legion Division"			
+	is_locked = yes
+	division_names_group = GER_Arm_01
+	regiments = {
+		motorized = { x = 0 y = 0 }	
+		motorized = { x = 0 y = 1 } 
+		light_armor = { x = 1 y = 0 }										
+		light_armor = { x = 1 y = 1 }	
+	} 
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Viriatos"			
+	is_locked = yes
+	division_names_group = POR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }											
+		infantry = { x = 0 y = 1 } 				
+		infantry = { x = 0 y = 2 }											
+		infantry = { x = 0 y = 3 } 			
+	}
+}
+
+units = {
+	division = {			
+		name = "4th 'Littorio' Infantry Division (Lictor)"		
+		location = 758  # Coruna
+		division_template = "Corpo Truppe Voluntare"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+	division = {			
+		name = "1st 'Dio lo Vuole' Blackshirt Infantry Division"		
+		location = 758  # Coruna
+		division_template = "Corpo Truppe Voluntare"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+	division = {			
+		name = "2nd 'Fiamme Nere' Blackshirt Infantry Division "		
+		location = 758  # Coruna
+		division_template = "Corpo Truppe Voluntare"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+	division = {			
+		name = "3rd 'Penne Nere' Blackshirt Infantry Division"		
+		location = 758  # Coruna
+		division_template = "Corpo Truppe Voluntare"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+		division = {			
+		name = "Condor Legion"		
+		location = 758  # Coruna
+		division_template = "Condor Legion Division"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+		division = {			
+		name = "Viriatos"		
+		location = 758  # Coruna
+		division_template = "Viriatos"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}	
+}

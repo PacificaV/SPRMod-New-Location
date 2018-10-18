@@ -1,0 +1,189 @@
+﻿division_template = {
+	name = "Militia Column"
+	is_locked = yes
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {		
+
+	division = {
+		name = "1st Worker's Militia"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "2nd Worker's Militia"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "3rd Worker's Militia"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "4th Worker's Militia"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "5th Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "6th Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "7th Worker's Militia"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "8th Worker's Militia"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "9th Worker's Militia"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "10th Worker's Militia"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "11th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "12th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "13th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "14th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "15th Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "16th Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "17th Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "18th Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "19th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "20th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "21st Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "22nd Worker's Militia"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "23nd Worker's Militia"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "24rd Worker's Militia"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "25th Worker's Militia"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "26th Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "27th Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "28th Worker's Militia"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "29th Worker's Militia"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "30th Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "31st Worker's Militia"
+		location = 6906 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "32th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "33rd Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "34th Worker's Militia"
+		location = 3873 
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "35th Worker's Militia"
+		location = 758  # Coruna
+		division_template = "Militia Column"
+	}
+}

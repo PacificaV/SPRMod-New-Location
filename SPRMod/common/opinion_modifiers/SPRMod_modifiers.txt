@@ -1,0 +1,57 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	
+	SPR_sell_the_spanish_gold = { 
+		value = 100
+	}
+	SPR_mission_to_france = { 
+		value = 25
+	}
+	SPR_arms_embargo = { 
+		trade = yes
+		value = -100
+	}
+	SPR_material_embargo = { 
+		trade = yes
+		value = -100
+	}
+	SPN_betrayed_us = { 
+		trade = no
+		value = -50
+	}
+	SPR_helped_us = {
+		trade = no
+		value = 50
+	}
+	SPR_betrayed_us = { 
+		trade = no
+		value = -50
+	}
+	SPN_helped_us = {
+		trade = no
+		value = 50
+	}
+	SPR_build_relations = {
+		trade = no
+		value = 50
+	}
+	SPR_trade_relations = {
+		trade = no
+		value = 50
+	}
+	SPR_european_antifascism = {
+		trade = no
+		value = -20
+	}
+
+
+}	

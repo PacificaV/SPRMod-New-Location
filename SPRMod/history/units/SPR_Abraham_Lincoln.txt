@@ -1,0 +1,20 @@
+﻿division_template = {
+	name = "Abraham Lincoln Brigade"			
+	is_locked = yes
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "XV Brigada Internacionales"
+		location = 3938  # Madrid
+		division_template = "Abraham Lincoln Brigade"
+		start_experience_factor = 0.3
+		}
+}

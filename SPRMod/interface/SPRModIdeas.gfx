@@ -1,0 +1,41 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_idea_spr_power_to_the_unions"
+		texturefile = "gfx/interface/ideas/spr_power_to_the_unions.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_spr_political_commissars"
+		texturefile = "gfx/interface/ideas/spr_political_commissars.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_spr_industrial_democracy"
+		texturefile = "gfx/interface/ideas/spr_industrial_democracy.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_spr_appeal_to_the_cnt"
+		texturefile = "gfx/interface/ideas/spr_appeal_to_the_cnt.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_spn_rally_the_monarchists"
+		texturefile = "gfx/interface/ideas/spn_rally_the_monarchists.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_spn_catholic_morale_officers"
+		texturefile = "gfx/interface/ideas/spn_catholic_morale_officers.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_spr_arms_embargo"
+		texturefile = "gfx/interface/ideas/spr_arms_embargo.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_spr_democratic_confederalism"
+		texturefile = "gfx/interface/ideas/spr_democratic_confederalism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spn_monarchist_rally"
+		texturefile = "gfx/interface/ideas/spn_monarchist_rally.dds"
+	}
+	
+
+}

@@ -1,0 +1,109 @@
+﻿division_template = {
+	name = "Militia Column"			# Emergency Republican Militia - clumsy but useful. Will get you by until international divisions arrive.
+	is_locked = yes
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {		
+
+	division = {
+		name = "I Guardia Civil"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "II Guardia Civil"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "III Guardia Civil"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "IV Guardia Civil"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "V Guardia Civil"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "VI Guardia Civil"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "VII Guardia Civil"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "VIII Guardia Civil"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "IX Guardia Civil"
+		location = 740  # Bilbao
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "X Guardia Civil"
+		location = 740  # Bilbao
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "I Brigada de Reserva"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "II Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "III Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "IV Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "V Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "VI Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "VII Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "VIII Brigada de Reserva"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "IX Brigada de Reserva"
+		location = 740
+		division_template = "Militia Column"
+	}
+}

@@ -1,0 +1,621 @@
+ideas = {
+
+	country = {
+
+		SPA_recovering_from_civil_war = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				original_tag = SPN
+				 
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				ai_get_ally_desire_factor = -200
+				join_faction_tension = 0.5
+			}
+		}
+			SPN_legion_army_idea = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_core_attack_factor = -0.2
+				army_core_defence_factor = 0.1
+			}
+		}
+		SPN_legion_army_idea_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_org_factor = 0.1
+				army_core_defence_factor = 0.2
+			}
+		}
+		SPN_army_above_all_idea = {
+			
+			picture = generic_goods_red_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			consumer_goods_factor = -0.20
+			}
+		}
+		
+		SPN_arm_our_men_idea = {
+		
+			picture = generic_infantry_bonus
+						allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		SPN_stand_by_the_falangists_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = generic_fascism_drift_bonus			
+			modifier = {
+				fascism_drift = 0.15
+			}
+		}
+		SPN_rally_the_monarchists_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = spn_rally_the_monarchists			
+			modifier = {
+				neutrality_drift = 0.15
+			}
+		}
+		SPN_empower_the_military_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = generic_infantry_bonus		
+			modifier = {
+				fascism_drift = 0.15
+			}
+		}
+		SPN_empower_the_military_idea_2 = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = generic_infantry_bonus		
+			modifier = {
+				fascism_drift = 0.05
+				army_attack_factor = 0.10
+				army_org_Factor = 0.05
+				planning_speed = 0.25
+			}
+		}
+		SPN_mass_conscription_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = generic_manpower_bonus		
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
+		SPN_mobilize_the_masses_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = generic_manpower_bonus		
+			modifier = {
+				conscription_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		SPN_faster_training_idea = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+	
+			modifier = {
+				training_time_army_factor = -0.1
+			}
+		}
+		SPN_monarchist_rally_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = spn_monarchist_rally	
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		
+		SPN_catholic_morale_officers_idea = {
+		
+			allowed = {
+				always = no
+			}			
+			removal_cost = 180			
+			allowed_civil_war = {
+				always = yes
+			}			
+			picture = spn_catholic_morale_officers	
+			modifier = {
+				foreign_subversive_activites = -0.75
+				army_morale_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		 SPN_italian_payments_idea= {
+			
+			picture = generic_goods_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			consumer_goods_factor = 0.05
+			}
+			
+		}
+		 SPN_german_payments_idea= {
+			
+			picture = generic_goods_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			consumer_goods_factor = 0.05
+			}
+			
+		}
+		 ITA_spanish_payments_idea= {
+			
+			picture = generic_goods_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+			
+		}
+		 GER_spanish_payments_idea= {
+			
+			picture = generic_goods_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			}
+			
+		}
+		SPN_spanish_pride_idea = {			
+			allowed = {
+				always = no
+			}			
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_pp_unity_bonus
+			modifier = {
+				political_power_factor = 0.10
+				army_morale_factor = 0.10
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+	}
+
+	political_advisor = {
+
+		SPN_luis_valdes_cavanillas = {
+
+			picture = generic_army_europe_2
+
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		SPN_tomas_garciano_goni = {
+
+			picture = generic_political_advisor_europe_1
+
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		SPN_fidel_davila_arrondo = {
+
+			picture = generic_army_europe_4
+
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+			traits = { war_industrialist }
+		}
+	}
+
+	theorist = {
+
+	SPN_jose_enrique_varela = {
+				
+				
+		allowed = {
+			original_tag = SPN
+			 
+		}
+		
+		picture = generic_army_europe_3
+		
+		research_bonus = {
+			land_doctrine = 0.07
+		}
+		
+		traits = { military_theorist }
+	}
+
+	SPN_emilio_herrera = {
+				
+				
+		allowed = {
+			original_tag = SPN
+			 
+		}
+		
+		picture = generic_air_europe_3
+		
+		research_bonus = {
+			air_doctrine = 0.07
+		}
+		
+		traits = { air_warfare_theorist }
+	}
+}
+	# MILITARY
+	army_chief = {
+		
+
+		SPN_miguel_cabanellas_ferrer = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+
+			
+			traits = { army_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPN_ricardo_rada = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPN_emilio_mola_vidal = {
+			
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+	air_chief = {
+
+		SPN_alfredo_kindelan_duany = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPN_juan_yague_blanco = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+		
+
+		SPN_salvador_moreno_fernandez = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPN_fransisco_moreno_fernandez = {
+			
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { navy_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SPN_luis_carrero_blanco = {
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { navy_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	
+	high_command = {
+		SPN_emilio_esteban_infantes = {
+			
+			picture = generic_army_europe_5
+			allowed = {
+				original_tag = SPN				 
+			}
+			
+
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SPN_agustin_munoz_grandes = {
+			
+			picture = generic_army_europe_3
+			allowed = {
+				original_tag = SPN
+			}
+			
+
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	
+		SPN_joaquin_garcia_morato = {
+			
+			picture = generic_air_europe_2
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+
+			
+			traits = { air_air_combat_training_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		SPN_angel_salas_larrazabal = {
+			
+			picture = generic_air_europe_1
+			allowed = {
+				original_tag = SPN
+				 
+			}
+			
+
+			
+			traits = { air_strategic_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

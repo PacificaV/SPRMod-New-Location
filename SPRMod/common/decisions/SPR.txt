@@ -1,0 +1,762 @@
+##SPANISH CIVIL WAR##
+
+#Category only allowed for SPR
+SPR_civil_war = {
+	SPR_the_abraham_lincoln_brigade = {
+		icon = generic_prepare_civil_war
+		
+		fire_only_once = yes
+
+		cost = 25
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			load_oob = "SPR_Abraham_Lincoln"
+			add_manpower = 10000  
+		}
+ }
+	SPR_no_pasaran = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_war = yes
+			has_global_flag = spanish_civil_war
+			NOT = {
+				has_global_flag = scw_over
+			}
+		}
+
+		visible = {
+			has_war = yes
+			has_global_flag = spanish_civil_war
+			NOT = {
+				has_global_flag = scw_over
+			}
+		}
+
+		fire_only_once = yes
+
+		days_remove = 180
+
+		cost = 25
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				surrender_progress > 0.3
+				factor = 10
+			}
+		}
+
+		modifier = {
+			defence = 0.2
+			dig_in_speed_factor = 0.5
+		}
+
+		complete_effect = {
+
+		}
+	}
+	
+	SPR_scavenge_zaragoza = {
+
+		icon = generic_prepare_civil_war
+
+		highlight_states = {
+			state = 166
+		}	
+
+		available = {
+			166 = { #Murcia
+				is_controlled_by = SPR
+				industrial_complex > 0
+			} 
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 5
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					controls_state = 166
+				}
+				166 = { #Murcia
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				}
+			}
+		}
+	}
+	
+	SPR_scavenge_burgos = {
+
+		icon = generic_prepare_civil_war
+
+		highlight_states = {
+			state = 176
+		}	
+
+		available = {
+			176 = { #burgos
+				is_controlled_by = SPR
+				industrial_complex > 0
+			} 
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 5
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					controls_state = 176
+				}
+				176 = { #burgos
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				}
+			}
+		}
+	}
+	
+	SPR_scavenge_sevilla = {
+
+		icon = generic_prepare_civil_war
+
+		highlight_states = {
+			state = 169
+		}	
+
+		available = {
+			169 = { #sevilla
+				is_controlled_by = SPR
+				industrial_complex > 0
+			} 
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 5
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					controls_state = 169
+				}
+				169 = { #sevilla
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				}
+			}
+		}
+	}
+	
+	SPR_scavenge_coruna = {
+
+		icon = generic_prepare_civil_war
+
+		highlight_states = {
+			state = 171
+		}	
+
+		available = {
+			171 = { #coruna
+				is_controlled_by = SPR
+				industrial_complex > 0
+			} 
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 5
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					controls_state = 171
+				}
+				171 = { #coruna
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				}
+			}
+		}
+	}
+	
+	SPR_scavenge_leon = {
+
+		icon = generic_prepare_civil_war
+
+		highlight_states = {
+			state = 174
+		}	
+
+		available = {
+			174 = { #León
+				is_controlled_by = SPR
+				industrial_complex > 0
+			} 
+		}
+
+		fire_only_once = yes
+
+		cost = 25
+		days_remove = 5
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					controls_state = 174
+				}
+				174 = { #León
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				}
+			}
+		}
+	}
+	
+	SPR_destroy_railroads = {
+
+		icon = generic_scorched_earth
+
+		available = {
+			has_war = yes
+			has_equipment = {
+				support_equipment > 24
+			}
+		}
+
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_war = yes
+			OR = {
+				controls_state = 41
+				controls_state = 167
+				controls_state = 165
+				controls_state = 173
+				controls_state = 175
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = -25
+			}
+			if = {
+				limit = {
+					controls_state = 41
+				}
+				41 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 167
+				}
+				167 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 165
+				}
+				165 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 173
+				}
+				173 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 175
+				}
+				175 = {
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+SPR_soviet_diplomacy = {
+	SPR_nationalized_industry = {
+
+		icon = generic_industry
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {									
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPR_nationalized_industry_1
+			}
+		}
+	}
+	
+	SPR_sell_the_spanish_gold = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			add_opinion_modifier = { target = SOV modifier = SPR_sell_the_spanish_gold }
+			SOV = { add_opinion_modifier = { target = ROOT modifier = SPR_sell_the_spanish_gold } }
+			#Relation Boost with the USSR
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	
+	SPR_soviet_infantry_imports = {
+
+		icon = generic_prepare_civil_war
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 4500
+			producer = SOV
+		}
+		}
+	}
+	
+	SPR_soviet_tank_imports = {
+
+		icon = generic_tank
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						not = {has_tech = basic_light_tank}
+						
+						}
+					}
+					set_technology = { basic_light_tank = yes }
+				}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 300
+				producer = SOV
+			}
+		}
+		}
+	}
+SPR_western_diplomacy = {
+	SPR_mission_to_france = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			FRA = {
+		country_event = { id = spain.40 days = 1 }
+		}
+		}
+		}
+		
+		SPR_mission_to_britain = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			ENG = {
+		country_event = { id = spain.39 days = 1 }
+		}
+		}
+		}
+		
+		SPR_appeal_the_arms_embargo = {
+
+		icon = generic_political_discourse
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			every_other_country = {
+			limit = {
+				NOT = { tag = SPR }
+				NOT = { tag = SPN }
+				NOT = { tag = CTL }
+				NOT = { tag = BSQ }
+			}
+			country_event = { id = spain.14 hours = 1 }
+			}
+		remove_ideas = SPR_arms_embargo_idea
+		}
+		}
+		
+		SPR_request_french_aircraft = {
+		icon = generic_air
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			FRA = {
+				country_event = { id = spain.53 days = 1 }
+				}
+		}
+}
+SPR_request_american_aircraft = {
+		icon = generic_air
+
+		fire_only_once = yes
+
+		cost = 50
+		days_remove = 20
+
+		modifier = {
+			
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				surrender_progress > 0.2
+			}
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			USA = {
+				country_event = { id = spain.53 days = 1 }
+				}
+		}
+}
+}

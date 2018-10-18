@@ -1,0 +1,76 @@
+################
+#### SPAIN  ####
+################
+
+SPR_civil_war = {
+	
+	allowed = {
+		original_tag = SPR
+	}
+
+	available = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+	}
+
+	visible = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+	}
+}
+
+SPR_soviet_diplomacy = {
+	
+	allowed = {
+		original_tag = SPR
+	}
+
+	available = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+		has_country_flag = soviet_alignment
+	}
+
+	visible = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+		has_country_flag = soviet_alignment
+	}
+}
+
+SPR_western_diplomacy = {
+	
+	allowed = {
+		original_tag = SPR
+	}
+
+	available = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+		has_country_flag = liberal_alignment
+	}
+
+	visible = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+		has_country_flag = liberal_alignment
+	}
+}

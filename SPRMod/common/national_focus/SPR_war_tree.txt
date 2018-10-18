@@ -1,0 +1,501 @@
+focus_tree = { 
+id = SPR_war_tree
+country = { 
+factor = 0 
+modifier = { 
+add = 3
+tag = SPR 
+} 
+} 
+
+#Focus for Recycled Goods
+focus = { 
+id = SPR_recycled_goods
+icon = GFX_goal_generic_consumer_goods
+x = 23
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_fortify_madrid } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_ideas = SPR_recycled_goods_idea
+		}
+ } 
+
+#Focus for Emergency Factory Conversion 
+focus = { 
+id = SPR_emergency_factory_conversion
+icon = GFX_goal_generic_construct_civ_factory
+x = 21
+y = 3
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_wartime_industry_mobilization } 
+ai_will_do = { 
+ factor = 1
+ } 
+ 		completion_reward = {
+		add_ideas = SPR_emergency_conversion_idea	
+		}
+
+ } 
+
+#Focus for Fortify Madrid
+focus = {
+		id = SPR_fortify_madrid
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = SPR_wartime_industry_mobilization } 
+		x = 23
+		y = 3		
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			41 = { is_controlled_by = ROOT }
+		}
+
+		bypass = {
+			NOT = {
+            41 = { is_controlled_by = ROOT }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+			41 = {
+				add_building_construction = {
+					type = bunker
+					province = 3938
+					level = 5
+					instant_build = yes
+				} #Adds five Land Forts to Madrid.
+			}
+		}
+
+		completion_reward = {
+			41 = {
+				add_building_construction = {
+					type = bunker
+					province = 3938
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+#Focus for United, Forever!
+focus = { 
+	id = SPR_united_forever
+	icon = GFX_focus_chi_mission_to_the_soviet_union
+	x = 17
+	y = 4
+	cost = 3
+	available_if_capitulated = yes 
+	prerequisite = { focus = SPR_bow_to_the_soviets }
+	ai_will_do = { 
+	factor = 1
+	} 	
+	available = {
+			SOV = { exists = yes }
+			SOV = { is_subject = no }
+		}
+		bypass = {
+			is_subject_of = SOV
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	completion_reward = {
+			SPR = {country_event = { id = spain.34 }}
+				swap_ideas = {
+				remove_idea = SPR_militia_army_idea
+				add_idea = SPR_red_army_idea
+				}
+			}
+	}
+
+#Focus for The Disaster Begins
+focus = { 
+id = SPR_the_disaster_begins
+icon = GFX_the_disaster_begins
+x = 13
+y = 1
+cost = 0
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+ available = {
+			has_war = yes
+			} 
+			bypass = {
+	has_global_flag = spanish_civil_war
+}
+}
+
+#Focus for Bow to the Soviets
+focus = { 
+id = SPR_bow_to_the_soviets
+icon = GFX_bow_to_the_soviets
+x = 17
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_the_disaster_begins } 
+mutually_exclusive = { focus = SPR_stand_by_the_liberal_republic } 
+mutually_exclusive = { focus = SPR_appeal_to_the_cnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+	add_ideas = SPR_bow_to_the_soviets_idea
+	set_country_flag = soviet_alignment
+ } 
+
+ } 
+
+#Focus for Stand By The Liberal Republic
+focus = { 
+id = SPR_stand_by_the_liberal_republic
+icon = GFX_goal_support_democracy
+x = 9
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_the_disaster_begins } 
+mutually_exclusive = { focus = SPR_appeal_to_the_cnt } 
+mutually_exclusive = { focus = SPR_bow_to_the_soviets }
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = { 
+	add_ideas = SPR_stand_by_the_republic_idea
+	set_country_flag = liberal_alignment
+ } 
+ } 
+
+#Focus for Call for Foreign Aid
+focus = { 
+id = SPR_call_for_foreign_aid
+icon = GFX_goal_generic_intelligence_exchange
+x = 4
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_the_disaster_begins } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+country_event = { id = spain.3 }
+ } 
+
+ } 
+
+#Focus for Wartime Industry Mobilization
+focus = { 
+id = SPR_wartime_industry_mobilization
+icon = GFX_goal_generic_construct_mil_factory
+x = 22
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_the_disaster_begins } 
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+} 
+
+focus = { 
+id = SPR_appeal_to_the_cnt
+icon = GFX_appeal_to_the_cnt
+x = 13
+y = 2
+cost = 1
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_the_disaster_begins } 
+mutually_exclusive = { focus = SPR_stand_by_the_liberal_republic }
+mutually_exclusive = { focus = SPR_bow_to_the_soviets }
+ai_will_do = { 
+ factor = 1
+ } 
+	completion_reward = {
+	add_ideas = SPR_appeal_to_the_CNT_idea
+	hidden_effect = {
+	set_party_name = { ideology = communism long_name = SPR_communism_CNT_FAI_long name = SPR_communism_CNT_FAI }
+	CTL = {
+			set_cosmetic_tag = CTL_CNT
+	}
+	}
+	SPR = {
+	create_country_leader = {
+				name = "Buenaventura Durruti"
+				desc = "POLITICS_BUENAVENTURA_DURRUTI_DESC"
+				picture = "Portrait_Spain_Buenaventura_Durruti.dds"
+				expire = "1965.1.1"
+				ideology = anarchist_communism
+				traits = {
+				#
+					}
+				}	
+		}
+	}
+}
+
+
+#Focus for Democratic Confederalism
+focus = { 
+id = SPR_democratic_confederalism
+icon = GFX_democratic_confederalism
+x = 14
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_catalonian_autonomy_guarantee } 
+ai_will_do = { 
+ factor = 1
+ } 
+  		completion_reward = {
+			add_ideas = SPR_democratic_confederalism_idea
+		}
+ } 
+
+#Focus for Political Commissars
+focus = { 
+id = SPR_political_commissars
+icon = GFX_focus_generic_soviet_politics
+x = 17
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_bow_to_the_soviets } 
+ai_will_do = { 
+ factor = 1
+ } 
+ 		completion_reward = {
+			add_ideas = SPR_political_commissars_idea
+		}
+
+ } 
+
+#Focus for A Las Barricadas!
+focus = { 
+id = SPR_a_las_barricadas
+icon = GFX_goal_generic_military_sphere
+x = 13
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_democratic_confederalism } 
+prerequisite = { focus = SPR_industrial_democracy } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+			SPR = {
+	country_event = { id = spain.30 }
+	}
+}
+} 
+
+#Focus for Industrial Democracy
+focus = { 
+id = SPR_industrial_democracy
+icon = GFX_industrial_democracy
+x = 12
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_power_to_the_unions } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+		add_ideas = SPR_industrial_democracy_idea
+ } 
+ }
+
+#Focus for Catalonian Autonomy Guarantee
+focus = { 
+id = SPR_catalonian_autonomy_guarantee
+icon = GFX_catalonian_autonomy_guarantee
+x = 14
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_appeal_to_the_cnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_political_power = -100
+			add_stability = 0.1
+			#SPR = {
+		#release = CTL
+		#if = {
+        #limit = { has_dlc = "Together for Victory" }
+        #set_autonomy = {
+        #    target = CTL
+        #    autonomous_state = autonomy_puppet
+        #    freedom_level = 0.5
+        #}
+    #}
+	#CTL = {
+	#set_politics = {
+			#ruling_party = communism
+			#elections_allowed = yes
+		#}
+		#}
+#}
+		}
+ } 
+
+#Focus for Power to the Unions
+focus = { 
+id = SPR_power_to_the_unions
+icon = GFX_goal_generic_production
+x = 12
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_appeal_to_the_cnt } 
+ai_will_do = { 
+ factor = 1
+ } 
+ 		completion_reward = {
+			add_ideas = SPR_power_to_the_unions_idea
+		}
+ } 
+
+#Focus for Total War Economy
+focus = { 
+id = SPR_total_war_economy
+icon = GFX_goal_generic_production2
+x = 21
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_emergency_factory_conversion }  
+ai_will_do = { 
+ factor = 1
+ } 
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			}
+ }  
+
+#Focus for Wartime Rationing Program
+focus = { 
+id = SPR_wartime_rationing_program
+icon = GFX_goal_generic_consumer_goods
+x = 9
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_stand_by_the_liberal_republic } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+		add_ideas = SPR_wartime_rationing_idea
+		}
+ } 
+
+#Focus for Viva La Republica!
+focus = { 
+id = SPR_viva_la_republica
+icon = GFX_focus_generic_the_giant_wakes
+x = 9
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_wartime_rationing_program } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+	add_stability = 0.2
+	swap_ideas = {
+     remove_idea = SPR_militia_army_idea
+     add_idea = SPR_militia_army_idea_2
+	}
+	}
+ } 
+
+#Focus for The International Brigades
+focus = { 
+id = SPR_the_international_brigades
+icon = GFX_attract_more_volunteers
+x = 3
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_call_for_foreign_aid } 
+ai_will_do = { 
+ factor = 5
+ } 
+completion_reward = { 
+	SPR = {
+	country_event = { id = spain.31 }
+	}
+ } 
+
+} 
+
+#Focus for The One True Spain
+focus = { 
+id = SPR_the_one_true_spain
+icon = GFX_goal_generic_demand_territory
+x = 4
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_secure_legitimacy } 
+prerequisite = { focus = SPR_the_international_brigades }
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+	add_ideas = SPR_spanish_pride_idea
+ }
+
+ }  
+
+#Focus for Secure Legitimacy
+focus = { 
+id = SPR_secure_legitimacy
+icon = GFX_goal_tripartite_pact
+x = 5
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_call_for_foreign_aid } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+			}
+ } 
+#End of focuses 
+ }

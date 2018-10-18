@@ -1,0 +1,411 @@
+focus_tree = { 
+id = RevCatTree
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = CTL 
+} 
+} 
+#Focus for The Revolution Begins
+focus = { 
+id = CTL_therevolutionbegins
+icon = GFX_goal_tfv_burn_the_royal_portraits
+x = 10
+y = 1
+cost = 1
+bypass = {
+	has_war = yes
+}
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Revolutionary Vanguard
+focus = { 
+id = CTL_revolutionaryvanguard
+icon = GFX_focus_generic_join_comintern
+x = 8
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_therevolutionbegins } 
+mutually_exclusive = { focus = CTL_theworkersrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+	set_party_name = { ideology = communism long_name = CTL_communism_PCE_long name = CTL_communism_PCE }
+	create_country_leader = {
+	name = "José Díaz"
+	desc = "POLITICS_JOSE_DIAZ_DESC"
+	picture = "Portrait_Spain_Jose_Diaz.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+ }
+ } 
+
+#Focus for Catalonian Autarky
+focus = { 
+id = CTL_catalonianautarky
+icon = GFX_goal_generic_soviet_construction
+x = 17
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_therevolutionbegins } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.75
+				uses = 2
+				category = industry
+			}
+		}
+ } 
+
+#Focus for A Fighting International
+focus = { 
+id = CTL_afightinginternational
+icon = GFX_goal_support_communism
+x = 3
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_therevolutionbegins } 
+ai_will_do = { 
+ factor = 1
+ } 
+	completion_reward = {
+			country_event = { id = spain.103 }
+		}
+ } 
+
+#Focus for The Worker's Revolution
+focus = { 
+id = CTL_theworkersrevolution
+icon = GFX_theworkersrevolution
+x = 12
+y = 2
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_therevolutionbegins } 
+mutually_exclusive = { focus = CTL_revolutionaryvanguard } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+create_country_leader = {
+				name = "Buenaventura Durruti"
+				desc = "POLITICS_BUENAVENTURA_DURRUTI_DESC"
+				picture = "Portrait_Spain_Buenaventura_Durruti.dds"
+				expire = "1965.1.1"
+				ideology = anarchist_communism
+				traits = {
+				#
+					}
+				}
+	}
+ } 
+
+#Focus for Worker's Militias
+focus = { 
+id = CTL_workersmilitias
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 12
+y = 3
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_theworkersrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+	completion_reward = {
+			add_ideas = SPN_mobilize_the_masses_idea
+		}
+ } 
+
+#Focus for Frontline Commissars
+focus = { 
+id = CTL_frontlinecommissars
+icon = GFX_focus_generic_soviet_politics
+x = 8
+y = 3
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_revolutionaryvanguard } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_ideas = SPR_political_commissars_idea
+		}
+ } 
+
+#Focus for Request International Brigades
+focus = { 
+id = CTL_requestinternationalbrigades
+icon = GFX_focus_generic_little_entente
+x = 3
+y = 3
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_afightinginternational } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+	CTL = {
+	country_event = { id = spain.102 }
+	}
+ } 
+ } 
+
+#Focus for With What Weapons We Can Find...
+focus = { 
+id = CTL_withwhatweaponswecanfind
+icon = GFX_goal_generic_small_arms
+x = 3
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_requestinternationalbrigades } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+	add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 1200
+		producer = CTL
+		}
+	} 
+ } 
+
+#Focus for Soviet Armored Support
+focus = { 
+id = CTL_sovietarmoredsupport
+icon = GFX_sovietarmoredsupport
+x = 5
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_revolutionaryvanguard } 
+prerequisite = { focus = CTL_afightinginternational } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+hidden_effect = {
+				if = {
+					limit = {
+						not = {has_tech = basic_light_tank}
+						
+						}
+					}
+					set_technology = { basic_light_tank = yes }
+				}
+add_equipment_to_stockpile = {
+type = light_tank_equipment_1
+amount = 100
+producer = SOV
+}
+} 
+ } 
+
+#Focus for Soviet Expeditionary Force
+focus = { 
+id = CTL_sovietexpeditionaryforce
+icon = GFX_focus_generic_military_mission
+x = 5
+y = 5
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_sovietarmoredsupport } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			load_oob = CTL_Soviet_Expeditionary
+			}
+ } 
+
+#Focus for A Las Barricadas!
+focus = { 
+id = CTL_alasbarricadas
+icon = GFX_goal_generic_military_sphere
+x = 12
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_workersmilitias } 
+ai_will_do = { 
+ factor = 1
+ } 
+ completion_reward = {
+ CTL = {
+	add_stability = 0.2
+	swap_ideas = {
+     remove_idea = SPR_militia_army_idea
+     add_idea = SPR_militia_army_idea_2
+	}
+	}
+ }
+ } 
+
+#Focus for United, Forever!
+focus = { 
+id = CTL_unitedforever
+icon = GFX_focus_chi_mission_to_the_soviet_union
+x = 8
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_frontlinecommissars } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			CTL = {country_event = { id = spain.34 }}
+				swap_ideas = {
+				remove_idea = SPR_militia_army_idea
+				add_idea = SPR_red_army_idea
+				}
+			}
+ } 
+
+#Focus for Armament Co-Operatives
+focus = { 
+id = CTL_armamentcooperatives
+icon = GFX_goal_generic_construct_mil_factory
+x = 15
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_theworkersrevolution } 
+prerequisite = { focus = CTL_catalonianautarky } 
+ai_will_do = { 
+ factor = 1
+ } 
+complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = SPR_nationalized_industry_1 }
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 165 }
+				limit = {									
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPR_nationalized_industry_1
+			}
+		}
+ } 
+
+#Focus for Industrial Democracy
+focus = { 
+id = CTL_industrialdemocracy
+icon = GFX_industrialdemocracy
+x = 15
+y = 5
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_armamentcooperatives } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+		add_ideas = SPR_industrial_democracy_idea
+ } 
+ } 
+
+#Focus for Activate the Factories
+focus = { 
+id = CTL_activatethefactories
+icon = GFX_goal_generic_production
+x = 17
+y = 3
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_catalonianautarky } 
+ai_will_do = { 
+ factor = 1
+ } 
+complete_tooltip = {
+			random_state = {
+				limit = { has_state_flag = SPR_nationalized_industry_1 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 165 }
+				limit = {									
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPR_nationalized_industry_1
+			}
+		}
+ } 
+
+#Focus for Total War Economy
+focus = { 
+id = CTL_totalwareconomy
+icon = GFX_goal_generic_construct_civilian
+x = 17
+y = 4
+cost = 3
+available_if_capitulated = yes 
+prerequisite = { focus = CTL_activatethefactories } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = {
+			add_ideas = tot_economic_mobilisation
+			}
+ } 
+
+#End of focuses 
+ }

@@ -1,0 +1,115 @@
+spriteTypes = { 
+
+	SpriteType = { 
+	name = "GFX_nationalized_industry" 
+	texturefile = "gfx/interface/goals/GFX_nationalized_industry.dds" 
+	}
+	
+	SpriteType = { 
+	name = "GFX_agri_universities" 
+	texturefile = "gfx/interface/goals/GFX_agri_universities.dds" 
+	}
+	
+	SpriteType = { 
+	name = "GFX_agrarian_focus_2" 
+	texturefile = "gfx/interface/goals/GFX_agrarian_focus_2.dds" 
+	}
+	
+	SpriteType = { 
+	name = "GFX_agrarian_focus" 
+	texturefile = "gfx/interface/goals/GFX_agrarian_focus.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_roll_in_the_tanks" 
+	texturefile = "gfx/interface/goals/GFX_roll_in_the_tanks.dds"
+	}
+	
+	SpriteType = {
+	name = "GFX_appeal_to_the_cnt"
+	texturefile = "gfx/interface/goals/GFX_appeal_to_the_cnt.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_democratic_confederalism"
+	texturefile = "gfx/interface/goals/GFX_democratic_confederalism.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_alfonso_focus"
+	texturefile = "gfx/interface/goals/GFX_alfonso_focus.dds" 
+	}
+	
+	SpriteType = { 
+	name = "GFX_industrial_democracy"
+	texturefile = "gfx/interface/goals/GFX_industrial_democracy.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_catalonian_autonomy_guarantee" 
+	texturefile = "gfx/interface/goals/GFX_catalonian_autonomy_guarantee.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_sell_the_spanish_gold" 
+	texturefile = "gfx/interface/goals/GFX_sell_the_spanish_gold.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_attract_more_volunteers" 
+	texturefile = "gfx/interface/goals/GFX_attract_more_volunteers.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_the_disaster_begins"
+	texturefile = "gfx/interface/goals/GFX_the_disaster_begins.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_bow_to_the_soviets" 
+	texturefile = "gfx/interface/goals/GFX_bow_to_the_soviets.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_restructure_the_legion" 
+	texturefile = "gfx/interface/goals/GFX_restructure_the_legion.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_catholic_morale_officers" 
+	texturefile = "gfx/interface/goals/GFX_catholic_morale_officers.dds" 
+	}
+	
+	SpriteType = {
+	name = "GFX_endorse_the_carlists" 
+	texturefile = "gfx/interface/goals/GFX_endorse_the_carlists.dds" 
+	}
+	SpriteType = {
+	name = "GFX_mexico_focus" 
+	texturefile = "gfx/interface/goals/GFX_mexico_focus.dds" 
+	}
+	SpriteType = {
+	name = "GFX_forgotten_major" 
+	texturefile = "gfx/interface/goals/GFX_forgotten_major.dds" 
+	}
+##Icon For: 57880
+ SpriteType = { 
+ name = "GFX_shutdowntheunions" 
+ texturefile = "gfx/interface/goals/GFX_shutdowntheunions.tga" 
+ }##Icon For: 57882
+ SpriteType = { 
+ name = "GFX_newanarchism" 
+ texturefile = "gfx/interface/goals/GFX_newanarchism.tga" 
+ }##Icon For: 57886
+ SpriteType = { 
+ name = "GFX_privatizedroadways" 
+ texturefile = "gfx/interface/goals/GFX_privatizedroadways.tga" 
+ }##Icon For: 57887
+ SpriteType = { 
+ name = "GFX_newercheapermanufacturing" 
+ texturefile = "gfx/interface/goals/GFX_newercheapermanufacturing.tga" 
+ }##Icon For: 57893
+ SpriteType = { 
+ name = "GFX_mandatoryprivatizededucation" 
+ texturefile = "gfx/interface/goals/GFX_mandatoryprivatizededucation.tga" 
+ }  
+ }

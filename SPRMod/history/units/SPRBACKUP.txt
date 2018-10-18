@@ -1,0 +1,386 @@
+division_template = {
+	name = "Militia Column"			# Emergency Republican Militia - clumsy but useful. Will get you by until international divisions arrive.
+	is_locked = yes
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "División de Infantería" 
+	division_names_group = SPR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+		engineer = { x = 0 y = 1 }   
+	}
+	}
+	division_template = {
+	name = "División de Caballería"  		
+	division_names_group = SPR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 2 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }     
+	}
+}
+division_template = {
+	name = "Brigada Montaña"  		
+	division_names_group = SPR_MNT_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Brigada de Infantería" 	
+	division_names_group = SPR_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }	
+		infantry = { x = 0 y = 1 }	
+		infantry = { x = 1 y = 0 }	
+		infantry = { x = 1 y = 1 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Eng Bn
+	}
+}
+
+units = {
+
+division = { # "1a División de Infantería"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3938  # Madrid
+		division_template = "División de Infantería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}			
+	division = { # "2a División de Infantería"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 9764  # Barcelona
+		division_template = "División de Infantería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	
+	division = { # "3a División de Infantería"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6906  # Valencia
+		division_template = "División de Infantería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}							
+	division = { # "4a División de Infantería"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 9764  # Barcelona
+		division_template = "División de Infantería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}						
+	
+			
+	division = { # "1a División de Caballería"		
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9764  # Barcelona
+		division_template = "División de Caballería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}			
+	division = {			
+		name = "2a Brigada Montaña"		
+		location = 740  #Bilbao
+		division_template = "Brigada Montaña"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}			
+	
+		division = {			
+		name = "Brigada de Arma de Infantería"		
+		location = 740  #Bilbao
+		division_template = "Brigada de Infantería"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}		
+
+	division = {
+		name = "I Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "II Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "III Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "IV Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "V Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+
+	division = {
+		name = "VI Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "VII Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "IX Militia Column"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "X Militia Column"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XI Militia Column"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XII Militia Column"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XIII Militia Column"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XIV Militia Column"
+		location = 10024  # Murcia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XV Militia Column"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XVI Militia Column"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XVII Militia Column"
+		location = 9979  # Malaga
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XVIII Militia Column"
+		location = 740  # Bilbao
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XX Militia Column"
+		location = 740  # Bilbao
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXI Militia Column"
+		location = 3938  # Madrid
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXII Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXIII Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXIV Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXV Militia Column"
+		location = 9764  # Barcelona
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXVI Militia Column"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXVII Militia Column"
+		location = 6906  # Valencia
+		division_template = "Militia Column"
+	}
+
+	division = {
+		name = "XXVIII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+
+	division = {
+		name = "XXIX Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XXX Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}
+	division = {
+		name = "XXXVI Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XXXVII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XXXVIII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XXXIX Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XL Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLI Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLIII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLIV Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLV Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLVI Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLVII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLVIII Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "XLIX Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "L Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "LI Militia Column"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+	division = {
+		name = "LII Militia Column 25"
+		location = 6993  
+		division_template = "Militia Column"
+	}	
+
+}
