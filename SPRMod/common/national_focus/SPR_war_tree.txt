@@ -182,6 +182,9 @@ ai_will_do = {
  completion_reward = { 
 	add_ideas = SPR_stand_by_the_republic_idea
 	set_country_flag = liberal_alignment
+		hidden_effect = {
+			set_country_flag = dem_power
+		}
  } 
  } 
 

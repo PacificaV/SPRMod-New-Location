@@ -91,6 +91,41 @@ spriteTypes = {
 	name = "GFX_forgotten_major" 
 	texturefile = "gfx/interface/goals/GFX_forgotten_major.dds" 
 	}
+	SpriteType = { 
+	name = "GFX_AnarchoIndustry" 
+	texturefile = "gfx/interface/goals/GFX_AnarchoIndustry.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_DestroyColonialism" 
+	texturefile = "gfx/interface/goals/GFX_DestroyColonialism.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_CNTFocus" 
+	texturefile = "gfx/interface/goals/GFX_CNTFocus.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_FAIFocus" 
+	texturefile = "gfx/interface/goals/GFX_FAIFocus.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_RevolutionAlone" 
+	texturefile = "gfx/interface/goals/GFX_RevolutionAlone.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_LeftUnityFocus" 
+	texturefile = "gfx/interface/goals/GFX_LeftUnityFocus.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_BreakPortugal" 
+	texturefile = "gfx/interface/goals/GFX_BreakPortugal.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_IndustrialDilemma" 
+	texturefile = "gfx/interface/goals/GFX_IndustrialDilemma.dds" 
+	}
+	
+
+	
 ##Icon For: 57880
  SpriteType = { 
  name = "GFX_shutdowntheunions" 

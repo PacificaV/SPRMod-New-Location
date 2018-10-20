@@ -197,6 +197,17 @@ create_field_marshal = {
     logistics_skill = 1
 }
 
+create_field_marshal = {
+	name = "Vicente Rojo Iluch"
+	portrait_path = "gfx/leaders/SPR/Portrait_Spain_Vicente_Rojo_Iluch.dds"
+	traits = {}
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 2
+}
+
 create_corps_commander = {
 	name = "Antonio Ortega"
 	portrait_path = "gfx/leaders/SPR/Portrait_Spain_Antonio_Ortega.dds"
@@ -259,16 +270,6 @@ create_corps_commander = {
     defense_skill = 1
     planning_skill = 2
     logistics_skill = 1
-}
-create_corps_commander = {
-	name = "Vicente Rojo Iluch"
-	portrait_path = "gfx/leaders/SPR/Portrait_Spain_Vicente_Rojo_Iluch.dds"
-	traits = {}
-	skill = 3
-    attack_skill = 2
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 2
 }
 
 ### Ship Variants ###

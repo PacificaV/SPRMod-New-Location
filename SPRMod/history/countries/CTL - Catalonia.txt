@@ -138,9 +138,9 @@ set_stability = 0.5
 }
 
 create_country_leader = {
-	name = "Manuel Azana"
-	desc = "POLITICS_MANUEL_AZANA_DESC"
-	picture = "Portrait_Spain_Manuel_Azana.dds"
+	name = "Lluis Companys"
+	desc = "POLITICS_LLUIS_COMPANYS_DESC"
+	picture = "Portrait_Catalonia_Lluis_Companys.dds"
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
@@ -149,9 +149,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "José Díaz"
-	desc = "POLITICS_JOSE_DIAZ_DESC"
-	picture = "Portrait_Spain_Jose_Diaz.dds"
+	name = "Buenaventura Durruti"
+	desc = "POLITICS_BUENAVENTURA_DURRUTI_DESC"
+	picture = "Portrait_Catalonia_Buenaventura_Durruti.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {
@@ -160,9 +160,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Francisco Franco"
-	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-	picture = "Portrait_Spain_Francisco_Franco.dds"
+	name = "Cambo Francecs"
+	desc = "POLITICS_CAMBO_FRANCECCS_DESC"
+	picture = "Portrait_Catalonia_Cambo_Francecs.dds"
 	expire = "1965.1.1"
 	ideology = falangism
 	traits = {

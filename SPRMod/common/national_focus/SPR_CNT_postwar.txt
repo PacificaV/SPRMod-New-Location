@@ -1,9 +1,9 @@
 focus_tree = { 
-id = CNT_postwar
+id = SPR_CNT_postwar
 country = { 
 factor = 0 
 modifier = { 
-add = 10 
+add = 1
 tag = SPR 
 } 
 } 
@@ -24,7 +24,7 @@ ai_will_do = {
 #Focus for The First Worker's Congress
 focus = { 
 id = SPR_thefirstworkerscongress
-icon = GFX_thefirstworkerscongress
+icon = GFX_industrial_democracy
 x = 5
 y = 1
 cost = 10
@@ -39,7 +39,7 @@ ai_will_do = {
 #Focus for Marginalize the FAI
 focus = { 
 id = SPR_marginalizethefai
-icon = GFX_goal_support_communism
+icon = GFX_CNTFocus
 x = 3
 y = 2
 cost = 5
@@ -55,7 +55,7 @@ ai_will_do = {
 #Focus for Co-Operative Industry
 focus = { 
 id = SPR_cooperativeindustry
-icon = GFX_goal_unknown
+icon = GFX_AnarchoIndustry
 x = 17
 y = 2
 cost = 10
@@ -71,7 +71,7 @@ ai_will_do = {
 #Focus for Communal Agricultural Research
 focus = { 
 id = SPR_communalagriculturalresearch
-icon = GFX_goal_unknown
+icon = GFX_agri_universities
 x = 11
 y = 2
 cost = 10
@@ -134,7 +134,7 @@ ai_will_do = {
 #Focus for Modernize Iberian Farming
 focus = { 
 id = SPR_modernizeiberianfarming
-icon = GFX_goal_unknown
+icon = GFX_agrarian_focus
 x = 11
 y = 1
 cost = 10
@@ -270,7 +270,7 @@ ai_will_do = {
 #Focus for Embrace the FAI
 focus = { 
 id = SPR_embracethefai
-icon = GFX_goal_generic_national_unity
+icon = GFX_FAIFocus
 x = 7
 y = 2
 cost = 10
@@ -347,7 +347,7 @@ ai_will_do = {
 #Focus for Death To Colonialism
 focus = { 
 id = SPR_deathtocolonialism
-icon = GFX_goal_unknown
+icon = GFX_DestroyColonialism
 x = 26
 y = 3
 cost = 10
@@ -377,7 +377,7 @@ ai_will_do = {
 #Focus for End the New State
 focus = { 
 id = SPR_endthenewstate
-icon = GFX_goal_unknown
+icon = GFX_BreakPortugal
 x = 26
 y = 2
 cost = 10
@@ -407,7 +407,7 @@ ai_will_do = {
 #Focus for The Revolution, Alone
 focus = { 
 id = SPR_therevolutionalone
-icon = GFX_goal_unknown
+icon = GFX_RevolutionAlone
 x = 28
 y = 1
 cost = 10
@@ -424,7 +424,7 @@ ai_will_do = {
 #Focus for Call for Socialist Unity
 focus = { 
 id = SPR_callforsocialistunity
-icon = GFX_goal_unknown
+icon = GFX_LeftUnityFocus
 x = 24
 y = 1
 cost = 10
@@ -455,7 +455,7 @@ ai_will_do = {
 #Focus for Synthetic Oil
 focus = { 
 id = SPR_syntheticoil
-icon = GFX_goal_unknown
+icon = GFX_goal_generic_oil_refinery
 x = 19
 y = 4
 cost = 10
@@ -470,7 +470,7 @@ ai_will_do = {
 #Focus for Portuguese Tungsten
 focus = { 
 id = SPR_portuguesetungsten
-icon = GFX_goal_unknown
+icon = GFX_focus_generic_tungsten
 x = 11
 y = 4
 cost = 10
@@ -485,7 +485,7 @@ ai_will_do = {
 #Focus for Exporting the Revolution
 focus = { 
 id = SPR_exportingtherevolution
-icon = GFX_goal_unknown
+icon = GFX_goal_generic_trade
 x = 26
 y = 0
 cost = 10
@@ -499,7 +499,7 @@ ai_will_do = {
 #Focus for Asturian Steel
 focus = { 
 id = SPR_asturiansteel
-icon = GFX_goal_unknown
+icon = GFX_focus_generic_steel
 x = 15
 y = 4
 cost = 10
@@ -514,7 +514,7 @@ ai_will_do = {
 #Focus for The Industrial Dilemma
 focus = { 
 id = SPR_theindustrialdilemma
-icon = GFX_goal_unknown
+icon = GFX_IndustrialDilemma
 x = 15
 y = 1
 cost = 10
@@ -594,7 +594,7 @@ y = 2
 cost = 10
 available_if_capitulated = yes 
 prerequisite = { focus = SPR_reorganizethemilitias } 
-mutually_exclusive = { focus = SPR_expandthemilitias focus = SPR_ }ai_will_do = { 
+mutually_exclusive = { focus = SPR_expandthemilitias}ai_will_do = { 
  factor = 1
  } 
 
@@ -604,12 +604,13 @@ mutually_exclusive = { focus = SPR_expandthemilitias focus = SPR_ }ai_will_do = 
 focus = { 
 id = SPR_expandthemilitias
 icon = GFX_focus_YUG_pan_slavic_congress
-x = 36
+x = 37
 y = 2
 cost = 10
 available_if_capitulated = yes 
 prerequisite = { focus = SPR_reorganizethemilitias } 
-mutually_exclusive = { focus = SPR_standardizethepeoplesarmy }mutually_exclusive = { focus = SPR_ focus = SPR_standardizethepeoplesarmy }ai_will_do = { 
+mutually_exclusive = { focus = SPR_standardizethepeoplesarmy }
+ai_will_do = { 
  factor = 1
  } 
 
@@ -653,7 +654,7 @@ x = 38
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_establishedofficercorps } 
+prerequisite = { focus = SPR_smallunittactics } 
 ai_will_do = { 
  factor = 1
  } 
@@ -668,7 +669,7 @@ x = 32
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_smallunittactics } 
+prerequisite = { focus = SPR_establishedofficercorps } 
 ai_will_do = { 
  factor = 1
  } 

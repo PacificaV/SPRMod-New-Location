@@ -158,20 +158,31 @@ country_event = {
 					logistics_skill = 1
 				}
 				create_corps_commander = {
-					name = "Manfred Stern"
-					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Manfred_Stern.dds"
+					name = "Valentín González González"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Valentin_Gonzalez_Gonzalez.dds"
 					traits = {
-						politically_connected
 					}
 					skill = 2
 					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+					
+				}
+				create_corps_commander = {
+					name = "Pedro Mateo Merino"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Pedro_Mateo_Merino.dds"
+					traits = {
+					}
+					skill = 1
+					attack_skill = 1
 					defense_skill = 1
 					planning_skill = 1
 					logistics_skill = 1
 				}
 				create_corps_commander = {
-					name = "Pedro Mateo Merino"
-					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Pedro_Mateo_Merino.dds"
+					name = "Enrique Lister"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Enrique_Lister.dds"
 					traits = {
 					}
 					skill = 1
@@ -414,20 +425,42 @@ country_event = {
 					logistics_skill = 1
 				}
 				create_corps_commander = {
-					name = "Manfred Stern"
-					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Manfred_Stern.dds"
+					name = "Pedro Mateo Merino"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Pedro_Mateo_Merino.dds"
 					traits = {
-						politically_connected
 					}
-					skill = 2
-					attack_skill = 2
+					skill = 1
+					attack_skill = 1
 					defense_skill = 1
 					planning_skill = 1
 					logistics_skill = 1
 				}
 				create_corps_commander = {
+					name = "Valentín González González"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Valentin_Gonzalez_Gonzalez.dds"
+					traits = {
+					}
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+					
+				}
+				create_corps_commander = {
 					name = "Pedro Mateo Merino"
 					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Pedro_Mateo_Merino.dds"
+					traits = {
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Enrique Lister"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Enrique_Lister.dds"
 					traits = {
 					}
 					skill = 1
@@ -2334,6 +2367,9 @@ country_event = {
 				hours = 6
 			}
 		}
+		hidden_effect = {
+			set_country_flag = CNT_power
+		}
 	}
 }
 ##International Brigades
@@ -2346,6 +2382,32 @@ country_event = {
 	option = {
 		name = spain.31.a
 		load_oob = "SPR_International_Brigades"
+		create_corps_commander = {
+					name = "Manfred Stern"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Manfred_Stern.dds"
+					traits = {
+						politically_connected
+					}
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+		create_corps_commander = {
+					name = "Andre Marty"
+					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Andre_Marty.dds"
+					traits = {
+						politically_connected
+						harsh_leader
+						old_guard
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
 	}
 }
 ##Democrats win Civil War
@@ -2356,7 +2418,7 @@ country_event = {
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		tag = SPR
-		has_government = democratic
+		has_country_flag = Dem_power
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
@@ -2381,6 +2443,9 @@ country_event = {
 				transfer_troops = no
 			}
 		}
+		SPR = {
+			load_focus_tree = SPR_liberal_postwar
+		}
 	}
 }
 ##Communists win Civil War
@@ -2391,7 +2456,7 @@ country_event = {
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		tag = SPR
-		has_government = communism
+		has_country_flag = CNT_power
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
@@ -2421,6 +2486,9 @@ country_event = {
 				target = SPN
 				transfer_troops = no
 			}
+		}
+		SPR = {
+			load_focus_tree = SPR_CNT_postwar
 		}
 	}
 	option = {
@@ -2460,6 +2528,9 @@ country_event = {
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = PCE_power
 		}
 	}
 }
