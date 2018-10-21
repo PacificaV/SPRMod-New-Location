@@ -1,8 +1,8 @@
 ﻿l_english:
  SPR_gw_tank_equipment:0 "Trubia A4"
  SPR_gw_tank_equipment_short:0 "Trubia A4"
- SPR_light_tank_equipment_1:0 "Trubia Naval"
- SPR_light_tank_equipment_1_short:0 "Trubia Naval"
+ SPR_light_tank_equipment_1:0 " T-26"
+ SPR_light_tank_equipment_1_short:0 " T-26"
  SPR_light_tank_equipment_2:0 "Verdeja 1"
  SPR_light_tank_equipment_2_short:0 "Verdeja 1"
  SPR_light_tank_equipment_3:0 "Verdeja 2"
