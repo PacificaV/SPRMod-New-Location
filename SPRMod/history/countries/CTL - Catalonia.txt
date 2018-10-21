@@ -153,7 +153,7 @@ create_country_leader = {
 	desc = "POLITICS_BUENAVENTURA_DURRUTI_DESC"
 	picture = "Portrait_Catalonia_Buenaventura_Durruti.dds"
 	expire = "1965.1.1"
-	ideology = stalinism
+	ideology = anarchist_communism
 	traits = {
 		#
 	}
