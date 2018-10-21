@@ -100,7 +100,25 @@ spriteTypes = {
 		name = "GFX_SPR_naval_bomber3_medium"
 		texturefile = "gfx/interface/technologies/SPR_naval_bomber3.tga"
 	}	
-
+	
+	##Spanish Tanks##
+	SpriteType = {
+		name = "GFX_SPR_gwtank_medium"
+		texturefile = "gfx/interface/technologies/SPR_gw_tank.tga"
+	}	
+	SpriteType = {
+		name = "GFX_SPR_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/SPR_basic_light_tank.tga"
+	}	
+	SpriteType = {
+		name = "GFX_SPR_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/SPR_imp_light_tank.tga"
+	}	
+	SpriteType = {
+		name = "GFX_SPR_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/SPR_adv_light_tank.tga"
+	}	
+	
 	##National Spanish Aircrafts##
 	SpriteType = {
 		name = "GFX_SPN_fighter1_medium"
@@ -200,23 +218,5 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_SPN_naval_bomber3_medium"
 		texturefile = "gfx/interface/technologies/SPN_naval_bomber3.tga"
-	}	
-	
-	##Spanish Tanks##
-	SpriteType = {
-		name = "GFX_SPR_gw_tank_medium"
-		texturefile = "gfx/interface/technologies/SPR_gw_tank.tga"
-	}	
-	SpriteType = {
-		name = "GFX_SPR_basic_light_tank_medium"
-		texturefile = "gfx/interface/technologies/SPR_basic_light_tank.tga"
-	}	
-	SpriteType = {
-		name = "GFX_SPR_light_tank_2_medium"
-		texturefile = "gfx/interface/technologies/SPR_light_tank_2.tga"
-	}	
-	SpriteType = {
-		name = "GFX_SPR_light_tank_3_medium"
-		texturefile = "gfx/interface/technologies/SPR_light_tank_3.tga"
 	}	
 }
