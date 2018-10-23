@@ -3,19 +3,19 @@ id = SPR_liberal_postwar
 country = { 
 factor = 0 
 modifier = { 
-add = 100 
+add = 1
 tag = SPR 
 } 
 } 
 #Focus for Relieve the Poor
 focus = { 
-id = SPR_relievethepoor
+id = SPR_relieve_the_poor
 icon = GFX_goal_tripartite_pact
 x = 2
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_restorationofdemocracy } 
+prerequisite = { focus = SPR_restoration_of_democracy } 
 ai_will_do = { 
  factor = 1
  } 
@@ -24,7 +24,7 @@ ai_will_do = {
 
 #Focus for Spanish Foreign Policy
 focus = { 
-id = SPR_spanishforeignpolicy
+id = SPR_spanish_foreign_policy
 icon = GFX_goal_unknown
 x = 28
 y = 0
@@ -38,14 +38,14 @@ ai_will_do = {
 
 #Focus for Appeal to the Western Allies
 focus = { 
-id = SPR_appealtothewesternallies
+id = SPR_appeal_to_the_western_allies
 icon = GFX_focus_chi_british_cooperation
 x = 24
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_spanishforeignpolicy } 
-mutually_exclusive = { focus = SPR_latinantifascistbloc } 
+prerequisite = { focus = SPR_spanish_foreign_policy } 
+mutually_exclusive = { focus = SPR_latin_anti_fascist_bloc_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -54,14 +54,14 @@ ai_will_do = {
 
 #Focus for Latin Anti-Fascist Bloc
 focus = { 
-id = SPR_latinantifascistbloc
+id = SPR_latin_anti_fascist_bloc_l
 icon = GFX_goal_generic_demand_territory
 x = 32
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_spanishforeignpolicy } 
-mutually_exclusive = { focus = SPR_appealtothewesternallies }
+prerequisite = { focus = SPR_spanish_foreign_policy } 
+mutually_exclusive = { focus = SPR_appeal_to_the_western_allies }
 ai_will_do = { 
  factor = 1
  } 
@@ -70,13 +70,13 @@ ai_will_do = {
 
 #Focus for Intervene in the World War
 focus = { 
-id = SPR_interveneintheworldwar
+id = SPR_intervene_in_the_world_war
 icon = GFX_goal_generic_territory_or_war
 x = 35
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_latinantifascistbloc } 
+prerequisite = { focus = SPR_latin_anti_fascist_bloc_l }      
 ai_will_do = { 
  factor = 1
  } 
@@ -85,13 +85,13 @@ ai_will_do = {
 
 #Focus for Expand the Asturian Steel Industry
 focus = { 
-id = SPR_expandtheasturiansteelindustry
+id = SPR_expand_the_asturian_steel_industry_l
 icon = GFX_focus_generic_steel
 x = 14
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_focusonmilitaryindustry focus = SPR_focusoncivilianindustry } 
+prerequisite = { focus = SPR_focus_on_military_industry focus = SPR_focus_on_civilian_industry } 
 ai_will_do = { 
  factor = 1
  } 
@@ -100,13 +100,13 @@ ai_will_do = {
 
 #Focus for Expand Unionized Labor
 focus = { 
-id = SPR_expandunionizedlabor
+id = SPR_expand_unionized_labor
 icon = GFX_goal_generic_construction2
 x = 11
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandtheasturiansteelindustry } 
+prerequisite = { focus = SPR_expand_the_asturian_steel_industry_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -115,13 +115,13 @@ ai_will_do = {
 
 #Focus for Expand Hispano-Suiza
 focus = { 
-id = SPR_expandhispanosuiza
+id = SPR_expand_hispano_suiza
 icon = GFX_goal_generic_construct_mil_factory
 x = 14
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandtheasturiansteelindustry } 
+prerequisite = { focus = SPR_expand_the_asturian_steel_industry_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -130,13 +130,13 @@ ai_will_do = {
 
 #Focus for Moroccon Oil Refineries
 focus = { 
-id = SPR_morocconoilrefineries
+id = SPR_moroccon_oil_refineries
 icon = GFX_goal_generic_oil_refinery
 x = 17
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandtheasturiansteelindustry } 
+prerequisite = { focus = SPR_expand_the_asturian_steel_industry_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -145,13 +145,13 @@ ai_will_do = {
 
 #Focus for Industrialize Western Spain
 focus = { 
-id = SPR_industrializewesternspain
+id = SPR_industrialize_western_spain
 icon = GFX_goal_generic_construct_civ_factory
 x = 13
 y = 5
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandunionizedlabor focus = SPR_expandhispanosuiza focus = SPR_morocconoilrefineries } 
+prerequisite = { focus = SPR_expand_unionized_labor focus = SPR_expand_hispano_suiza focus = SPR_moroccon_oil_refineries } 
 ai_will_do = { 
  factor = 1
  } 
@@ -160,13 +160,13 @@ ai_will_do = {
 
 #Focus for State-Sponsored Universities
 focus = { 
-id = SPR_statesponsoreduniversities
+id = SPR_state_sponsored_universities
 icon = GFX_goal_generic_scientific_exchange
 x = 16
 y = 5
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandunionizedlabor focus = SPR_expandhispanosuiza focus = SPR_morocconoilrefineries } 
+prerequisite = { focus = SPR_expand_unionized_labor focus = SPR_expand_hispano_suiza focus = SPR_moroccon_oil_refineries } 
 ai_will_do = { 
  factor = 1
  } 
@@ -175,7 +175,7 @@ ai_will_do = {
 
 #Focus for Industrialize the Nation
 focus = { 
-id = SPR_industrializethenation
+id = SPR_industrialize_the_nation_l
 icon = GFX_goal_generic_construction2
 x = 14
 y = 0
@@ -189,13 +189,13 @@ ai_will_do = {
 
 #Focus for Expansion of Public Works
 focus = { 
-id = SPR_expansionofpublicworks
+id = SPR_expansion_of_public_works_l
 icon = GFX_goal_generic_construct_infrastructure
 x = 10
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_industrializethenation } 
+prerequisite = { focus = SPR_industrialize_the_nation_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -204,13 +204,13 @@ ai_will_do = {
 
 #Focus for Increased Wages for Farm-Workers
 focus = { 
-id = SPR_increasedwagesforfarmworkers
+id = SPR_increased_wages_for_farm_workers_l
 icon = GFX_goal_unknown
 x = 18
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_industrializethenation } 
+prerequisite = { focus = SPR_industrialize_the_nation_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -219,13 +219,13 @@ ai_will_do = {
 
 #Focus for Spanish Agricultural Universities
 focus = { 
-id = SPR_spanishagriculturaluniversities
+id = SPR_spanish_agricultural_universities_l
 icon = GFX_goal_unknown
 x = 18
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_increasedwagesforfarmworkers } 
+prerequisite = { focus = SPR_increased_wages_for_farm_workers_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -234,13 +234,13 @@ ai_will_do = {
 
 #Focus for Repair the Broken Roads
 focus = { 
-id = SPR_repairthebrokenroads
+id = SPR_repair_the_broken_roads
 icon = GFX_goal_generic_construct_civilian
 x = 10
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expansionofpublicworks } 
+prerequisite = { focus = SPR_expansion_of_public_works_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -249,13 +249,13 @@ ai_will_do = {
 
 #Focus for Expanded Industrial Investments
 focus = { 
-id = SPR_expandedindustrialinvestments
+id = SPR_expanded_industrial_investments
 icon = GFX_goal_generic_production
 x = 14
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_industrializethenation } 
+prerequisite = { focus = SPR_industrialize_the_nation_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -264,14 +264,14 @@ ai_will_do = {
 
 #Focus for Focus on Civilian Industry
 focus = { 
-id = SPR_focusoncivilianindustry
+id = SPR_focus_on_civilian_industry
 icon = GFX_goal_generic_construct_civ_factory
 x = 12
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandedindustrialinvestments } 
-mutually_exclusive = { focus = SPR_focusonmilitaryindustry } 
+prerequisite = { focus = SPR_expanded_industrial_investments } 
+mutually_exclusive = { focus = SPR_focus_on_military_industry } 
 ai_will_do = { 
  factor = 1
  } 
@@ -280,14 +280,14 @@ ai_will_do = {
 
 #Focus for Focus on Military Industry
 focus = { 
-id = SPR_focusonmilitaryindustry
+id = SPR_focus_on_military_industry
 icon = GFX_goal_generic_construct_mil_factory
 x = 16
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_expandedindustrialinvestments } 
-mutually_exclusive = { focus = SPR_focusoncivilianindustry } 
+prerequisite = { focus = SPR_expanded_industrial_investments } 
+mutually_exclusive = { focus = SPR_focus_on_civilian_industry } 
 ai_will_do = { 
  factor = 1
  } 
@@ -296,13 +296,13 @@ ai_will_do = {
 
 #Focus for Endorse Collective Modes of Production
 focus = { 
-id = SPR_endorsecollectivemodesofproduction
+id = SPR_endorse_collective_modes_of_production_l
 icon = GFX_goal_generic_production
 x = 4
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_protectthecitizens } 
+prerequisite = { focus = SPR_protect_the_citizens } 
 ai_will_do = { 
  factor = 1
  } 
@@ -311,15 +311,15 @@ ai_will_do = {
 
 #Focus for The Republic Perfected
 focus = { 
-id = SPR_therepublicperfected
+id = SPR_the_republic_perfected
 icon = GFX_goal_support_democracy
 x = 4
 y = 5
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_progressivetenancysystems } 
-prerequisite = { focus = SPR_endorsecollectivemodesofproduction } 
-prerequisite = { focus = SPR_themediterraneaneconomicbloc } 
+prerequisite = { focus = SPR_progressive_tenancy_systems_l } 
+prerequisite = { focus = SPR_endorse_collective_modes_of_production_l } 
+prerequisite = { focus = SPR_the_mediterranean_economic_bloc_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -328,13 +328,13 @@ ai_will_do = {
 
 #Focus for Progressive Tenancy Systems
 focus = { 
-id = SPR_progressivetenancysystems
+id = SPR_progressive_tenancy_systems_l
 icon = GFX_goal_unknown
 x = 7
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_protectthecitizens } 
+prerequisite = { focus = SPR_protect_the_citizens } 
 ai_will_do = { 
  factor = 1
  } 
@@ -343,14 +343,14 @@ ai_will_do = {
 
 #Focus for Protect the Citizens
 focus = { 
-id = SPR_protectthecitizens
+id = SPR_protect_the_citizens
 icon = GFX_focus_generic_treaty
 x = 4
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_feedthehungry } 
-prerequisite = { focus = SPR_relievethepoor } 
+prerequisite = { focus = SPR_feed_the_hungry } 
+prerequisite = { focus = SPR_relieve_the_poor } 
 ai_will_do = { 
  factor = 1
  } 
@@ -359,13 +359,13 @@ ai_will_do = {
 
 #Focus for The Mediterranean Economic Bloc
 focus = { 
-id = SPR_themediterraneaneconomicbloc
+id = SPR_the_mediterranean_economic_bloc_l
 icon = GFX_focus_generic_the_giant_wakes
 x = 1
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_protectthecitizens } 
+prerequisite = { focus = SPR_protect_the_citizens } 
 ai_will_do = { 
  factor = 1
  } 
@@ -374,13 +374,13 @@ ai_will_do = {
 
 #Focus for Feed the Hungry
 focus = { 
-id = SPR_feedthehungry
+id = SPR_feed_the_hungry
 icon = GFX_goal_generic_construct_civilian
 x = 6
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_restorationofdemocracy } 
+prerequisite = { focus = SPR_restoration_of_democracy } 
 ai_will_do = { 
  factor = 1
  } 
@@ -389,13 +389,13 @@ ai_will_do = {
 
 #Focus for Restoration of Democracy
 focus = { 
-id = SPR_restorationofdemocracy
+id = SPR_restoration_of_democracy
 icon = GFX_goal_generic_improve_relations
 x = 4
 y = 1
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_therepublicenduring } 
+prerequisite = { focus = SPR_the_republic_enduring } 
 ai_will_do = { 
  factor = 1
  } 
@@ -404,7 +404,7 @@ ai_will_do = {
 
 #Focus for The Republic Enduring
 focus = { 
-id = SPR_therepublicenduring
+id = SPR_the_republic_enduring
 icon = GFX_goal_support_democracy
 x = 4
 y = 0
@@ -418,13 +418,13 @@ ai_will_do = {
 
 #Focus for Appeal the Monroe Doctrine
 focus = { 
-id = SPR_appealthemonroedoctrine
+id = SPR_appeal_the_monroe_doctrine_l
 icon = GFX_focus_chi_mission_to_the_us
 x = 32
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_latinantifascistbloc } 
+prerequisite = { focus = SPR_latin_anti_fascist_bloc_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -433,13 +433,13 @@ ai_will_do = {
 
 #Focus for Break Salazar's Portugal
 focus = { 
-id = SPR_breaksalazarsportugal
+id = SPR_break_salazars_portugal_l
 icon = GFX_goal_generic_major_war
 x = 28
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_appealtothewesternallies focus = SPR_latinantifascistbloc } 
+prerequisite = { focus = SPR_appeal_to_the_western_allies focus = SPR_latin_anti_fascist_bloc_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -448,13 +448,13 @@ ai_will_do = {
 
 #Focus for Commitment to Global Anti-Fascism
 focus = { 
-id = SPR_commitmenttoglobalantifascism
+id = SPR_commitment_to_global_anti_fascism
 icon = GFX_focus_generic_anti_fascist_diplomacy
 x = 28
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_breaksalazarsportugal } 
+prerequisite = { focus = SPR_break_salazars_portugal_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -463,13 +463,13 @@ ai_will_do = {
 
 #Focus for Join the Allies
 focus = { 
-id = SPR_jointheallies
+id = SPR_join_the_allies
 icon = GFX_goal_support_democracy
 x = 24
 y = 2
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_appealtothewesternallies } 
+prerequisite = { focus = SPR_appeal_to_the_western_allies } 
 ai_will_do = { 
  factor = 1
  } 
@@ -478,13 +478,13 @@ ai_will_do = {
 
 #Focus for Invite our Mexican Friends
 focus = { 
-id = SPR_inviteourmexicanfriends
+id = SPR_invite_our_mexican_friends_l
 icon = GFX_goal_unknown
 x = 34
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_appealthemonroedoctrine } 
+prerequisite = { focus = SPR_appeal_the_monroe_doctrine_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -493,13 +493,13 @@ ai_will_do = {
 
 #Focus for Invite the South American Democracies
 focus = { 
-id = SPR_invitethesouthamericandemocracies
+id = SPR_invite_the_south_american_democracies
 icon = GFX_goal_support_democracy
 x = 30
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_appealthemonroedoctrine } 
+prerequisite = { focus = SPR_appeal_the_monroe_doctrine_l } 
 ai_will_do = { 
  factor = 1
  } 
@@ -508,14 +508,14 @@ ai_will_do = {
 
 #Focus for End Fascism in South America
 focus = { 
-id = SPR_endfascisminsouthamerica
+id = SPR_end_fascism_in_south_america_l
 icon = GFX_focus_generic_anti_fascist_diplomacy
 x = 32
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_inviteourmexicanfriends } 
-prerequisite = { focus = SPR_invitethesouthamericandemocracies } 
+prerequisite = { focus = SPR_invite_our_mexican_friends_l } 
+prerequisite = { focus = SPR_invite_the_south_american_democracies } 
 ai_will_do = { 
  factor = 1
  } 
@@ -524,13 +524,13 @@ ai_will_do = {
 
 #Focus for Request British Naval Advisors
 focus = { 
-id = SPR_requestbritishnavaladvisors
+id = SPR_request_british_naval_advisors_l
 icon = GFX_focus_chi_british_cooperation
 x = 26
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_jointheallies } 
+prerequisite = { focus = SPR_join_the_allies } 
 ai_will_do = { 
  factor = 1
  } 
@@ -539,13 +539,13 @@ ai_will_do = {
 
 #Focus for Request French Military Advisors
 focus = { 
-id = SPR_requestfrenchmilitaryadvisors
+id = SPR_request_french_military_advisors_l
 icon = GFX_focus_chi_reach_out_to_france
 x = 22
 y = 3
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_jointheallies } 
+prerequisite = { focus = SPR_join_the_allies } 
 ai_will_do = { 
  factor = 1
  } 
@@ -554,14 +554,14 @@ ai_will_do = {
 
 #Focus for End the Italian Threat
 focus = { 
-id = SPR_endtheitalianthreat
+id = SPR_end_the_italian_threat_l
 icon = GFX_focus_ger_assassinate_mussolini
 x = 24
 y = 4
 cost = 10
 available_if_capitulated = yes 
-prerequisite = { focus = SPR_requestbritishnavaladvisors } 
-prerequisite = { focus = SPR_requestfrenchmilitaryadvisors } 
+prerequisite = { focus = SPR_request_british_naval_advisors_l } 
+prerequisite = { focus = SPR_request_french_military_advisors_l } 
 ai_will_do = { 
  factor = 1
  } 

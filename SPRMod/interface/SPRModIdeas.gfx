@@ -33,6 +33,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/spr_democratic_confederalism.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_spr_inefficient_army"
+		texturefile = "gfx/interface/ideas/spr_inefficient_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_spr_agrarian_crisis"
+		texturefile = "gfx/interface/ideas/spr_agrarian_crisis.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_spn_monarchist_rally"
 		texturefile = "gfx/interface/ideas/spn_monarchist_rally.dds"
 	}

@@ -33,7 +33,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				army_core_attack_factor = -0.2
+				army_org_factor = 0.1
+				conscription_factor = 0.05
 				army_core_defence_factor = 0.1
 			}
 		}
@@ -50,7 +51,8 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				army_org_factor = 0.1
+				army_org_factor = 0.2
+				conscription_factor = 0.05
 				army_core_defence_factor = 0.2
 			}
 		}

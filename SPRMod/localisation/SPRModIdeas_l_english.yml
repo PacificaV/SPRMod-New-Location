@@ -39,6 +39,18 @@
  SPN_army_above_all_idea:0 "The Army Above All"
  SPN_faster_training_idea:0 "Faster Training Regimines"
  SPR_spanish_civil_war:0 "Spanish Civil War"
+ SPR_political_violence_idea:0 "Political Violence"
+ SPR_political_violence_idea_desc:0 "The Republic has, especially as of late, been plagued with political violence, including paramilitary action and murder. Resolving it will be difficult."
+ SPR_political_violence_2_idea:0 "Political Violence"
+ SPR_political_violence_2_idea_desc:0 "The Republic has, especially as of late, been plagued with political violence, including paramilitary action and murder. Resolving it will be difficult."
+ SPR_inefficient_army_idea:0 "Inefficient Army"
+ SPR_inefficient_army_idea_desc:0 "The Republic's army is horrifically inefficient, with too many officers, a lack of standardization, and a plague of political appointments. It is in no state to fight a war."
+ SPR_inefficient_army_2_idea:0 "Inefficient Army"
+ SPR_inefficient_army_2_idea_desc:0 "The Republic's army is horrifically inefficient, with too many officers, a lack of standardization, and a plague of political appointments. It is in no state to fight a war."
+ SPR_agrarian_crisis_idea:0 "Agrarian Crisis"
+ SPR_agrarian_crisis_idea_desc:0 "Ever since the previous government cut farm-worker wages, the Spanish agricultural sector has been in chaos. Violence and political radicalism plagues the countryside, and output is greatly decreased."
+ SPR_agrarian_crisis_2_idea:0 "Agrarian Crisis"
+ SPR_agrarian_crisis_2_idea_desc:0 "Ever since the previous government cut farm-worker wages, the Spanish agricultural sector has been in chaos. Violence and political radicalism plagues the countryside, and output is greatly decreased."
  
  ###Advisors###
  SPR_dolores_ibarruri:1 "Dolores Ibárruri"

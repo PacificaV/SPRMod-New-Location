@@ -2,6 +2,12 @@
 
 oob = "SPR_1936"
 
+add_ideas = {
+	SPR_political_violence_idea
+	SPR_inefficient_army_idea
+	SPR_agrarian_crisis_idea
+}
+
 set_research_slots = 3
 
 set_technology = {
@@ -52,6 +58,7 @@ set_politics = {
 	election_frequency = 36
 	elections_allowed = yes
 }
+
 
 set_convoys = 150
 set_stability = 0.5

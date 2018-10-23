@@ -25,6 +25,53 @@ SPN_civil_war = {
 	}
 }
 
+SPN_axis_diplomacy = {
+	
+	allowed = {
+		original_tag = SPN
+	}
+
+	available = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+	}
+
+	visible = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+	}
+}
+
+SPN_desperate_measures = {
+	
+	allowed = {
+		original_tag = SPN
+	}
+
+	available = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+	}
+
+	visible = {
+		has_global_flag = spanish_civil_war
+		has_war = yes
+		NOT = {
+			has_global_flag = scw_over
+			}
+		surrender_progress > 0.2
+	}
+}
+
 SPN_special_operations = {
 	
 	allowed = {

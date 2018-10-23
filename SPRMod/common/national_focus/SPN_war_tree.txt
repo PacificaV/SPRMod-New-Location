@@ -126,35 +126,17 @@ ai_will_do = {
  completion_reward = { 
  country_event = { id = spain.2 }
  }
- } 
-
-#Focus for Mobilize the Masses
-focus = { 
-id = SPN_mobilize_the_masses
-icon = GFX_goal_generic_demand_territory
-x = 7
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_stand_by_the_falangists } 
-ai_will_do = { 
- factor = 1
- }
-completion_reward = {
-	add_ideas = SPN_mobilize_the_masses_idea
-	}
-
- } 
+ }  
 
 #Focus for Catholic Morale Officers
 focus = { 
 id = SPN_catholic_morale_officers
 icon = GFX_catholic_morale_officers
 x = 7
-y = 4
+y = 3
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SPN_mobilize_the_masses } 
+prerequisite = { focus = SPN_stand_by_the_falangists } 
 ai_will_do = { 
  factor = 1
  }
@@ -169,7 +151,7 @@ focus = {
 id = SPN_the_church_and_the_state
 icon = GFX_goal_generic_dangerous_deal
 x = 7
-y = 5
+y = 4
 cost = 5
 available_if_capitulated = yes 
 prerequisite = { focus = SPN_catholic_morale_officers } 
@@ -180,68 +162,6 @@ completion_reward = {
 	country_event = spain.41
  } 
  }
-
-#Focus for Mission to Italy ##MAKE INTO DECISION
-focus = { 
-id = SPN_mission_to_italy
-icon = GFX_focus_generic_italy_first
-x = 5
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_appeal_to_the_axis } 
-prerequisite = { focus = SPN_stand_by_the_falangists } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-ITA = {
-		custom_effect_tooltip = needs_approval
-		country_event = { id = spain.42 days = 1 }
-		}	
-	}
- } 
-
-#Focus for Mission to Germany ##MAKE INTO DECISION
-focus = { 
-id = SPN_mission_to_germany
-icon = GFX_focus_chi_mission_to_germany
-x = 5
-y = 5
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_mission_to_italy } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-GER = {
-		custom_effect_tooltip = needs_approval
-		country_event = { id = spain.43 days = 1 }
-		}	
-	}
- } 
-
-#Focus for Import Arms Shipments ##MAKE INTO DECISION
-focus = { 
-id = SPN_import_arms_shipments
-icon = GFX_goal_generic_small_arms
-x = 3
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_appeal_to_the_axis } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-	add_equipment_to_stockpile = {
-		type = infantry_equipment_1
-		amount = 4500
-		producer = SPR
-		}
-	}
- } 
 
 #Focus for International Support 
 focus = { 
@@ -274,34 +194,15 @@ completion_reward = {
 	}
  }  
 
-#Focus for The Legion Condor
-focus = { 
-id = SPN_the_legion_condor
-icon = GFX_focus_chi_flying_tigers
-x = 1
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_international_support } 
-ai_will_do = { 
- factor = 1
- }
-completion_reward = { 
-GER = {
- country_event = { id = spain.16 }  
- }
- } 
- }
-
 #Focus for Acquire Recognition
 focus = { 
 id = SPN_acquire_recognition
 icon = GFX_goal_molotov_ribbentrop_pact
 x = 3
-y = 4
+y = 3
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SPN_import_arms_shipments } 
+prerequisite = { focus = SPN_appeal_to_the_axis } 
 ai_will_do = { 
  factor = 1
  } 
@@ -317,10 +218,10 @@ focus = {
 id = SPN_the_only_true_spain
 icon = GFX_goal_generic_propaganda
 x = 2
-y = 5
+y = 4
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_legion_condor } 
+prerequisite = { focus = SPN_international_support } 
 prerequisite = { focus = SPN_acquire_recognition } 
 ai_will_do = { 
  factor = 1
@@ -449,53 +350,32 @@ ai_will_do = {
 
  } 
 
-#Focus for Begin the Junta ##REMOVE
+#Focus for The Army Above All
 focus = { 
-id = SPN_begin_the_junta
-icon = GFX_focus_generic_strike_at_democracy1
+id = SPN_the_army_above_all
+icon = GFX_focus_generic_military_mission
 x = 15
-y = 5
+y = 4
 cost = 5
 available_if_capitulated = yes 
 prerequisite = { focus = SPN_mass_conscription } 
 ai_will_do = { 
  factor = 1
- }
-completion_reward = {
-	 swap_ideas = {
-     remove_idea = SPN_empower_the_military_idea
-     add_idea = SPN_empower_the_military_idea_2
-	}
-	} 
-
-} 
-
-#Focus for Glorify the Soldiers
-focus = { 
-id = SPN_glorify_the_soldiers
-icon = GFX_focus_generic_little_entente
-x = 15
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_empower_the_military } 
-ai_will_do = { 
- factor = 1
  } 
  completion_reward = {
- add_manpower = 30000
- }
- } 
+	add_ideas = SPN_army_above_all_idea
+  }
+}
 
 #Focus for Mass Conscription
 focus = { 
 id = SPN_mass_conscription
 icon = GFX_goal_generic_military_sphere
 x = 15
-y = 4
+y = 3
 cost = 5
 available_if_capitulated = yes 
-prerequisite = { focus = SPN_glorify_the_soldiers } 
+prerequisite = { focus = SPN_empower_the_military } 
 ai_will_do = { 
  factor = 1
  } 
@@ -561,36 +441,15 @@ ai_will_do = {
 }
  } 
 
-#Focus for German Tank Imports ##MAKE INTO DECISION
-focus = { 
-id = SPN_german_tank_imports
-icon = GFX_goal_continuous_armor_production
-x = 21
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_knights_of_the_air } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
- GER = {
-		custom_effect_tooltip = needs_approval
-		country_event = { id = spain.19 days = 1 }
-		}
-}
- } 
-
 #Focus for The New Spanish Legion
 focus = { 
 id = SPN_the_new_spanish_legion
 icon = GFX_goal_rhineland
-x = 20
-y = 5
+x = 21
+y = 4
 cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_german_tank_imports } 
-prerequisite = { focus = SPN_arm_our_men } 
+available_if_capitulated = yes  
+prerequisite = { focus = SPN_knights_of_the_air } 
 ai_will_do = { 
  factor = 1
  } 
@@ -600,69 +459,7 @@ swap_ideas = {
      add_idea = SPN_legion_army_idea_2
 	}
 	}
- } 
-
-#Focus for The Army Above All ##REPLACES 'BEGIN THE JUNTA'
-focus = { 
-id = SPN_the_army_above_all
-icon = GFX_focus_generic_military_mission
-x = 17
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_restructure_the_legion } 
-prerequisite = { focus = SPN_empower_the_military } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	add_ideas = SPN_army_above_all_idea
- }
-
- } 
-
-#Focus for Nationalized Military Industry ##MAKE INTO DECISION
-focus = { 
-id = SPN_nationalized_military_industry
-icon = GFX_goal_generic_construct_mil_factory
-x = 17
-y = 5
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_army_above_all } 
-ai_will_do = { 
- factor = 1
- } 
-complete_tooltip = {
-			random_state = {
-				limit = { has_state_flag = SPN_nationalized_military_1 }
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {									
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = SPN_nationalized_military_1
-			}
-		}
- } 
+ }  
 
 #End of focuses 
  }
