@@ -135,9 +135,9 @@ ideas = {
 		
 		}
 		
-		SPR_political_violence_2_idea = {
+		SPR_new_republic_idea = {
 		
-			picture = generic_disjointed_gov
+			picture = spr_new_republic
 			
 			allowed = {
 				always = no
@@ -150,8 +150,201 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.5
-				political_power_factor = -0.03			
+				stability_factor = -0.10
+				political_power_factor = -0.05			
+				consumer_goods_factor = 0.10
+			}
+		
+		}
+		SPR_new_republic_2_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = -0.5	
+				consumer_goods_factor = 0.10		
+			}
+		
+		}
+		SPR_new_republic_3_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.10		
+			}
+		
+		}
+		SPR_new_republic_4_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.05		
+			}
+		
+		}
+		
+		SPR_new_republic_5_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+			}
+		
+		}
+		SPR_new_republic_6_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				monthly_population = 0.10
+			}
+		
+		}
+		SPR_new_republic_7_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.10
+				monthly_population = 0.10
+				research_time_factor = 0.10
+			}
+		
+		}
+		
+		SPR_ruined_nation_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.10
+				monthly_population = 0.10
+				research_time_factor = 0.10
+			}
+		
+		}
+		
+		SPR_ruined_nation_2_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.10
+				monthly_population = 0.10
+				research_time_factor = 0.10
+			}
+		
+		}
+		
+		SPR_ruined_nation_3_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = 0.10
+				monthly_population = 0.10
+				research_time_factor = 0.10
 			}
 		
 		}

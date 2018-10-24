@@ -47,5 +47,18 @@
  BSQ_communism:0 "Basque Confederation"
  BSQ_communism_ADJ:0 "Basque"
  BSQ_communism_DEF:0 "Basque Confederation"
+ MRC_democratic:0 "Morocco"
+ MRC_democratic_ADJ:0 "Moroccan"
+ MRC_democratic_DEF:0 "Morocco"
+ MRC_fascism:0 "Moroccan State"
+ MRC_fascism_ADJ:0 "Moroccan"
+ MRC_fascism_DEF:0 "the Moroccan State"
+ MRC_communism:0 "Moroccan Socialist Republic"
+ MRC_communism_ADJ:0 "Moroccan"
+ MRC_communism_DEF:0 "the Moroccan Socialist Republic"
+ MRC_neutrality:0 "Morocco"
+ MRC_neutrality_ADJ:0 "moroccan"
+ MRC_neutrality_DEF:0 "Morocco"
+
  
 

@@ -24,7 +24,11 @@ spriteTypes = {
 		name = "GFX_idea_spn_catholic_morale_officers"
 		texturefile = "gfx/interface/ideas/spn_catholic_morale_officers.dds"
 	}
-		spriteType = {
+	spriteType = {
+		name = "GFX_idea_spr_new_republic"
+		texturefile = "gfx/interface/ideas/spr_new_republic.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_spr_arms_embargo"
 		texturefile = "gfx/interface/ideas/spr_arms_embargo.dds"
 	}

@@ -2248,6 +2248,9 @@ news_event = {
 	immediate = {
 		set_global_flag = nationalist_victory
 		set_global_flag = scw_over
+		SPN = {
+			set_cosmetic_tag = SPN_POST
+		}
 	}
 	
 	option = {
@@ -2291,6 +2294,9 @@ news_event = {
 	immediate = {
 		set_global_flag = republican_victory
 		set_global_flag = scw_over
+		SPR = {
+			set_cosmetic_tag = SPR_POST
+		}
 	}
 	
 	option = {

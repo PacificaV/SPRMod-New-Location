@@ -409,11 +409,6 @@ completion_reward = {
 	SPR = {
 	country_event = { id = spain.101 }
 	}
-	hidden_effect = {
-	CTL = {
-		set_cosmetic_tag = CTL_civil_war
-		}
-		}
 }
  } 
 

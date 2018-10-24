@@ -1,6 +1,6 @@
 ﻿l_english:
- SPR_civil_war_democratic:0 "Republican Spain"
- SPR_civil_war_democratic_DEF:0 "Republican Spain"
+ SPR_SCW:0 "Republican Spain"
+ SPR_SCW_DEF:0 "Republican Spain"
  SPR_CNT_communism:0 "Iberian Federation"
  SPR_CNT_communism_ADJ:0 "Iberian"
  SPR_CNT_communism_DEF:0 "the Iberian Federation"
@@ -19,6 +19,11 @@
  BSQ_CNT_DEF:0 "the Basque Federation"
  BSQ_PCE:0 "Basque Socialist Republic"
  BSQ_PCE_DEF:0 "the Basque Socialist Republic"
- CTL_civil_war:0 "Spanish Socialist Republic"
- CTL_civil_war_DEF:0 "the Spanish Socialist Republic"
+ CTL_SCW:0 "Spanish Socialist Republic"
+ CTL_SCW_DEF:0 "the Spanish Socialist Republic"
+ SPR_POST:0 "Spanish Republic"
+ SPR_POST_DEF:0 "Spanish Republic"
+ SPN_POST:0 "Spanish State"
+ SPN_POST_DEF:0 "the Spanish State"
+ 
 
