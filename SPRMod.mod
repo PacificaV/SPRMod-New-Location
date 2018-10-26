@@ -1,4 +1,4 @@
-name="Spanish Civil War Mod"
+﻿name="Spanish Civil War Mod"
 path="mod/SPRMod"
 tags={
 	"Alternative History"

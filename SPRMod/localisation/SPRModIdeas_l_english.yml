@@ -51,6 +51,23 @@
  SPR_agrarian_crisis_idea_desc:0 "Ever since the previous government cut farm-worker wages, the Spanish agricultural sector has been in chaos. Violence and political radicalism plagues the countryside, and output is greatly decreased."
  SPR_agrarian_crisis_2_idea:0 "Agrarian Crisis"
  SPR_agrarian_crisis_2_idea_desc:0 "Ever since the previous government cut farm-worker wages, the Spanish agricultural sector has been in chaos. Violence and political radicalism plagues the countryside, and output is greatly decreased."
+ SPR_med_trade_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_2_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_3_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_4_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_5_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_6_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_7_idea:0 "The Mediterannean Economic Bloc"
+ SPR_med_trade_8_idea:0 "The Mediterannean Economic Bloc"
+ SPR_new_republic_idea:0 "The New Republic"
+ SPR_new_republic_2_idea:0 "The New Republic"
+ SPR_new_republic_3_idea:0 "The New Republic"
+ SPR_new_republic_4_idea:0 "The New Republic"
+ SPR_new_republic_5_idea:0 "The New Republic"
+ SPR_new_republic_6_idea:0 "The New Republic"
+ SPR_new_republic_7_idea:0 "The New Republic"
+ SPR_stable_politics_idea:0 "Stable Politics"
+ 
  
  ###Advisors###
  SPR_dolores_ibarruri:1 "Dolores Ibárruri"

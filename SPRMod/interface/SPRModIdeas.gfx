@@ -45,6 +45,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/spr_agrarian_crisis.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_med_trade_org"
+		texturefile = "gfx/interface/ideas/med_trade_org.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_spn_monarchist_rally"
 		texturefile = "gfx/interface/ideas/spn_monarchist_rally.dds"
 	}

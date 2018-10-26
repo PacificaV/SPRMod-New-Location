@@ -20,6 +20,10 @@ spriteTypes = {
 		name = "GFX_report_event_church_3"
 		texturefile = "gfx/event_pictures/GFX_report_event_church_3.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_falange_women"
+		texturefile = "gfx/event_pictures/GFX_report_event_falange_women.dds"
+	}
 }
 	
 	

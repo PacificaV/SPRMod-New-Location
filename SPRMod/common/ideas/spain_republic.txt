@@ -85,9 +85,9 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_factor = -0.1
-				consumer_goods_factor = -0.05
-				monthly_population = -0.1
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.12
+				monthly_population = -0.15
 			}
 		
 		}
@@ -107,11 +107,51 @@ ideas = {
 			}
 			
 			modifier = {
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.08
+				monthly_population = -0.10
+			}
+		
+		}
+		
+		SPR_agrarian_crisis_3_idea = {
+		
+			picture = spr_agrarian_crisis
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
 				political_power_factor = -0.05
-				consumer_goods_factor = -0.03
+				consumer_goods_factor = 0.03
 				monthly_population = -0.05
 			}
 		
+		}
+		
+		SPR_revamped_agriculture_idea = {
+		picture = generic_agrarian_reform
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				monthly_population = 0.05
+			}
 		}
 		
 		SPR_political_violence_idea = {
@@ -131,6 +171,25 @@ ideas = {
 			modifier = {
 				stability_factor = -0.10
 				political_power_factor = -0.05			
+			}
+		
+		}
+		SPR_stable_politics_idea = {
+		
+			picture = generic_unity_bonus
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.05		
 			}
 		
 		}
@@ -171,7 +230,7 @@ ideas = {
 			}
 			
 			modifier = {
-				stability_factor = -0.5	
+				stability_factor = -0.05	
 				consumer_goods_factor = 0.10		
 			}
 		
@@ -275,14 +334,14 @@ ideas = {
 				political_power_factor = 0.25
 				stability_factor = 0.10
 				monthly_population = 0.10
-				research_time_factor = 0.10
+				research_time_factor = -0.10
 			}
 		
 		}
 		
 		SPR_ruined_nation_idea = {
 		
-			picture = spr_new_republic
+			picture = spr_ruined_nation
 			
 			allowed = {
 				always = no
@@ -295,17 +354,19 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_factor = 0.25
-				stability_factor = 0.10
-				monthly_population = 0.10
-				research_time_factor = 0.10
+				political_power_cost = 0.3
+				consumer_goods_factor = 0.1
+				conscription_factor = -0.3
+				join_faction_tension = 0.50
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.3		
 			}
 		
 		}
 		
 		SPR_ruined_nation_2_idea = {
 		
-			picture = spr_new_republic
+			picture = spr_ruined_nation
 			
 			allowed = {
 				always = no
@@ -318,16 +379,43 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_factor = 0.25
-				stability_factor = 0.10
-				monthly_population = 0.10
-				research_time_factor = 0.10
+				political_power_cost = 0.2
+				consumer_goods_factor = 0.15
+				conscription_factor = -0.2
+				join_faction_tension = 0.30
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2	
 			}
 		
 		}
 		
 		SPR_ruined_nation_3_idea = {
 		
+			picture = spr_ruined_nation
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = 0.2
+				conscription_factor = -0.05
+				join_faction_tension = 0.10
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = -0.1	
+			}
+		
+		}
+		
+		SPR_republic_perfected_idea = {
+		
 			picture = spr_new_republic
 			
 			allowed = {
@@ -341,12 +429,213 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_factor = 0.25
+				political_power_factor = 0.15
 				stability_factor = 0.10
 				monthly_population = 0.10
 				research_time_factor = 0.10
 			}
 		
+		}
+		SPR_british_advisors_idea = {
+			picture = generic_naval_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				naval_coordination = 0.08
+				naval_hit_chance = 0.08
+				experience_gain_navy_factor = 0.1
+				experience_gain_navy = 0.05
+			}
+		}
+		SPR_french_advisors_idea = {
+			picture = generic_naval_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				training_time_factor = -0.08
+				planning_speed = 0.08
+				experience_gain_army_factor = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+		
+		SPR_med_trade_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.06
+				production_speed_buildings_factor = 0.06
+				research_time_factor = -0.06
+				
+			}
+		}
+		SPR_med_trade_2_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.06
+				production_speed_buildings_factor = 0.06
+				research_time_factor = -0.06
+				
+			}
+		}
+		SPR_med_trade_3_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.09
+				production_speed_buildings_factor = 0.09
+				research_time_factor = -0.09
+				
+			}
+		}
+		SPR_med_trade_4_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.12
+				production_speed_buildings_factor = 0.12
+				research_time_factor = -0.12
+				
+			}
+		}
+		SPR_med_trade_5_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.15
+				research_time_factor = -0.15
+				
+			}
+		}
+		SPR_med_trade_6_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.18
+				production_speed_buildings_factor = 0.18
+				research_time_factor = -0.18
+				
+			}
+		}
+		SPR_med_trade_7_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.21
+				production_speed_buildings_factor = 0.21
+				research_time_factor = -0.21
+				
+			}
+		}
+		SPR_med_trade_8_idea = {
+			picture = med_trade_org
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.24
+				production_speed_buildings_factor = 0.24
+				research_time_factor = -0.24
+				
+			}
 		}
 		
 		SPR_recycled_goods_idea = {

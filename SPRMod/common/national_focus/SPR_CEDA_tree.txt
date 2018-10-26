@@ -1,158 +1,162 @@
-focus_tree = { 
-id = ceda_tree
-country = { 
-factor = 0 
-modifier = { 
-add = 1 
-tag = SPR 
-} 
-} 
-#Focus for Surprise Election Victory
-focus = { 
-id = SPR_surprise_election_victory
-icon = GFX_goal_generic_attack_allies
-x = 8
-y = 0
-cost = 1
-available_if_capitulated = yes 
-ai_will_do = { 
- factor = 1
- } 
-available = {
-    has_country_flag = SPR_1936_elections
-}
-bypass = {
-	has_country_flag = SPR_1936_elections
-}
-} 
-
-#Focus for Anti-Marxist United Front
-focus = { 
-id = SPR_anti_marxist_united_front
-icon = GFX_goal_generic_dangerous_deal
-x = 8
-y = 1
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { 
-focus = SPR_surprise_election_victory 
-} 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-	country_event = {
-	id = spain.80
-	hours = 1
-}	
-}
- } 
-
-#Focus for Radicalize the National Front
-focus = { 
-id = SPR_radicalize_the_national_front
-icon = GFX_goal_generic_major_alliance
-x = 8
-y = 2
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_anti_marxist_united_front } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-	country_event = {
-	id = spain.81
-	hours = 1
-}
-}
- } 
-
-#Focus for Christian Corporatism
-focus = { 
-id = SPR_christian_corporatism
-icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-x = 6
-y = 3
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_radicalize_the_national_front } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-country_event = {
-	id = spain.82
-	hours = 1
-}
-}
-
- } 
-
-#Focus for The Fate Of Organized Labor
-focus = { 
-id = SPR_the_fate_of_organized_labor
-icon = GFX_focus_CZE_german_puppet
-x = 8
-y = 3
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_radicalize_the_national_front } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-country_event = {
-	id = spain.83
-	hours = 1
-}
-}
-
- } 
-
-#Focus for The Issue Of The Monarchy
-focus = { 
-id = SPR_the_issue_of_the_monarchy
-icon = GFX_focus_generic_military_mission
-x = 10
-y = 3
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_radicalize_the_national_front }  
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-country_event = {
-	id = spain.84
-	hours = 1
-}
+focus_tree = {
+	id = ceda_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			tag = SPR
+		}
 	}
-
- } 
-
-#Focus for The Fate of the Republic
-focus = { 
-id = SPR_the_fate_of_the_republic
-icon = GFX_goal_generic_military_deal
-x = 8
-y = 4
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_christian_corporatism } 
-prerequisite = { focus = SPR_the_fate_of_organized_labor } 
-prerequisite = { focus = SPR_the_issue_of_the_monarchy } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = {
-	id = spain.85
-	hours = 1
-}
+	# Focus for Surprise Election Victory
+	focus = {
+		id = SPR_surprise_election_victory
+		icon = GFX_goal_generic_attack_allies
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = SPR_1936_elections
+		}
+		bypass = {
+			has_country_flag = SPR_1936_elections
+		}
 	}
+	# Focus for Anti-Marxist United Front
+	focus = {
+		id = SPR_anti_marxist_united_front
+		icon = GFX_goal_generic_dangerous_deal
+		x = 8
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_surprise_election_victory
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.80
+				hours = 1
+			}
+		}
+	}
+	# Focus for Radicalize the National Front
+	focus = {
+		id = SPR_radicalize_the_national_front
+		icon = GFX_goal_generic_major_alliance
+		x = 8
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_anti_marxist_united_front
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.81
+				hours = 1
+			}
+		}
+	}
+	# Focus for Christian Corporatism
+	focus = {
+		id = SPR_christian_corporatism
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 6
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_radicalize_the_national_front
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.82
+				hours = 1
+			}
+		}
+	}
+	# Focus for The Fate Of Organized Labor
+	focus = {
+		id = SPR_the_fate_of_organized_labor
+		icon = GFX_focus_CZE_german_puppet
+		x = 8
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_radicalize_the_national_front
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.83
+				hours = 1
+			}
+		}
+	}
+	# Focus for The Issue Of The Monarchy
+	focus = {
+		id = SPR_the_issue_of_the_monarchy
+		icon = GFX_focus_generic_military_mission
+		x = 10
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_radicalize_the_national_front
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.84
+				hours = 1
+			}
+		}
+	}
+	# Focus for The Fate of the Republic
+	focus = {
+		id = SPR_the_fate_of_the_republic
+		icon = GFX_goal_generic_military_deal
+		x = 8
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_christian_corporatism
+		}
+		prerequisite = {
+			focus = SPR_the_fate_of_organized_labor
+		}
+		prerequisite = {
+			focus = SPR_the_issue_of_the_monarchy
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.85
+				hours = 1
+			}
+		}
+	}
+	# End of focuses
+}
 
- } 
-
-#End of focuses 
- }

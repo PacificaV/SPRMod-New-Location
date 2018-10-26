@@ -1,178 +1,201 @@
-focus_tree = { 
-id = prewar_tree
-country = { 
-factor = 0 
-modifier = { 
-add = 10 
-tag = SPR 
-} 
-} 
-#Focus for The Black Two Years
-focus = { 
-id = SPR_the_black_two_years
-icon = GFX_goal_generic_attack_allies
-x = 8
-y = 0
-cost = 1
-available_if_capitulated = yes 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-add_political_power = -100
- } 
-
- } 
-
-#Focus for The 1936 Elections
-focus = { 
-id = SPR_the_1936_elections
-icon = GFX_goal_generic_dangerous_deal
-x = 8
-y = 1
-cost = 1
-available_if_capitulated = yes 
-prerequisite = { 
-focus = SPR_the_black_two_years 
-} 
-available = {
-    has_country_flag = SPR_1936_elections
-}
-bypass = {
-	has_country_flag = SPR_1936_elections
-}
-ai_will_do = { 
- factor = 1
- } 
-
- } 
-
-#Focus for Rehire the Workers
-focus = { 
-id = SPR_rehire_the_workers
-icon = GFX_goal_generic_major_alliance
-x = 4
-y = 2
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_1936_elections } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-	country_event = { id = spain.21 hours = 2}
-}
- } 
-
-#Focus for The Issue of Political Violence
-focus = { 
-id = SPR_the_issue_of_political_violence
-icon = GFX_goal_tfv_saf_anti_colonialist_crusade
-x = 8
-y = 2
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_1936_elections } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.22 hours = 2}
-}
-
- } 
-
-#Focus for Free the Political Prisoners
-focus = { 
-id = SPR_free_the_political_prisoners
-icon = GFX_focus_CZE_german_puppet
-x = 12
-y = 2
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_1936_elections } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.20 hours = 2}
-}
-
- } 
-
-#Focus for The Issue of General Ochoa
-focus = { 
-id = SPR_the_issue_of_general_ochoa
-icon = GFX_focus_generic_military_mission
-x = 8
-y = 3
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_rehire_the_workers } 
-prerequisite = { focus = SPR_the_issue_of_political_violence } 
-prerequisite = { focus = SPR_free_the_political_prisoners } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.23 hours = 2}
+focus_tree = {
+	id = prewar_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
 	}
-
- } 
-
-#Focus for Address the Army's Loyalties
-focus = { 
-id = SPR_address_the_armys_loyalties
-icon = GFX_goal_generic_military_deal
-x = 8
-y = 4
-cost = 4
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_issue_of_general_ochoa } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.24 hours = 2}
+	# Focus for The Black Two Years
+	focus = {
+		id = SPR_the_black_two_years
+		icon = GFX_goal_generic_attack_allies
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -100
+		}
 	}
-
- } 
-
-#Focus for The Issue of the Paramilitaries
-focus = { 
-id = SPR_the_issue_of_the_paramilitaries
-icon = GFX_goal_generic_small_arms
-x = 12
-y = 4
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_issue_of_general_ochoa } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.25 hours = 2}
+	# Focus for The 1936 Elections
+	focus = {
+		id = SPR_the_1936_elections
+		icon = GFX_goal_generic_dangerous_deal
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_black_two_years
+		}
+		available = {
+			has_country_flag = SPR_1936_elections
+		}
+		bypass = {
+			has_country_flag = SPR_1936_elections
+		}
+		ai_will_do = {
+			factor = 1
+		}
 	}
-
- } 
-
-#Focus for The Issue of the UME
-focus = { 
-id = SPR_the_issue_of_the_ume
-icon = GFX_goal_generic_forceful_treaty
-x = 4
-y = 4
-cost = 3
-available_if_capitulated = yes 
-prerequisite = { focus = SPR_the_issue_of_general_ochoa } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	country_event = { id = spain.26 hours = 2}
+	# Focus for Rehire the Workers
+	focus = {
+		id = SPR_rehire_the_workers
+		icon = GFX_goal_generic_major_alliance
+		x = 4
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_1936_elections
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.21
+				hours = 2
+			}
+		}
 	}
+	# Focus for The Issue of Political Violence
+	focus = {
+		id = SPR_the_issue_of_political_violence
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 8
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_1936_elections
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.22
+				hours = 2
+			}
+		}
+	}
+	# Focus for Free the Political Prisoners
+	focus = {
+		id = SPR_free_the_political_prisoners
+		icon = GFX_focus_CZE_german_puppet
+		x = 12
+		y = 2
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_1936_elections
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.20
+				hours = 2
+			}
+		}
+	}
+	# Focus for The Issue of General Ochoa
+	focus = {
+		id = SPR_the_issue_of_general_ochoa
+		icon = GFX_focus_generic_military_mission
+		x = 8
+		y = 3
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_rehire_the_workers
+		}
+		prerequisite = {
+			focus = SPR_the_issue_of_political_violence
+		}
+		prerequisite = {
+			focus = SPR_free_the_political_prisoners
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.23
+				hours = 2
+			}
+		}
+	}
+	# Focus for Address the Army's Loyalties
+	focus = {
+		id = SPR_address_the_armys_loyalties
+		icon = GFX_goal_generic_military_deal
+		x = 8
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_issue_of_general_ochoa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.24
+				hours = 2
+			}
+		}
+	}
+	# Focus for The Issue of the Paramilitaries
+	focus = {
+		id = SPR_the_issue_of_the_paramilitaries
+		icon = GFX_goal_generic_small_arms
+		x = 12
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_issue_of_general_ochoa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.25
+				hours = 2
+			}
+		}
+	}
+	# Focus for The Issue of the UME
+	focus = {
+		id = SPR_the_issue_of_the_ume
+		icon = GFX_goal_generic_forceful_treaty
+		x = 4
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPR_the_issue_of_general_ochoa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.26
+				hours = 2
+			}
+		}
+	}
+	# End of focuses
+}
 
- } 
-
-#End of focuses 
- }

@@ -1,465 +1,511 @@
-focus_tree = { 
-id = SPN_war_tree
-country = { 
-factor = 0 
-modifier = { 
-add = 3 
-tag = SPN 
-} 
-} 
-#Focus for The Coup Begins
-focus = { 
-id = SPN_the_coup_begins
-icon = GFX_goal_support_fascism
-x = 11
-y = 1
-cost = 0
-available_if_capitulated = yes 
-ai_will_do = { 
- factor = 1
- } 
- available = {
-			has_war = yes
-			} 
-			bypass = {
-	has_global_flag = spanish_civil_war
-}
-completion_reward = { 
-}
-} 
-
-#Focus for Stand by the Falangists
-focus = { 
-id = SPN_stand_by_the_falangists
-icon = GFX_goal_support_fascism
-x = 7
-y = 2
-cost = 1
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_coup_begins } 
-mutually_exclusive = { focus = SPN_rally_the_monarchists } 
-mutually_exclusive = { focus = SPN_empower_the_military } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-	add_ideas = SPN_stand_by_the_falangists_idea
-	}
- } 
-
-#Focus for Empower the Military
-focus = { 
-id = SPN_empower_the_military
-icon = GFX_goal_rhineland
-x = 15
-y = 2
-cost = 1
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_coup_begins } 
-mutually_exclusive = { focus = SPN_rally_the_monarchists } 
-mutually_exclusive = { focus = SPN_stand_by_the_falangists } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-hidden_effect = {
-	set_party_name = { ideology = fascism long_name = SPN_fascism_military_long name = SPN_fascism_military }
+focus_tree = {
+	id = SPN_war_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 3
+			tag = SPN
 		}
-	add_ideas = SPN_empower_the_military_idea
 	}
- } 
-
-#Focus for Rally the Monarchists
-focus = { 
-id = SPN_rally_the_monarchists
-icon = GFX_focus_rom_royal_dictatorship
-x = 11
-y = 2
-cost = 1
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_coup_begins } 
-mutually_exclusive = { focus = SPN_stand_by_the_falangists } 
-mutually_exclusive = { focus = SPN_empower_the_military } 
-ai_will_do = { 
- factor = 1
- }
-completion_reward = { 
-	add_ideas = SPN_rally_the_monarchists_idea
-	} 
-
- } 
-
-#Focus for Restructure the Legion
-focus = { 
-id = SPN_restructure_the_legion
-icon = GFX_restructure_the_legion
-x = 20
-y = 2
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_coup_begins } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-	add_tech_bonus = {
+	# Focus for The Coup Begins
+	focus = {
+		id = SPN_the_coup_begins
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 1
+		cost = 0
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = yes
+		}
+		bypass = {
+			has_global_flag = spanish_civil_war
+		}
+		completion_reward = {
+		}
+	}
+	# Focus for Stand by the Falangists
+	focus = {
+		id = SPN_stand_by_the_falangists
+		icon = GFX_goal_support_fascism
+		x = 7
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_the_coup_begins
+		}
+		mutually_exclusive = {
+			focus = SPN_rally_the_monarchists
+		}
+		mutually_exclusive = {
+			focus = SPN_empower_the_military
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_stand_by_the_falangists_idea
+			set_country_flag = falangist_alignment
+		}
+	}
+	# Focus for Empower the Military
+	focus = {
+		id = SPN_empower_the_military
+		icon = GFX_goal_rhineland
+		x = 15
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_the_coup_begins
+		}
+		mutually_exclusive = {
+			focus = SPN_rally_the_monarchists
+		}
+		mutually_exclusive = {
+			focus = SPN_stand_by_the_falangists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_party_name = {
+					ideology = fascism
+					long_name = SPN_fascism_military_long
+					name = SPN_fascism_military
+				}
+			}
+			add_ideas = SPN_empower_the_military_idea
+			set_country_flag = military_alignment
+		}
+	}
+	# Focus for Rally the Monarchists
+	focus = {
+		id = SPN_rally_the_monarchists
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 11
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_the_coup_begins
+		}
+		mutually_exclusive = {
+			focus = SPN_stand_by_the_falangists
+		}
+		mutually_exclusive = {
+			focus = SPN_empower_the_military
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_rally_the_monarchists_idea
+			set_country_flag = monarchist_alignment
+		}
+	}
+	# Focus for Restructure the Legion
+	focus = {
+		id = SPN_restructure_the_legion
+		icon = GFX_restructure_the_legion
+		x = 20
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_the_coup_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
 				name = land_doctrine_bonus
 				bonus = 0.50
 				uses = 2
 				category = land_doctrine
 			}
-	}
- } 
-
-#Focus for Appeal to the Axis
-focus = { 
-id = SPN_appeal_to_the_axis
-icon = GFX_goal_generic_military_deal
-x = 2
-y = 2
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_the_coup_begins } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = { 
- country_event = { id = spain.2 }
- }
- }  
-
-#Focus for Catholic Morale Officers
-focus = { 
-id = SPN_catholic_morale_officers
-icon = GFX_catholic_morale_officers
-x = 7
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_stand_by_the_falangists } 
-ai_will_do = { 
- factor = 1
- }
-completion_reward = {
-	add_ideas = SPN_catholic_morale_officers_idea
-	} 
-
- } 
-
-#Focus for The Church and the State
-focus = { 
-id = SPN_the_church_and_the_state
-icon = GFX_goal_generic_dangerous_deal
-x = 7
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_catholic_morale_officers } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-	country_event = spain.41
- } 
- }
-
-#Focus for International Support 
-focus = { 
-id = SPN_international_support
-icon = GFX_focus_generic_diplomatic_treaty
-x = 1
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_appeal_to_the_axis } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = { 
-	SPN = {
-	country_event = { id = spain.17 }
-	}
-	hidden_effect = {
-		add_equipment_to_stockpile = {
-		type = light_tank_0
-		amount = 150
-		producer = GER
-		}
-		add_equipment_to_stockpile = {
-		type = motorized
-		amount = 250
-		producer = ITA
 		}
 	}
+	# Focus for Appeal to the Axis
+	focus = {
+		id = SPN_appeal_to_the_axis
+		icon = GFX_goal_generic_military_deal
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_the_coup_begins
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = spain.2
+			}
+		}
 	}
- }  
-
-#Focus for Acquire Recognition
-focus = { 
-id = SPN_acquire_recognition
-icon = GFX_goal_molotov_ribbentrop_pact
-x = 3
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_appeal_to_the_axis } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
+	# Focus for Catholic Morale Officers
+	focus = {
+		id = SPN_catholic_morale_officers
+		icon = GFX_catholic_morale_officers
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_stand_by_the_falangists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_catholic_morale_officers_idea
+		}
+	}
+	# Focus for The Church and the State
+	focus = {
+		id = SPN_the_church_and_the_state
+		icon = GFX_goal_generic_dangerous_deal
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_catholic_morale_officers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = spain.41
+		}
+	}
+	# Focus for International Support
+	focus = {
+		id = SPN_international_support
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_appeal_to_the_axis
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			SPN = {
+				country_event = {
+					id = spain.17
+				}
+			}
+			hidden_effect = {
+				add_equipment_to_stockpile = {
+					type = light_tank_0
+					amount = 150
+					producer = GER
+				}
+				add_equipment_to_stockpile = {
+					type = motorized
+					amount = 250
+					producer = ITA
+				}
+			}
+		}
+	}
+	# Focus for Acquire Recognition
+	focus = {
+		id = SPN_acquire_recognition
+		icon = GFX_goal_molotov_ribbentrop_pact
+		x = 3
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_appeal_to_the_axis
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.1
+		}
 	}
-
- } 
-
-#Focus for The Only True Spain
-focus = { 
-id = SPN_the_only_true_spain
-icon = GFX_goal_generic_propaganda
-x = 2
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_international_support } 
-prerequisite = { focus = SPN_acquire_recognition } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	add_ideas = SPN_spanish_pride_idea
- }
- } 
-
-#Focus for Endorse the Carlists
-focus = { 
-id = SPN_endorse_the_carlists
-icon = GFX_endorse_the_carlists
-x = 10
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_rally_the_monarchists } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	create_corps_commander = {
-	name = "Manuel Fal Conde"
-	portrait_path = "gfx/leaders/SPN/Portrait_Manuel_Fal_Conde.dds"
-	traits = {politically_connected}
-	skill = 4
-    attack_skill = 4
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 3
- }	
- 
- add_political_power = 100
-}
-} 
-
-#Focus for Support the Throne
-focus = { 
-id = SPN_support_the_throne
-icon = GFX_goal_generic_radar
-x = 10
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_endorse_the_carlists } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-		add_popularity = {
+	# Focus for The Only True Spain
+	focus = {
+		id = SPN_the_only_true_spain
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_international_support
+		}
+		prerequisite = {
+			focus = SPN_acquire_recognition
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_spanish_pride_idea
+		}
+	}
+	# Focus for Endorse the Carlists
+	focus = {
+		id = SPN_endorse_the_carlists
+		icon = GFX_endorse_the_carlists
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_rally_the_monarchists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_corps_commander = {
+				name = "Manuel Fal Conde"
+				portrait_path = "gfx/leaders/SPN/Portrait_Manuel_Fal_Conde.dds"
+				traits = {
+					politically_connected
+				}
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			add_political_power = 100
+		}
+	}
+	# Focus for Support the Throne
+	focus = {
+		id = SPN_support_the_throne
+		icon = GFX_goal_generic_radar
+		x = 10
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_endorse_the_carlists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
 				ideology = neutrality
 				popularity = 0.10
 			}
 			add_political_power = 50
 			add_stability = 0.1
 		}
- }
-
-#Focus for Acknowledge the Alfonsists
-focus = { 
-id = SPN_acknowledge_the_alfonsists
-icon = GFX_alfonso_focus
-x = 12
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_rally_the_monarchists } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	create_corps_commander = {
-	name = "Don Juan de Borbón"
-	portrait_path = "gfx/leaders/SPN/Portrait_Infante_Juan.dds"
-	traits = {politically_connected}
-	skill = 3
-    attack_skill = 3
-    defense_skill = 4
-    planning_skill = 3
-    logistics_skill = 4
- }	
- 
- add_political_power = 100
-}
-
- } 
-
-#Focus for Encourage Nostalgia
-focus = { 
-id = SPN_encourage_nostalgia
-icon = GFX_goal_generic_propaganda
-x = 12
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_acknowledge_the_alfonsists } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-	add_ideas = SPN_monarchist_rally_idea
-}
- } 
-
-#Focus for Crown the King
-focus = { 
-id = SPN_crown_the_king
-icon = GFX_focus_rom_parties_end
-x = 11
-y = 5
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_support_the_throne } 
-prerequisite = { focus = SPN_encourage_nostalgia } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
- set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
+	}
+	# Focus for Acknowledge the Alfonsists
+	focus = {
+		id = SPN_acknowledge_the_alfonsists
+		icon = GFX_alfonsists_focus
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_rally_the_monarchists
 		}
-	country_event = { id = spain.18 }
-  }
-
- } 
-
-#Focus for The Army Above All
-focus = { 
-id = SPN_the_army_above_all
-icon = GFX_focus_generic_military_mission
-x = 15
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_mass_conscription } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-	add_ideas = SPN_army_above_all_idea
-  }
-}
-
-#Focus for Mass Conscription
-focus = { 
-id = SPN_mass_conscription
-icon = GFX_goal_generic_military_sphere
-x = 15
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_empower_the_military } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-add_ideas = SPN_mass_conscription_idea
-}
- } 
-
-#Focus for Faster Training Regimines
-focus = { 
-id = SPN_faster_training_regimines
-icon = GFX_focus_generic_military_academy
-x = 19
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_restructure_the_legion } 
-ai_will_do = { 
- factor = 1
- } 
-completion_reward = {
-add_ideas = SPN_faster_training_idea
-}
-
- } 
-
-#Focus for Knights of the Air
-focus = { 
-id = SPN_knights_of_the_air
-icon = GFX_goal_generic_air_fighter2
-x = 21
-y = 3
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_restructure_the_legion } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
- add_tech_bonus = {
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_corps_commander = {
+				name = "Don Juan de Borbón"
+				portrait_path = "gfx/leaders/SPN/Portrait_Infante_Juan.dds"
+				traits = {
+					politically_connected
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			add_political_power = 100
+		}
+	}
+	# Focus for Encourage Nostalgia
+	focus = {
+		id = SPN_encourage_nostalgia
+		icon = GFX_goal_generic_propaganda
+		x = 12
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_acknowledge_the_alfonsists
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_monarchist_rally_idea
+		}
+	}
+	# Focus for Crown the King
+	focus = {
+		id = SPN_crown_the_king
+		icon = GFX_focus_rom_parties_end
+		x = 11
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_support_the_throne
+		}
+		prerequisite = {
+			focus = SPN_encourage_nostalgia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			country_event = {
+				id = spain.18
+			}
+		}
+	}
+	# Focus for The Army Above All
+	focus = {
+		id = SPN_the_army_above_all
+		icon = GFX_focus_generic_military_mission
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_mass_conscription
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_army_above_all_idea
+		}
+	}
+	# Focus for Mass Conscription
+	focus = {
+		id = SPN_mass_conscription
+		icon = GFX_goal_generic_military_sphere
+		x = 15
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_empower_the_military
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_mass_conscription_idea
+		}
+	}
+	# Focus for Faster Training Regimines
+	focus = {
+		id = SPN_faster_training_regimines
+		icon = GFX_focus_generic_military_academy
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_restructure_the_legion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_faster_training_idea
+		}
+	}
+	# Focus for Knights of the Air
+	focus = {
+		id = SPN_knights_of_the_air
+		icon = GFX_goal_generic_air_fighter2
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_restructure_the_legion
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
 				name = air_doctrine_bonus
 				bonus = 0.50
 				uses = 2
 				category = air_doctrine
 			}
-}
- } 
-
-#Focus for Arm our Men!
-focus = { 
-id = SPN_arm_our_men
-icon = GFX_goal_generic_small_arms
-x = 19
-y = 4
-cost = 5
-available_if_capitulated = yes 
-prerequisite = { focus = SPN_faster_training_regimines } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
- add_ideas = SPN_arm_our_men_idea
-}
- } 
-
-#Focus for The New Spanish Legion
-focus = { 
-id = SPN_the_new_spanish_legion
-icon = GFX_goal_rhineland
-x = 21
-y = 4
-cost = 5
-available_if_capitulated = yes  
-prerequisite = { focus = SPN_knights_of_the_air } 
-ai_will_do = { 
- factor = 1
- } 
- completion_reward = {
-swap_ideas = {
-     remove_idea = SPN_legion_army_idea
-     add_idea = SPN_legion_army_idea_2
+		}
 	}
+	# Focus for Arm our Men!
+	focus = {
+		id = SPN_arm_our_men
+		icon = GFX_goal_generic_small_arms
+		x = 19
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_faster_training_regimines
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPN_arm_our_men_idea
+		}
 	}
- }  
+	# Focus for The New Spanish Legion
+	focus = {
+		id = SPN_the_new_spanish_legion
+		icon = GFX_goal_rhineland
+		x = 21
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = SPN_knights_of_the_air
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPN_legion_army_idea
+				add_idea = SPN_legion_army_idea_2
+			}
+		}
+	}
+	# End of focuses
+}
 
-#End of focuses 
- }

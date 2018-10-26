@@ -34,11 +34,6 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/GFX_democratic_confederalism.dds" 
 	}
 	
-	SpriteType = {
-	name = "GFX_alfonso_focus"
-	texturefile = "gfx/interface/goals/GFX_alfonso_focus.dds" 
-	}
-	
 	SpriteType = { 
 	name = "GFX_industrial_democracy"
 	texturefile = "gfx/interface/goals/GFX_industrial_democracy.dds" 
@@ -100,6 +95,14 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/GFX_DestroyColonialism.dds" 
 	}
 	SpriteType = { 
+	name = "GFX_med_trade_org_focus" 
+	texturefile = "gfx/interface/goals/GFX_med_trade_org_focus.dds" 
+	}
+	SpriteType = { 
+	name = "GFX_alfonsists_focus" 
+	texturefile = "gfx/interface/goals/GFX_alfonsists_focus.dds" 
+	}
+	SpriteType = { 
 	name = "GFX_CNTFocus" 
 	texturefile = "gfx/interface/goals/GFX_CNTFocus.dds" 
 	}
@@ -123,28 +126,4 @@ spriteTypes = {
 	name = "GFX_IndustrialDilemma" 
 	texturefile = "gfx/interface/goals/GFX_IndustrialDilemma.dds" 
 	}
-	
-
-	
-##Icon For: 57880
- SpriteType = { 
- name = "GFX_shutdowntheunions" 
- texturefile = "gfx/interface/goals/GFX_shutdowntheunions.tga" 
- }##Icon For: 57882
- SpriteType = { 
- name = "GFX_newanarchism" 
- texturefile = "gfx/interface/goals/GFX_newanarchism.tga" 
- }##Icon For: 57886
- SpriteType = { 
- name = "GFX_privatizedroadways" 
- texturefile = "gfx/interface/goals/GFX_privatizedroadways.tga" 
- }##Icon For: 57887
- SpriteType = { 
- name = "GFX_newercheapermanufacturing" 
- texturefile = "gfx/interface/goals/GFX_newercheapermanufacturing.tga" 
- }##Icon For: 57893
- SpriteType = { 
- name = "GFX_mandatoryprivatizededucation" 
- texturefile = "gfx/interface/goals/GFX_mandatoryprivatizededucation.tga" 
- }  
  }

@@ -1,60 +1,75 @@
-﻿
-############################
+﻿############################
 ## Spanish Events
 ############################
 add_namespace = spain
+
 ## Spanish Civil War
+
 country_event = {
 	id = spain.1
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.1.t
 	desc = spain.1.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
 	immediate = {
-	hidden_effect = {
-		SPN = {
-			country_event = {
-				id = spain.35
-				days = 5
-			}
-			if = {
-				limit = {
-					has_global_flag = primo_escapes
-				}
+		hidden_effect = {
+			SPN = {
 				country_event = {
-					id = spain.37
-					days = 25
+					id = spain.35
+					days = 5
 				}
-			}			
-		}
-		SPR = {
-			country_event = {
-				id = spain.29
-				days = 14
+				if = {
+					limit = {
+						has_global_flag = primo_escapes
+					}
+					country_event = {
+						id = spain.37
+						days = 25
+					}
+				}
 			}
-		}
-		SPR = {
-			remove_ideas = SPR_political_violence
-		}
-		SPR = {
-			country_event = {
-				id = spain.58
-				days = 75
+			SPR = {
+				country_event = {
+					id = spain.29
+					days = 14
+				}
 			}
-		}
-		171 = { set_demilitarized_zone = yes }
-		176 = { set_demilitarized_zone = yes }
-		166 = { set_demilitarized_zone = yes }
-		169 = { set_demilitarized_zone = yes }
-		170 = { set_demilitarized_zone = yes }
-		174 = { set_demilitarized_zone = yes }
-		177 = { set_demilitarized_zone = yes }
-		178 = { set_demilitarized_zone = yes }
+			SPR = {
+				country_event = {
+					id = spain.58
+					days = 75
+				}
+			}
+			171 = {
+				set_demilitarized_zone = yes
+			}
+			176 = {
+				set_demilitarized_zone = yes
+			}
+			166 = {
+				set_demilitarized_zone = yes
+			}
+			169 = {
+				set_demilitarized_zone = yes
+			}
+			170 = {
+				set_demilitarized_zone = yes
+			}
+			174 = {
+				set_demilitarized_zone = yes
+			}
+			177 = {
+				set_demilitarized_zone = yes
+			}
+			178 = {
+				set_demilitarized_zone = yes
+			}
 		}
 	}
 	option = {
-		#Support Nationalists
+		# Support Nationalists
 		name = spain.1.a
 		trigger = {
 			is_ai = no
@@ -62,14 +77,30 @@ country_event = {
 		custom_effect_tooltip = nationalists_chosen
 		set_global_flag = spanish_civil_war
 		hidden_effect = {
-		171 = { set_demilitarized_zone = no }
-		176 = { set_demilitarized_zone = no }
-		166 = { set_demilitarized_zone = no }
-		169 = { set_demilitarized_zone = no }
-		170 = { set_demilitarized_zone = no }
-		174 = { set_demilitarized_zone = no }
-		177 = { set_demilitarized_zone = no }
-		178 = { set_demilitarized_zone = no }
+			171 = {
+				set_demilitarized_zone = no
+			}
+			176 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			169 = {
+				set_demilitarized_zone = no
+			}
+			170 = {
+				set_demilitarized_zone = no
+			}
+			174 = {
+				set_demilitarized_zone = no
+			}
+			177 = {
+				set_demilitarized_zone = no
+			}
+			178 = {
+				set_demilitarized_zone = no
+			}
 			SPR = {
 				set_stability = 0.9
 				set_war_support = 0.8
@@ -85,35 +116,35 @@ country_event = {
 				}
 			}
 			SPN = {
-			country_event = {
+				country_event = {
 					id = spain.100
 					days = 1
 				}
 			}
-				SPN = {
-					transfer_state = 171
-				}
-				SPN = {
-					transfer_state = 176
-				}
-				SPN = {
-					transfer_state = 166
-				}
-				SPN = {
-					transfer_state = 169
-				}
-				SPN = {
-					transfer_state = 170
-				}
-				SPN = {
-					transfer_state = 174
-				}
-				SPN = {
-					transfer_state = 177
-				}
-				SPN = {
-					transfer_state = 178
-				}
+			SPN = {
+				transfer_state = 171
+			}
+			SPN = {
+				transfer_state = 176
+			}
+			SPN = {
+				transfer_state = 166
+			}
+			SPN = {
+				transfer_state = 169
+			}
+			SPN = {
+				transfer_state = 170
+			}
+			SPN = {
+				transfer_state = 174
+			}
+			SPN = {
+				transfer_state = 177
+			}
+			SPN = {
+				transfer_state = 178
+			}
 			SPR = {
 				create_corps_commander = {
 					name = "Antonio Ortiz"
@@ -170,7 +201,6 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 1
 					logistics_skill = 2
-					
 				}
 				create_corps_commander = {
 					name = "Enrique Lister"
@@ -198,7 +228,6 @@ country_event = {
 			SPR = {
 				load_oob = "SPR_Civil_War"
 			}
-			
 			SPN = {
 				add_ideas = SPR_spanish_civil_war
 				add_ideas = SPN_legion_army_idea
@@ -315,31 +344,52 @@ country_event = {
 				}
 			}
 			SPN = {
-				set_technology = { CAS1 = yes }
+				set_technology = {
+					CAS1 = yes
+				}
 				change_tag_from = SPR
 			}
-				
 			SPR = {
-				set_technology = { CAS1 = yes }
+				set_technology = {
+					CAS1 = yes
+				}
 				load_focus_tree = SPR_war_tree
 			}
-		}		
+		}
 	}
 	option = {
-		#Support Republicans
+		# Support Republicans
 		name = spain.1.b
 		set_global_flag = spanish_civil_war
 		hidden_effect = {
-		171 = { set_demilitarized_zone = no }
-		176 = { set_demilitarized_zone = no }
-		166 = { set_demilitarized_zone = no }
-		169 = { set_demilitarized_zone = no }
-		170 = { set_demilitarized_zone = no }
-		174 = { set_demilitarized_zone = no }
-		177 = { set_demilitarized_zone = no }
-		178 = { set_demilitarized_zone = no }
+			171 = {
+				set_demilitarized_zone = no
+			}
+			176 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			169 = {
+				set_demilitarized_zone = no
+			}
+			170 = {
+				set_demilitarized_zone = no
+			}
+			174 = {
+				set_demilitarized_zone = no
+			}
+			177 = {
+				set_demilitarized_zone = no
+			}
+			178 = {
+				set_demilitarized_zone = no
+			}
 			SPR = {
-				set_technology = { CAS1 = yes }
+				set_technology = {
+					CAS1 = yes
+				}
 				set_equipment_fraction = 0.6
 				set_stability = 0.9
 				set_war_support = 0.8
@@ -355,36 +405,38 @@ country_event = {
 				}
 			}
 			SPN = {
-			set_technology = { CAS1 = yes }
-			country_event = {
+				set_technology = {
+					CAS1 = yes
+				}
+				country_event = {
 					id = spain.100
 					days = 1
 				}
 			}
-				SPN = {
-					transfer_state = 171
-				}
-				SPN = {
-					transfer_state = 176
-				}
-				SPN = {
-					transfer_state = 166
-				}
-				SPN = {
-					transfer_state = 169
-				}
-				SPN = {
-					transfer_state = 170
-				}
-				SPN = {
-					transfer_state = 174
-				}
-				SPN = {
-					transfer_state = 177
-				}
-				SPN = {
-					transfer_state = 178
-				}
+			SPN = {
+				transfer_state = 171
+			}
+			SPN = {
+				transfer_state = 176
+			}
+			SPN = {
+				transfer_state = 166
+			}
+			SPN = {
+				transfer_state = 169
+			}
+			SPN = {
+				transfer_state = 170
+			}
+			SPN = {
+				transfer_state = 174
+			}
+			SPN = {
+				transfer_state = 177
+			}
+			SPN = {
+				transfer_state = 178
+			}
 			SPR = {
 				create_corps_commander = {
 					name = "Antonio Ortiz"
@@ -452,7 +504,6 @@ country_event = {
 					defense_skill = 2
 					planning_skill = 1
 					logistics_skill = 2
-					
 				}
 				create_corps_commander = {
 					name = "Enrique Lister"
@@ -469,7 +520,6 @@ country_event = {
 			SPR = {
 				load_oob = "SPR_Civil_War"
 			}
-			
 			SPN = {
 				add_ideas = SPR_spanish_civil_war
 				add_ideas = SPN_legion_army_idea
@@ -584,20 +634,24 @@ country_event = {
 					planning_skill = 1
 					logistics_skill = 1
 				}
-			}			
+			}
 			SPR = {
 				load_focus_tree = SPR_war_tree
 			}
-		}		
+		}
 	}
 }
+
 ## Nationalists: Seek Support
+
 country_event = {
 	id = spain.2
-	title = spain.2.t
-	desc = spain.2.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.2.t
+	desc = spain.2.d
 	trigger = {
 		has_civil_war = yes
 		original_tag = SPR
@@ -640,13 +694,17 @@ country_event = {
 		}
 	}
 }
+
 ## Republicans: Seek Support
+
 country_event = {
 	id = spain.3
-	title = spain.2.t
-	desc = spain.3.d
 	picture = GFX_report_event_spain_civil_war_volunteers
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.2.t
+	desc = spain.3.d
 	option = {
 		name = spain.3.a
 		every_other_country = {
@@ -685,13 +743,17 @@ country_event = {
 		}
 	}
 }
+
 ## Nationalist Spain Wants Our Help
+
 country_event = {
 	id = spain.4
-	title = spain.4.t
-	desc = spain.4.d
 	picture = GFX_report_event_spain_civil_war_soldiers
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.4.t
+	desc = spain.4.d
 	trigger = {
 		SPR = {
 			has_civil_war = yes
@@ -706,13 +768,17 @@ country_event = {
 		name = spain.4.b
 	}
 }
+
 ## Republican Spain Wants Our Help
+
 country_event = {
 	id = spain.5
-	title = spain.5.t
-	desc = spain.5.d
 	picture = GFX_report_event_spain_civil_war_volunteers_02
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.5.t
+	desc = spain.5.d
 	trigger = {
 		SPR = {
 			has_civil_war = yes
@@ -727,12 +793,17 @@ country_event = {
 		name = spain.5.b
 	}
 }
+
 ## Nationalist Spain Appreciates our Help
+
 country_event = {
 	id = spain.6
+	picture = GFX_report_event_finnish_letter
+	is_triggered_only = no
+	fire_only_once = no
+	
 	title = spain.6.t
 	desc = spain.6.d
-	picture = GFX_report_event_finnish_letter
 	trigger = {
 		has_country_flag = promised_help_nationalist_spain
 		SPR = {
@@ -764,12 +835,17 @@ country_event = {
 		}
 	}
 }
+
 ## Republican Spain Appreciates our Help
+
 country_event = {
 	id = spain.7
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = no
+	
 	title = spain.7.t
 	desc = spain.7.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		has_country_flag = promised_help_republican_spain
 		SPR = {
@@ -791,19 +867,23 @@ country_event = {
 		}
 	}
 }
+
 ## Civil war over. Move Capital
+
 country_event = {
 	id = spain.8
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.8.t
 	desc = spain.8.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		tag = SPN
 		has_government = fascism
 		has_global_flag = nationalist_victory
 		owns_state = 41
 	}
-	fire_only_once = yes
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -822,20 +902,24 @@ country_event = {
 		}
 	}
 }
+
 ## Election of 1936
+
 country_event = {
 	id = spain.9
+	picture = GFX_report_event_election_vote
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.9.t
 	desc = spain.9.d
-	picture = GFX_report_event_election_vote
-	fire_only_once = yes
 	trigger = {
 		tag = SPR
 		date < 1937.1.1
 	}
 	mean_time_to_happen = {
 		days = 40
-		#Election Day
+		# Election Day
 	}
 	immediate = {
 		hidden_effect = {
@@ -844,7 +928,6 @@ country_event = {
 			}
 		}
 	}
-	#Popular Front
 	option = {
 		ai_chance = {
 			factor = 2
@@ -873,7 +956,6 @@ country_event = {
 			}
 		}
 	}
-	#CEDA
 	option = {
 		ai_chance = {
 			factor = 1
@@ -893,76 +975,99 @@ country_event = {
 			SPRfashsupport = 1
 		}
 		load_focus_tree = ceda_tree
-		set_party_name = { ideology = democratic long_name = SPR_democratic_CEDA_long name = SPR_democratic_CEDA }
+		set_party_name = {
+			ideology = democratic
+			long_name = SPR_democratic_CEDA_long
+			name = SPR_democratic_CEDA
+		}
 		create_country_leader = {
-		name = "José María Gil-Robles y Quiñones"
-		desc = "POLITICS_JOSE_MARIA_DESC"
-		picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
-		expire = "1965.1.1"
-		ideology = conservatism
-		traits = {}
+			name = "José María Gil-Robles y Quiñones"
+			desc = "POLITICS_JOSE_MARIA_DESC"
+			picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+			}
 		}
 		SPR = {
 			set_country_flag = rightist_government
-			}
-			SPN = {
+		}
+		SPN = {
 			set_country_flag = rightist_government
-			}
+		}
 	}
 }
 
 ##Spanish Civil War if CEDA is Elected
+
 country_event = {
 	id = spain.10
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.1.t
 	desc = spain.10.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-		SPN = {
-			country_event = {
-				id = spain.35
-				days = 5
-			}
-			if = {
-				limit = {
-					has_global_flag = primo_escapes
-				}
+			SPN = {
 				country_event = {
-					id = spain.37
-					days = 25
+					id = spain.35
+					days = 5
 				}
-			}			
-		}
-		SPR = {
-			country_event = {
-				id = spain.29
-				days = 14
+				if = {
+					limit = {
+						has_global_flag = primo_escapes
+					}
+					country_event = {
+						id = spain.37
+						days = 25
+					}
+				}
 			}
-		}
-		SPR = {
-			country_event = {
-				id = spain.58
-				days = 75
+			SPR = {
+				country_event = {
+					id = spain.29
+					days = 14
+				}
 			}
-		}
-		SPR = {
-			set_cosmetic_tag = SPR_SCW
-		}
-		171 = { set_demilitarized_zone = yes }
-		176 = { set_demilitarized_zone = yes }
-		166 = { set_demilitarized_zone = yes }
-		169 = { set_demilitarized_zone = yes }
-		170 = { set_demilitarized_zone = yes }
-		174 = { set_demilitarized_zone = yes }
-		177 = { set_demilitarized_zone = yes }
-		178 = { set_demilitarized_zone = yes }
+			SPR = {
+				country_event = {
+					id = spain.58
+					days = 75
+				}
+			}
+			SPR = {
+				set_cosmetic_tag = SPR_SCW
+			}
+			171 = {
+				set_demilitarized_zone = yes
+			}
+			176 = {
+				set_demilitarized_zone = yes
+			}
+			166 = {
+				set_demilitarized_zone = yes
+			}
+			169 = {
+				set_demilitarized_zone = yes
+			}
+			170 = {
+				set_demilitarized_zone = yes
+			}
+			174 = {
+				set_demilitarized_zone = yes
+			}
+			177 = {
+				set_demilitarized_zone = yes
+			}
+			178 = {
+				set_demilitarized_zone = yes
+			}
 		}
 	}
 	option = {
-		#Support Nationalists
+		# Support Nationalists
 		name = spain.10.a
 		trigger = {
 			is_ai = no
@@ -970,15 +1075,31 @@ country_event = {
 		custom_effect_tooltip = nationalists_chosen
 		set_global_flag = spanish_civil_war
 		hidden_effect = {
-		171 = { set_demilitarized_zone = no }
-		176 = { set_demilitarized_zone = no }
-		166 = { set_demilitarized_zone = no }
-		169 = { set_demilitarized_zone = no }
-		170 = { set_demilitarized_zone = no }
-		174 = { set_demilitarized_zone = no }
-		177 = { set_demilitarized_zone = no }
-		178 = { set_demilitarized_zone = no }
-		SPN = {
+			171 = {
+				set_demilitarized_zone = no
+			}
+			176 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			169 = {
+				set_demilitarized_zone = no
+			}
+			170 = {
+				set_demilitarized_zone = no
+			}
+			174 = {
+				set_demilitarized_zone = no
+			}
+			177 = {
+				set_demilitarized_zone = no
+			}
+			178 = {
+				set_demilitarized_zone = no
+			}
+			SPN = {
 				SPR = {
 					transfer_state = 166
 				}
@@ -1012,17 +1133,18 @@ country_event = {
 				}
 			}
 			SPN = {
-			country_event = {
+				country_event = {
 					id = spain.100
 					days = 1
 				}
 				create_country_leader = {
-				name = "José María Gil-Robles y Quiñones"
-				desc = "POLITICS_JOSE_MARIA_DESC"
-				picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
-				expire = "1965.1.1"
-				ideology = falangism
-				traits = {}
+					name = "José María Gil-Robles y Quiñones"
+					desc = "POLITICS_JOSE_MARIA_DESC"
+					picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
+					expire = "1965.1.1"
+					ideology = falangism
+					traits = {
+					}
 				}
 			}
 			SPR = {
@@ -1032,7 +1154,8 @@ country_event = {
 					picture = "Portrait_Spain_Manuel_Azana.dds"
 					expire = "1965.1.1"
 					ideology = socialism
-					traits = {#
+					traits = {
+						# 
 					}
 				}
 			}
@@ -1109,11 +1232,9 @@ country_event = {
 			SPR = {
 				load_oob = "SPR_Civil_War_CEDA"
 			}
-			
 			SPN = {
 				load_oob = "SPN_Civil_War_CEDA"
 			}
-			
 			SPN = {
 				add_ideas = SPR_spanish_civil_war
 				add_ideas = SPN_legion_army_idea
@@ -1231,25 +1352,40 @@ country_event = {
 			SPN = {
 				change_tag_from = SPR
 			}
-				
 			SPR = {
 				load_focus_tree = SPR_war_tree
 			}
-		}		
+		}
 	}
 	option = {
-		#Support Republicans
+		# Support Republicans
 		name = spain.10.b
 		hidden_effect = {
-		171 = { set_demilitarized_zone = no }
-		176 = { set_demilitarized_zone = no }
-		166 = { set_demilitarized_zone = no }
-		169 = { set_demilitarized_zone = no }
-		170 = { set_demilitarized_zone = no }
-		174 = { set_demilitarized_zone = no }
-		177 = { set_demilitarized_zone = no }
-		178 = { set_demilitarized_zone = no }
-		SPN = {
+			171 = {
+				set_demilitarized_zone = no
+			}
+			176 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			169 = {
+				set_demilitarized_zone = no
+			}
+			170 = {
+				set_demilitarized_zone = no
+			}
+			174 = {
+				set_demilitarized_zone = no
+			}
+			177 = {
+				set_demilitarized_zone = no
+			}
+			178 = {
+				set_demilitarized_zone = no
+			}
+			SPN = {
 				SPR = {
 					transfer_state = 166
 				}
@@ -1268,7 +1404,7 @@ country_event = {
 			}
 			set_global_flag = spanish_civil_war
 			SPN = {
-			country_event = {
+				country_event = {
 					id = spain.100
 					days = 1
 				}
@@ -1279,7 +1415,6 @@ country_event = {
 				set_stability = 0.9
 				set_stability = 0.9
 				set_war_support = 0.8
-
 				create_corps_commander = {
 					name = "Antonio Ortiz"
 					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Antonio_Ortiz.dds"
@@ -1364,7 +1499,7 @@ country_event = {
 					hours = 6
 					id = news.63
 				}
-				}
+			}
 			SPR = {
 				add_ideas = SPR_militia_army_idea
 				set_equipment_fraction = 0.6
@@ -1380,21 +1515,21 @@ country_event = {
 					popularity = 0.10
 				}
 			}
-						SPR = {
+			SPR = {
 				load_oob = "SPR_Civil_War_CEDA"
 			}
-			
 			SPN = {
 				load_oob = "SPN_Civil_War_CEDA"
 			}
 			SPN = {
-			create_country_leader = {
-				name = "José María Gil-Robles y Quiñones"
-				desc = "POLITICS_JOSE_MARIA_DESC"
-				picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
-				expire = "1965.1.1"
-				ideology = falangism
-				traits = {}
+				create_country_leader = {
+					name = "José María Gil-Robles y Quiñones"
+					desc = "POLITICS_JOSE_MARIA_DESC"
+					picture = "gfx/leaders/SPR/Portrait_Spain_Jose_Maria.dds"
+					expire = "1965.1.1"
+					ideology = falangism
+					traits = {
+					}
 				}
 				add_ideas = SPR_spanish_civil_war
 				add_ideas = SPN_legion_army_idea
@@ -1512,12 +1647,15 @@ country_event = {
 }
 
 ## Francoist Terror
+
 country_event = {
 	id = spain.11
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.11.t
 	desc = spain.11.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -1528,24 +1666,28 @@ country_event = {
 		}
 		has_war = yes
 		date > 1936.7.27
-		#Trigger at some point after civil war breaks out
+		# Trigger at some point after civil war breaks out
 	}
 	mean_time_to_happen = {
 		days = 10
-		#Outbreak after war
+		# Outbreak after war
 	}
 	option = {
 		name = spain.11.a
 		add_manpower = -1500
 	}
 }
+
 ## Arms Embargo
+
 country_event = {
 	id = spain.12
+	picture = GFX_report_event_generic_parliament
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.12.t
 	desc = spain.12.d
-	picture = GFX_report_event_generic_parliament
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -1583,12 +1725,15 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = spain.13
-	title = spain.13.t
-	desc = spain.13.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.13.t
+	desc = spain.13.d
 	option = {
 		name = spain.13.a
 		ai_chance = {
@@ -1611,12 +1756,15 @@ country_event = {
 		add_political_power = -25
 	}
 }
+
 country_event = {
 	id = spain.14
-	title = spain.14.t
-	desc = spain.14.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.14.t
+	desc = spain.14.d
 	option = {
 		name = spain.14.a
 		ai_chance = {
@@ -1639,13 +1787,17 @@ country_event = {
 		add_political_power = -25
 	}
 }
+
 ## Red Terror
+
 country_event = {
 	id = spain.15
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.15.t
 	desc = spain.15.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -1653,26 +1805,30 @@ country_event = {
 		tag = SPN
 		has_war = yes
 		date > 1936.7.27
-		#Trigger at some point after civil war breaks out
+		# Trigger at some point after civil war breaks out
 	}
 	mean_time_to_happen = {
 		days = 10
-		#Outbreak after war
+		# Outbreak after war
 	}
 	option = {
 		name = spain.15.a
 		add_manpower = -1500
 	}
 }
+
 ## Condor Legion (Literally just copy/pasting the WTT events gang) - event for Germany
+
 country_event = {
 	id = spain.16
-	title = spain.16.t
-	desc = spain.16.d
 	picture = GFX_report_event_china_flying_tigers
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.16.t
+	desc = spain.16.d
 	option = {
-		#accept
+		# accept
 		name = spain.16.a
 		ai_chance = {
 			base = 70
@@ -1703,7 +1859,7 @@ country_event = {
 		}
 	}
 	option = {
-		#refuse
+		# refuse
 		name = spain.16.b
 		ai_chance = {
 			base = 30
@@ -1720,25 +1876,33 @@ country_event = {
 		}
 	}
 }
+
 ##International Fascist Volunteers
+
 country_event = {
 	id = spain.17
-	title = spain.17.t
-	desc = spain.17.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.17.t
+	desc = spain.17.d
 	option = {
 		name = spain.17.a
 		load_oob = "SPN_foreign_volunteers"
 	}
 }
+
 ##Choose the King
+
 country_event = {
 	id = spain.18
-	title = spain.18.t
-	desc = spain.18.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.18.t
+	desc = spain.18.d
 	option = {
 		name = spain.18.a
 		ai_chance = {
@@ -1830,13 +1994,17 @@ country_event = {
 		}
 	}
 }
+
 ##Buy tanks from GER
+
 country_event = {
 	id = spain.19
-	title = spain.19.t
-	desc = spain.19.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.19.t
+	desc = spain.19.d
 	option = {
 		name = spain.19.a
 		trigger = {
@@ -1875,14 +2043,16 @@ country_event = {
 		}
 	}
 }
+
 ##Free the Political Prisoners
+
 country_event = {
 	id = spain.20
-	title = spain.20.t
-	desc = spain.20.d
 	picture = GFX_report_event_communists_cheer
 	is_triggered_only = yes
-	#Do not release
+	fire_only_once = no
+	title = spain.20.t
+	desc = spain.20.d
 	option = {
 		name = spain.20.a
 		ai_chance = {
@@ -1902,7 +2072,6 @@ country_event = {
 		}
 		add_political_power = -15
 	}
-	#Release nonviolent offenders
 	option = {
 		name = spain.20.b
 		ai_chance = {
@@ -1918,7 +2087,6 @@ country_event = {
 		}
 		add_political_power = 30
 	}
-	#Release all
 	option = {
 		name = spain.20.c
 		ai_chance = {
@@ -1935,14 +2103,17 @@ country_event = {
 		add_political_power = 15
 	}
 }
+
 ##Rehire the Workers
+
 country_event = {
 	id = spain.21
-	title = spain.21.t
-	desc = spain.21.d
 	picture = GFX_report_event_american_hunger_march
 	is_triggered_only = yes
-	#Do not rehire
+	fire_only_once = no
+	
+	title = spain.21.t
+	desc = spain.21.d
 	option = {
 		name = spain.21.a
 		ai_chance = {
@@ -1962,7 +2133,6 @@ country_event = {
 		}
 		add_political_power = -10
 	}
-	#Rehire the workers
 	option = {
 		name = spain.21.b
 		ai_chance = {
@@ -1978,7 +2148,6 @@ country_event = {
 		}
 		add_political_power = 10
 	}
-	#Rehire and purge
 	option = {
 		name = spain.21.c
 		ai_chance = {
@@ -1995,14 +2164,17 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
 ##The Issue Of Political Violence
+
 country_event = {
 	id = spain.22
-	title = spain.22.t
-	desc = spain.22.d
 	picture = GFX_report_event_generic_riot
 	is_triggered_only = yes
-	#remain silent
+	fire_only_once = no
+	
+	title = spain.22.t
+	desc = spain.22.d
 	option = {
 		name = spain.22.a
 		ai_chance = {
@@ -2022,7 +2194,6 @@ country_event = {
 		}
 		add_political_power = -50
 	}
-	#speak against it
 	option = {
 		name = spain.22.b
 		ai_chance = {
@@ -2034,7 +2205,6 @@ country_event = {
 		}
 		add_political_power = 10
 	}
-	#crack down forcibly
 	option = {
 		name = spain.22.c
 		ai_chance = {
@@ -2055,14 +2225,17 @@ country_event = {
 		add_political_power = -10
 	}
 }
+
 ##The Issue Of General Ochoa
+
 country_event = {
 	id = spain.23
-	title = spain.23.t
-	desc = spain.23.d
 	picture = GFX_report_event_journalists_speech
 	is_triggered_only = yes
-	#Remove him from command
+	fire_only_once = no
+	
+	title = spain.23.t
+	desc = spain.23.d
 	option = {
 		name = spain.23.a
 		ai_chance = {
@@ -2078,7 +2251,6 @@ country_event = {
 		}
 		add_political_power = -10
 	}
-	#Imprison him
 	option = {
 		name = spain.23.b
 		ai_chance = {
@@ -2090,7 +2262,6 @@ country_event = {
 		}
 		add_political_power = 50
 	}
-	#Arrange an accident
 	option = {
 		name = spain.23.c
 		ai_chance = {
@@ -2107,14 +2278,17 @@ country_event = {
 		add_political_power = 10
 	}
 }
+
 ##Assess the Army's loyalties
+
 country_event = {
 	id = spain.24
-	title = spain.24.t
-	desc = spain.24.d
 	picture = GFX_report_event_fascists_posing
 	is_triggered_only = yes
-	#Watch, but do nothing
+	fire_only_once = no
+	
+	title = spain.24.t
+	desc = spain.24.d
 	option = {
 		name = spain.24.a
 		ai_chance = {
@@ -2134,7 +2308,6 @@ country_event = {
 		}
 		add_political_power = 10
 	}
-	#Reassign the generals
 	option = {
 		name = spain.24.b
 		ai_chance = {
@@ -2150,7 +2323,6 @@ country_event = {
 		}
 		add_political_power = 50
 	}
-	#Purge the army entirely - 40/60 success/fail
 	option = {
 		name = spain.24.c
 		ai_chance = {
@@ -2169,13 +2341,17 @@ country_event = {
 		}
 	}
 }
+
 ##The Issue of the Paramilitaries
+
 country_event = {
 	id = spain.25
-	title = spain.25.t
-	desc = spain.25.d
 	picture = GFX_report_event_fascist_militia
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.25.t
+	desc = spain.25.d
 	option = {
 		name = spain.25.a
 		ai_chance = {
@@ -2226,13 +2402,17 @@ country_event = {
 		add_political_power = -10
 	}
 }
+
 ##The Issue of the UME
+
 country_event = {
 	id = spain.26
-	title = spain.26.t
-	desc = spain.26.d
 	picture = GFX_report_event_communist_leader
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.26.t
+	desc = spain.26.d
 	option = {
 		name = spain.26.a
 		ai_chance = {
@@ -2287,21 +2467,25 @@ country_event = {
 		add_political_power = 10
 	}
 }
+
 ##Army successfully purged
+
 country_event = {
 	id = spain.27
-	title = spain.27.t
-	desc = spain.27.d
 	picture = GFX_report_event_soviet_purge_officers_02
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.27.t
+	desc = spain.27.d
 	option = {
 		name = spain.27.a
 		ai_chance = {
 			base = 1
 		}
-		#hidden_effect = {
-		#add_timed_idea = { idea = SPR_officers_purged_idea  days = 365 }
-		#}
+		# hidden_effect = {
+		# add_timed_idea = { idea = SPR_officers_purged_idea  days = 365 }
+		# }
 		subtract_from_variable = {
 			var = SPRtension
 			value = 10
@@ -2309,13 +2493,17 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 ##Purge fails
+
 country_event = {
 	id = spain.28
-	title = spain.28.t
-	desc = spain.28.d
 	picture = GFX_report_event_military_planning
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.28.t
+	desc = spain.28.d
 	option = {
 		name = spain.28.a
 		ai_chance = {
@@ -2336,12 +2524,15 @@ country_event = {
 }
 
 ##Francisco Largo Calvo Event
+
 country_event = {
 	id = spain.29
-	title = spain.29.t
-	desc = spain.29.d
 	picture = GFX_report_event_generic_communist_congress
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.29.t
+	desc = spain.29.d
 	option = {
 		name = spain.29.a
 		add_political_power = -25
@@ -2349,12 +2540,15 @@ country_event = {
 }
 
 ##CNT Event
+
 country_event = {
 	id = spain.30
-	title = spain.30.t
-	desc = spain.30.d
 	picture = GFX_report_event_generic_communist_congress
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.30.t
+	desc = spain.30.d
 	option = {
 		name = spain.30.a
 		set_politics = {
@@ -2372,57 +2566,65 @@ country_event = {
 		}
 	}
 }
+
 ##International Brigades
+
 country_event = {
 	id = spain.31
-	title = spain.31.t
-	desc = spain.31.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.31.t
+	desc = spain.31.d
 	option = {
 		name = spain.31.a
 		load_oob = "SPR_International_Brigades"
 		create_corps_commander = {
-					name = "Manfred Stern"
-					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Manfred_Stern.dds"
-					traits = {
-						politically_connected
-					}
-					skill = 2
-					attack_skill = 2
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-				}
+			name = "Manfred Stern"
+			portrait_path = "gfx/leaders/SPR/Portrait_Spain_Manfred_Stern.dds"
+			traits = {
+				politically_connected
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 		create_corps_commander = {
-					name = "Andre Marty"
-					portrait_path = "gfx/leaders/SPR/Portrait_Spain_Andre_Marty.dds"
-					traits = {
-						politically_connected
-						harsh_leader
-						old_guard
-					}
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-				}
+			name = "Andre Marty"
+			portrait_path = "gfx/leaders/SPR/Portrait_Spain_Andre_Marty.dds"
+			traits = {
+				politically_connected
+				harsh_leader
+				old_guard
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
 	}
 }
+
 ##Democrats win Civil War
+
 country_event = {
 	id = spain.32
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.32.t
 	desc = spain.32.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		tag = SPR
 		has_country_flag = Dem_power
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
-	fire_only_once = yes
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -2448,19 +2650,23 @@ country_event = {
 		}
 	}
 }
+
 ##Communists win Civil War
+
 country_event = {
 	id = spain.33
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.33.t
 	desc = spain.33.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
 	trigger = {
 		tag = SPR
 		has_country_flag = CNT_power
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
-	fire_only_once = yes
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -2516,13 +2722,17 @@ country_event = {
 		}
 	}
 }
+
 ##PCE Event
+
 country_event = {
 	id = spain.34
-	title = spain.34.t
-	desc = spain.34.d
 	picture = GFX_report_event_communists_cheer
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.34.t
+	desc = spain.34.d
 	option = {
 		name = spain.34.a
 		set_politics = {
@@ -2534,14 +2744,17 @@ country_event = {
 		}
 	}
 }
+
 ##Sanjurjo Event
+
 country_event = {
 	id = spain.35
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.35.t
 	desc = spain.35.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.35.a
 		ai_chance = {
@@ -2567,21 +2780,25 @@ country_event = {
 		add_political_power = 10
 	}
 }
+
 ##Rivera Event
+
 country_event = {
 	id = spain.36
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.36.t
 	desc = spain.36.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
 	trigger = {
 		tag = SPR
 		date > 1936.3.14
 		NOT = {
 			SPR = {
 				has_country_flag = rightist_government
-				}
 			}
+		}
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -2603,7 +2820,7 @@ country_event = {
 			expire = "1965.1.1"
 			ideology = falangism
 			traits = {
-				}
+			}
 		}
 		set_global_flag = primo_imprisoned
 	}
@@ -2616,14 +2833,17 @@ country_event = {
 		set_global_flag = primo_escapes
 	}
 }
+
 ##Rivera Event 2
+
 country_event = {
 	id = spain.37
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.37.t
 	desc = spain.37.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.37.a
 		ai_chance = {
@@ -2654,25 +2874,33 @@ country_event = {
 		name = spain.37.b
 	}
 }
+
 ##Flag_Switch
+
 country_event = {
 	id = spain.38
-	title = spain.38.t
-	desc = spain.38.d
 	picture = GFX_report_event_generic_communist_congress
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.38.t
+	desc = spain.38.d
 	option = {
 		name = spain.38.a
 		set_cosmetic_tag = SPR_CNT
 	}
 }
+
 ##Deal with Britain
+
 country_event = {
 	id = spain.39
-	title = spain.39.t
-	desc = spain.39.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.39.t
+	desc = spain.39.d
 	option = {
 		name = spain.39.a
 		ai_chance = {
@@ -2728,13 +2956,17 @@ country_event = {
 		}
 	}
 }
+
 ##Deal with France
+
 country_event = {
 	id = spain.40
-	title = spain.39.t
-	desc = spain.39.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.39.t
+	desc = spain.39.d
 	option = {
 		name = spain.39.a
 		ai_chance = {
@@ -2784,13 +3016,17 @@ country_event = {
 		}
 	}
 }
+
 ##Falangist Event
+
 country_event = {
 	id = spain.41
-	title = spain.41.t
-	desc = spain.41.desc
 	picture = GFX_report_event_spain_civil_war_soldiers
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.41.t
+	desc = spain.41.desc
 	option = {
 		name = spain.41.a
 		ai_chance = {
@@ -2855,13 +3091,17 @@ country_event = {
 		}
 	}
 }
+
 ##Deal with Italy
+
 country_event = {
 	id = spain.42
-	title = spain.40.t
-	desc = spain.40.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.40.t
+	desc = spain.40.d
 	option = {
 		name = spain.40.a
 		ai_chance = {
@@ -2910,13 +3150,17 @@ country_event = {
 		}
 	}
 }
+
 ##Deal with Germany
+
 country_event = {
 	id = spain.43
-	title = spain.40.t
-	desc = spain.40.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.40.t
+	desc = spain.40.d
 	option = {
 		name = spain.39.a
 		ai_chance = {
@@ -2992,13 +3236,16 @@ country_event = {
 	}
 }
 
-#Agree
+# Agree
+
 country_event = {
 	id = spain.44
-	title = spain.44.t
-	desc = spain.44.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.44.t
+	desc = spain.44.d
 	option = {
 		name = spain.44.a
 		ai_chance = {
@@ -3007,13 +3254,16 @@ country_event = {
 	}
 }
 
-#Decline
+# Decline
+
 country_event = {
 	id = spain.45
-	title = spain.45.t
-	desc = spain.45.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.45.t
+	desc = spain.45.d
 	option = {
 		name = spain.45.a
 		ai_chance = {
@@ -3023,12 +3273,15 @@ country_event = {
 }
 
 ##Nationalists Offer Prisoner Exchange
+
 country_event = {
 	id = spain.46
-	title = spain.46.t
-	desc = spain.46.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.46.t
+	desc = spain.46.d
 	option = {
 		name = spain.46.a
 		ai_chance = {
@@ -3037,81 +3290,89 @@ country_event = {
 		SPN = {
 			set_country_flag = primo_is_general
 			create_corps_commander = {
-			name = "José Antonio Primo de Rivera"
-			portrait_path = "gfx/leaders/SPN/Portrait_Spain_Primo_Rivera.dds"
-			traits = {
+				name = "José Antonio Primo de Rivera"
+				portrait_path = "gfx/leaders/SPN/Portrait_Spain_Primo_Rivera.dds"
+				traits = {
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
 			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 3
-		}
 		}
 		add_political_power = -10
-			add_popularity = {
-					ideology = communism
-					popularity = 0.05
-				}
-		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
 	}
 	option = {
 		name = spain.46.b
 		ai_chance = {
 			base = 1
-			}
-			add_political_power = 10
-			add_popularity = {
-					ideology = communism
-					popularity = -0.05
-				}
+		}
+		add_political_power = 10
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
 		SPR = {
 			set_country_flag = primo_commando_mission
 		}
 	}
 }
+
 country_event = {
 	id = spain.47
-	title = spain.47.t
-	desc = spain.47.d
 	picture = GFX_report_event_fascists_posing
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.47.t
+	desc = spain.47.d
 	option = {
 		name = spain.47.a
 		SPN = {
 			set_country_flag = primo_is_general
 			create_corps_commander = {
-			name = "José Antonio Primo de Rivera"
-			portrait_path = "gfx/leaders/SPN/Portrait_Spain_Primo_Rivera.dds"
-			traits = {
+				name = "José Antonio Primo de Rivera"
+				portrait_path = "gfx/leaders/SPN/Portrait_Spain_Primo_Rivera.dds"
+				traits = {
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
 			}
-			skill = 2
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 3
-		}
-		add_manpower = -100
+			add_manpower = -100
 		}
 	}
 }
+
 country_event = {
 	id = spain.48
-	title = spain.48.t
-	desc = spain.48.d
 	picture = GFX_report_event_generic_battle
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.48.t
+	desc = spain.48.d
 	option = {
 		name = spain.48.a
 		add_manpower = -200
 	}
 }
+
 country_event = {
 	id = spain.49
-	title = spain.49.t
-	desc = spain.49.d
 	picture = GFX_report_event_generic_battle
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.49.t
+	desc = spain.49.d
 	option = {
 		name = spain.49.a
 		add_manpower = -200
@@ -3120,12 +3381,15 @@ country_event = {
 }
 
 ##United, Forever
+
 country_event = {
 	id = spain.50
-	title = spain.50.t
-	desc = spain.50.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.50.t
+	desc = spain.50.d
 	option = {
 		name = spain.50.a
 		ai_chance = {
@@ -3152,12 +3416,15 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = spain.51
-	title = spain.51.t
-	desc = spain.51.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.51.t
+	desc = spain.51.d
 	option = {
 		name = spain.51.a
 		effect_tooltip = {
@@ -3167,12 +3434,15 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = spain.52
-	title = spain.52.t
-	desc = spain.52.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.52.t
+	desc = spain.52.d
 	option = {
 		name = spain.52.a
 	}
@@ -3180,10 +3450,12 @@ country_event = {
 
 country_event = {
 	id = spain.53
-	title = spain.53.t
-	desc = spain.53.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.53.t
+	desc = spain.53.d
 	option = {
 		name = spain.53.a
 		FRA = {
@@ -3195,35 +3467,46 @@ country_event = {
 			}
 		}
 		SPR = {
-			country_event = { id = spain.54 days = 1 }
+			country_event = {
+				id = spain.54
+				days = 1
+			}
 		}
 	}
 	option = {
 		name = spain.53.b
 		SPR = {
-			country_event = { id = spain.45 days = 1 }
+			country_event = {
+				id = spain.45
+				days = 1
+			}
 		}
 	}
 }
 
 country_event = {
 	id = spain.54
-	title = spain.54.t
-	desc = spain.54.d
 	picture = GFX_report_event_hitler_handshake
 	is_triggered_only = yes
+	fire_only_once = no
+	
+	title = spain.54.t
+	desc = spain.54.d
 	option = {
 		name = spain.54.a
 	}
 }
 
 ###PERIODIC AIRCRAFT/AID SHIPMENTS##
+
 country_event = {
 	id = spain.56
+	picture = GFX_report_event_soviet_army_greeted
+	is_triggered_only = no
+	fire_only_once = no
+	
 	title = spain.56.t
 	desc = spain.56.d
-	picture = GFX_report_event_soviet_army_greeted
-	fire_only_once = no
 	trigger = {
 		tag = SPR
 		NOT = {
@@ -3231,35 +3514,38 @@ country_event = {
 		}
 		has_global_flag = spanish_civil_war
 	}
-		mean_time_to_happen = {
+	mean_time_to_happen = {
 		days = 50
 	}
 	option = {
 		name = spain.56.a
 		hidden_effect = {
-		SPR = {
-			add_equipment_to_stockpile = {
+			SPR = {
+				add_equipment_to_stockpile = {
 					type = fighter_equipment_1
 					amount = 75
 					producer = SOV
 				}
-		}
-		SPR = {
-			add_equipment_to_stockpile = {
+			}
+			SPR = {
+				add_equipment_to_stockpile = {
 					type = CAS_equipment_1
 					amount = 50
 					producer = SPR
 				}
-		}
+			}
 		}
 	}
 }
+
 country_event = {
 	id = spain.57
+	picture = GFX_report_event_generic_bombers
+	is_triggered_only = no
+	fire_only_once = no
+	
 	title = spain.57.t
 	desc = spain.57.d
-	picture = GFX_report_event_generic_bombers
-	fire_only_once = no
 	trigger = {
 		tag = SPN
 		NOT = {
@@ -3267,90 +3553,105 @@ country_event = {
 		}
 		has_global_flag = spanish_civil_war
 	}
-		mean_time_to_happen = {
+	mean_time_to_happen = {
 		days = 50
 	}
 	option = {
 		name = spain.57.a
 		SPN = {
 			add_equipment_to_stockpile = {
-					type = fighter_equipment_0
-					amount = 85
-					producer = ITA
-				}
+				type = fighter_equipment_0
+				amount = 85
+				producer = ITA
+			}
 		}
 		SPN = {
 			add_equipment_to_stockpile = {
-					type = CAS_equipment_1
-					amount = 50
-					producer = GER
-				}
+				type = CAS_equipment_1
+				amount = 50
+				producer = GER
+			}
 		}
 	}
 }
 
-#Anti-Clerical Violence
+# Anti-Clerical Violence
+
 country_event = {
 	id = spain.58
+	picture = GFX_report_event_generic_ruins
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.58.t
 	desc = spain.58.d
-	picture = GFX_report_event_generic_ruins
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.58.a
 		hidden_effect = {
-			country_event = { id = spain.59 days = 50 }
-		set_variable = {
-			SPRinfamy = 1
-		}
+			country_event = {
+				id = spain.59
+				days = 50
+			}
+			set_variable = {
+				SPRinfamy = 1
+			}
 		}
 		add_political_power = 10
 	}
 	option = {
 		name = spain.58.b
 		add_political_power = -50
-		}
+	}
 }
 
-#Anti-Clerical Violence 2 
+# Anti-Clerical Violence 2
+
 country_event = {
 	id = spain.59
+	picture = GFX_report_event_church_3
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.59.t
 	desc = spain.59.d
-	picture = GFX_report_event_church_3
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.59.a
 		hidden_effect = {
-			country_event = { id = spain.77 days = 50 }
+			country_event = {
+				id = spain.77
+				days = 50
+			}
 			add_to_variable = {
-			SPRinfamy = 1
-		}
+				SPRinfamy = 1
+			}
 		}
 		add_political_power = 10
 	}
 	option = {
 		name = spain.59.b
 		add_political_power = -50
-		}
+	}
 }
 
-#Anti-Clerical Violence 3
+# Anti-Clerical Violence 3
+
 country_event = {
 	id = spain.77
+	picture = GFX_report_event_church_2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.77.t
 	desc = spain.77.d
-	picture = GFX_report_event_church_2
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.77.a
 		hidden_effect = {
-			country_event = { id = spain.78 days = 50 }
+			country_event = {
+				id = spain.78
+				days = 50
+			}
 			add_to_variable = {
-			SPRinfamy = 1
+				SPRinfamy = 1
 			}
 		}
 		add_political_power = 10
@@ -3358,23 +3659,25 @@ country_event = {
 	option = {
 		name = spain.77.b
 		add_political_power = -50
-		}
+	}
 }
 
-#Anti-Clerical Violence 4
+# Anti-Clerical Violence 4
+
 country_event = {
 	id = spain.78
+	picture = GFX_report_event_church_1
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.78.t
 	desc = spain.78.d
-	picture = GFX_report_event_church_1
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.78.a
 		custom_effect_tooltip = player_is_bastard
 		hidden_effect = {
 			add_to_variable = {
-			SPRinfamy = 1
+				SPRinfamy = 1
 			}
 		}
 		add_political_power = 10
@@ -3382,17 +3685,20 @@ country_event = {
 	option = {
 		name = spain.78.b
 		add_political_power = -50
-		}
+	}
 }
+
 ##Civil War Buildup Events
 ##Election Violence
+
 country_event = {
 	id = spain.60
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.60.t
 	desc = spain.60.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.60.a
 		add_to_variable = {
@@ -3404,13 +3710,17 @@ country_event = {
 		}
 	}
 }
+
 ##Parade Violence
+
 country_event = {
 	id = spain.61
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.61.t
 	desc = spain.61.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -3446,14 +3756,17 @@ country_event = {
 		}
 	}
 }
+
 ##Funeral of Anastasio de los Reyes
+
 country_event = {
 	id = spain.62
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.62.t
 	desc = spain.62.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
 		name = spain.62.a
 		add_to_variable = {
@@ -3465,14 +3778,17 @@ country_event = {
 		}
 	}
 }
+
 ##Generic Street Fight
+
 country_event = {
 	id = spain.63
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.63.t
 	desc = spain.63.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
 		name = spain.63.a
 		add_to_variable = {
@@ -3484,14 +3800,17 @@ country_event = {
 		}
 	}
 }
+
 ##Generic Political Assassination
+
 country_event = {
 	id = spain.64
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.64.t
 	desc = spain.64.d
-	picture = GFX_report_event_communist_leader
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
 		name = spain.64.a
 		add_to_variable = {
@@ -3503,14 +3822,17 @@ country_event = {
 		}
 	}
 }
+
 ##Morocco Rise UP
+
 country_event = {
 	id = spain.65
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.65.t
 	desc = spain.65.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.65.a
 		add_to_variable = {
@@ -3583,13 +3905,17 @@ country_event = {
 		}
 	}
 }
+
 ##Jose Castillo's Death
+
 country_event = {
 	id = spain.66
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
 	title = spain.66.t
 	desc = spain.66.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -3615,14 +3941,17 @@ country_event = {
 		}
 	}
 }
+
 ##Random Event Maker
+
 country_event = {
 	id = spain.67
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = no
+	fire_only_once = no
+	hidden = yes
 	title = spain.67.t
 	desc = spain.67.d
-	picture = GFX_report_event_communist_leader
-	hidden = yes
-	fire_only_once = no
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -3637,7 +3966,7 @@ country_event = {
 			}
 		}
 	}
-		mean_time_to_happen = {
+	mean_time_to_happen = {
 		days = 2
 	}
 	immediate = {
@@ -3659,28 +3988,32 @@ country_event = {
 		name = spain.67.a
 	}
 }
+
 ##Null Event
+
 country_event = {
 	id = spain.68
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	hidden = yes
 	title = spain.67.t
 	desc = spain.67.d
-	picture = GFX_report_event_communist_leader
-	hidden = yes
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
 		name = spain.68.a
 	}
 }
 
 ##José Calvo Sotelo's Death
+
 country_event = {
 	id = spain.69
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.69.t
 	desc = spain.69.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.69.a
 		trigger = {
@@ -3708,77 +4041,87 @@ country_event = {
 		}
 	}
 }
-#Weigh European Options 
+
+# Weigh European Options
+
 country_event = {
 	id = spain.70
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.70.t
 	desc = spain.70.d
-	picture = GFX_report_event_hitler_handshake
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
-		name = spain.70.a #Appeal to Democratic Minors
+		name = spain.70.a
+		# Appeal to Democratic Minors
 		NOR = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 		SWE = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 		DEN = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 		HOL = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 		BEL = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 		LUX = {
 			add_opinion_modifier = {
-			target = SPR
-			modifier = SPR_trade_relations
+				target = SPR
+				modifier = SPR_trade_relations
 			}
 		}
 	}
 	option = {
-		name = spain.70.b #Fully Equal Policy
-			add_ideas = free_trade
+		name = spain.70.b
+		# Fully Equal Policy
+		add_ideas = free_trade
 	}
 }
 
-#French Event to release Morocco
+# French Event to release Morocco
+
 country_event = {
 	id = spain.71
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.71.t
 	desc = spain.71.d
-	picture = GFX_report_event_communist_leader
-	fire_only_once = no
-	is_triggered_only = yes
-	option = { #Agree to Referendum
+	option = {
+		# Agree to Referendum
 		name = spain.71.a
 		SPR = {
-		release = MRC
-		if = {
-        limit = { has_dlc = "Together for Victory" }
-        set_autonomy = {
-            target = MRC
-            autonomous_state = autonomy_puppet
-            freedom_level = 0.5
+			release = MRC
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				set_autonomy = {
+					target = MRC
+					autonomous_state = autonomy_puppet
+					freedom_level = 0.5
 				}
 			}
 		}
@@ -3786,8 +4129,8 @@ country_event = {
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
-				}
 			}
+		}
 		FRA = {
 			MRC = {
 				transfer_state = 461
@@ -3797,83 +4140,124 @@ country_event = {
 			}
 		}
 		SPR = {
-		country_event = { id = spain.211 days = 1}
+			country_event = {
+				id = spain.211
+				days = 1
+			}
 		}
 	}
-	option = { #Decline Referendum
+	option = {
+		# Decline Referendum
 		name = spain.71.b
 		SPR = {
-		country_event = { id = spain.210 days = 5}
+			country_event = {
+				id = spain.210
+				days = 5
+			}
 		}
 	}
 }
 
-#American Event to Signify Relations
+# American Event to Signify Relations
+
 country_event = {
 	id = spain.72
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.72.t
 	desc = spain.72.d
-	picture = GFX_report_event_communist_leader
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
 		name = spain.72.a
 	}
 }
 
-#British Event to Cede Gibraltar (hahahaha as if)
+# British Event to Cede Gibraltar (hahahaha as if)
+
 country_event = {
 	id = spain.73
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.73.t
 	desc = spain.73.d
-	picture = GFX_report_event_communist_leader
-	fire_only_once = no
-	is_triggered_only = yes
-	option = { #Agree to Proposal
+	option = {
+		# Agree to Proposal
 		name = spain.73.a
 		SPR = {
-					transfer_state = 119
-				}
-		SPR = {
-		country_event = { id = spain.76 days = 5}
+			transfer_state = 119
 		}
-		
+		SPR = {
+			country_event = {
+				id = spain.76
+				days = 5
+			}
+		}
 	}
-	option = { #Decline Proposal
+	option = {
+		# Decline Proposal
 		name = spain.73.b
 		SPR = {
-		country_event = { id = spain.75 days = 5}
+			country_event = {
+				id = spain.75
+				days = 5
+			}
 		}
 	}
 }
 
-#Portugal Event
+# Portugal Event
+
 country_event = {
 	id = spain.74
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	fire_only_once = no
+	
 	title = spain.74.t
 	desc = spain.74.d
-	picture = GFX_report_event_communist_leader
-	fire_only_once = no
-	is_triggered_only = yes
-	option = { #Pre-Empetive War
+	option = {
+		# Pre-Empetive War
 		name = spain.74.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POR
+		}
 	}
-	option = { #Encourage Opposition
+	option = {
+		# Encourage Opposition
 		name = spain.74.b
+		SPR = {
+			set_country_flag = portugal_decisions
+		}
 	}
-	option = { #Embargo
+	option = {
+		# Embargo
 		name = spain.74.c
+		every_other_country = {
+			limit = {
+				has_country_flag = MedTrade
+			}
+			country_event = {
+				id = spain.95
+				days = 3
+			}
+		}
 	}
 }
 
-#Catalonia RISE UP
+# Catalonia RISE UP
+
 country_event = {
 	id = spain.79
+	picture = GFX_report_event_communists_cheer
+	is_triggered_only = yes
+	fire_only_once = yes
+	
 	title = spain.79.t
 	desc = spain.79.d
-	picture = GFX_report_event_communists_cheer
-	fire_only_once = yes
-	is_triggered_only = yes
 	option = {
 		name = spain.79.a
 		add_to_variable = {
@@ -3950,17 +4334,20 @@ country_event = {
 				}
 			}
 		}
-	}	
+	}
 }
-#CEDA Events
-##Anti-Marxist United Front 
+
+# CEDA Events
+##Anti-Marxist United Front
+
 country_event = {
 	id = spain.80
-	title = spain.80.t
-	desc = spain.80.d
 	picture = GFX_report_event_fascists_posing
 	is_triggered_only = yes
-	#Watch the Communists, but do not act... yet.
+	fire_only_once = no
+	
+	title = spain.80.t
+	desc = spain.80.d
 	option = {
 		name = spain.80.a
 		ai_chance = {
@@ -3980,7 +4367,6 @@ country_event = {
 		}
 		add_political_power = -15
 	}
-	#Are you, or have you ever been, a member of the Frente Popular?
 	option = {
 		name = spain.80.b
 		ai_chance = {
@@ -3992,7 +4378,6 @@ country_event = {
 		}
 		add_political_power = 30
 	}
-	#Send in the Guardia Civil
 	option = {
 		name = spain.20.c
 		ai_chance = {
@@ -4013,14 +4398,17 @@ country_event = {
 		add_political_power = 15
 	}
 }
+
 ##Radicalize the National Front
+
 country_event = {
 	id = spain.81
-	title = spain.81.t
-	desc = spain.81.d
 	picture = GFX_report_event_fascist_gathering
 	is_triggered_only = yes
-	#How about we don't do that
+	fire_only_once = no
+	
+	title = spain.81.t
+	desc = spain.81.d
 	option = {
 		name = spain.81.a
 		ai_chance = {
@@ -4040,7 +4428,6 @@ country_event = {
 		}
 		add_political_power = -10
 	}
-	#Let the monarchists in
 	option = {
 		name = spain.81.b
 		ai_chance = {
@@ -4048,11 +4435,10 @@ country_event = {
 		}
 		add_political_power = 50
 		add_popularity = {
-					ideology = neutrality
-					popularity = 0.10
-				}
+			ideology = neutrality
+			popularity = 0.10
+		}
 	}
-	#FULLNAZI
 	option = {
 		name = spain.81.c
 		ai_chance = {
@@ -4072,19 +4458,22 @@ country_event = {
 		}
 		add_political_power = 10
 		add_popularity = {
-					ideology = fascism
-					popularity = 0.05
-				}
+			ideology = fascism
+			popularity = 0.05
+		}
 	}
 }
+
 ##Christian Corporatism
+
 country_event = {
 	id = spain.82
-	title = spain.82.t
-	desc = spain.82.d
 	picture = GFX_report_event_fascist_gathering
 	is_triggered_only = yes
-	#Maybe Don't Do That
+	fire_only_once = no
+	
+	title = spain.82.t
+	desc = spain.82.d
 	option = {
 		name = spain.82.a
 		ai_chance = {
@@ -4104,7 +4493,6 @@ country_event = {
 		}
 		add_political_power = -50
 	}
-	#Don't Force It But Start It
 	option = {
 		name = spain.82.b
 		ai_chance = {
@@ -4116,7 +4504,6 @@ country_event = {
 		}
 		add_political_power = 10
 	}
-	#Immediate Decentralization
 	option = {
 		name = spain.82.c
 		ai_chance = {
@@ -4137,14 +4524,17 @@ country_event = {
 		add_political_power = -10
 	}
 }
+
 ##The Fate of Organized Labor
+
 country_event = {
 	id = spain.83
-	title = spain.83.t
-	desc = spain.83.d
 	picture = GFX_report_event_journalists_speech
 	is_triggered_only = yes
-	#Negotiate with the Unions
+	fire_only_once = no
+	
+	title = spain.83.t
+	desc = spain.83.d
 	option = {
 		name = spain.83.a
 		ai_chance = {
@@ -4164,7 +4554,6 @@ country_event = {
 		}
 		add_political_power = -10
 	}
-	#Shut down the CNT
 	option = {
 		name = spain.83.b
 		ai_chance = {
@@ -4183,7 +4572,6 @@ country_event = {
 		hidden_effect = {
 		}
 	}
-	#Ban Unions
 	option = {
 		name = spain.83.c
 		ai_chance = {
@@ -4205,14 +4593,17 @@ country_event = {
 		add_stability = -0.10
 	}
 }
+
 ##The Issue of the Monarchy
+
 country_event = {
 	id = spain.84
-	title = spain.84.t
-	desc = spain.84.d
 	picture = GFX_report_event_fascists_posing
 	is_triggered_only = yes
-	#Negotiate for a Figurehead King
+	fire_only_once = no
+	
+	title = spain.84.t
+	desc = spain.84.d
 	option = {
 		name = spain.84.a
 		ai_chance = {
@@ -4228,16 +4619,15 @@ country_event = {
 		}
 		add_political_power = -10
 	}
-	#Invite a True King!
 	option = {
 		name = spain.84.b
 		ai_chance = {
 			base = 1
 		}
 		add_popularity = {
-					ideology = neutrality
-					popularity = 0.15
-				}
+			ideology = neutrality
+			popularity = 0.15
+		}
 		add_to_variable = {
 			var = SPRtension
 			value = 2
@@ -4253,14 +4643,17 @@ country_event = {
 		}
 	}
 }
+
 ##The Fate of the Republic
+
 country_event = {
 	id = spain.85
-	title = spain.85.t
-	desc = spain.85.d
 	picture = GFX_report_event_fascists_posing
 	is_triggered_only = yes
-	#Compromise - a Reactionary Republic
+	fire_only_once = no
+	
+	title = spain.85.t
+	desc = spain.85.d
 	option = {
 		name = spain.85.a
 		ai_chance = {
@@ -4281,10 +4674,9 @@ country_event = {
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.20
-			}
+		}
 		add_political_power = -10
 	}
-	#Moderate Elements Shut Down the Govt!
 	option = {
 		name = spain.85.b
 		ai_chance = {
@@ -4300,7 +4692,6 @@ country_event = {
 		}
 		add_political_power = -50
 	}
-	#It's treason, then.
 	option = {
 		name = spain.85.c
 		ai_chance = {
@@ -4319,21 +4710,397 @@ country_event = {
 			value = 3
 		}
 		SPR = {
-		 country_event = {
-	id = spain.83
-	hours = 1
-}
+			country_event = {
+				id = spain.83
+				hours = 1
+			}
 		}
 		add_political_power = 50
 	}
 }
+##Joining Allies
+
+country_event = {
+	id = spain.90
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.90.t
+	desc = spain.90.d
+	option = {
+		name = spain.90.a
+		ai_chance = {
+			factor = 200
+			}
+		add_to_faction = SPR
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "ENG"
+				value = 200
+			}
+		}
+	}
+	option = {
+		name = spain.90.b
+		ai_chance = {
+			factor = 0
+		}
+		SPR = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = FRA_go_with_britain_reject
+			}
+			country_event = { id = spain.212 }
+		}
+	}
+}
+
+##British Naval Advisors
+
+country_event = {
+	id = spain.91
+	title = spain.91.t
+	desc = spain.91.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.91.a
+		ai_chance = {
+			factor = 200
+			}
+		SPR = {
+			add_ideas = spr_british_advisors_idea
+			country_event = { id = spain.214 }
+		}
+	}
+	option = {
+		name = spain.91.b
+		ai_chance = {
+			factor = 0
+		}
+		SPR = {
+			country_event = { id = spain.212 days = 1 }
+		}
+	}
+}
+
+##French Army Advisors
+
+country_event = {
+	id = spain.92
+	title = spain.92.t
+	desc = spain.92.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes	
+	fire_only_once = yes
+	option = {
+		name = spain.92.a
+		ai_chance = {
+			factor = 200
+			}
+		SPR = {
+			add_ideas = spr_french_advisors_idea
+		}
+		SPR = {
+			country_event = { id = spain.215 days = 1 }
+		}
+	}
+	option = {
+		name = spain.92.b
+		ai_chance = {
+			factor = 0
+		}
+		SPR = {
+			country_event = {
+				id = spain.213
+				days = 1
+			}
+		}
+	}
+}
+
+# Mediterranean Economic Bloc - Introduction
+
+country_event = {
+	id = spain.93
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+	set_variable = {
+			SPRMedTrade = 1
+			}
+			ALB = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.301
+					}					
+				}
+			}
+			FRA = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.300
+						days = 2
+					}					
+				}
+			}
+			ITA = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.303
+						days = 4
+					}					
+				}
+			}
+			ENG = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.302
+						days = 6
+					}					
+				}
+			}
+			GRE = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.304
+						days = 8
+					}					
+				}
+			}
+			YUG = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.306
+						days = 10
+					}					
+				}
+			}
+			TUR = {
+				if = {
+					limit = {
+						NOT = {
+							has_government = fascism
+							}
+					}
+					country_event = {
+						id = spain.305
+						days = 12
+					}					
+				}
+			}
+				SPR = {
+					country_event = { id = spain.94 days = 14 }
+				}
+	}
+	option = {
+	}
+	
+}
+
+# Mediterranean Economic Bloc Counting Event
+
+country_event = {
+	id = spain.94		
+	title = spain.94.t
+	desc = spain.94.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes	 
+	fire_only_once = yes
+	option = {
+		name = spain.94.a
+		ai_chance = {
+			factor = 50
+			}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 1 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_5_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_5_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 2 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_2_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_2_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 3 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_3_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_3_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 4 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_4_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_4_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 5 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_5_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_5_idea
+			}
+		}
+	    if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 6 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_6_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_6_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 7 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_7_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_7_idea
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { var = SPRMedTrade value = 8 compare = equals }
+			}
+			every_other_country = {
+				limit = {
+					has_country_flag = MedTrade
+				}
+				add_ideas = spr_med_trade_8_idea
+			}
+			SPR = {
+				add_ideas = spr_med_trade_8_idea
+			}
+		}
+	}
+}
+
+# Embargo Portugal
+
+country_event = {
+	id = spain.95
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.95.t
+	desc = spain.95.d
+	option = {
+		name = spain.95.a
+		ai_chance = {
+			factor = 100
+			}
+		add_opinion_modifier = {
+			target = POR
+			modifier = SPR_embargo_portugal
+		}
+	}
+	option = {
+		name = spain.95.b
+		ai_chance = {
+			factor = 5
+			}
+	}
+}
+
 ##Civil War Averted
+
 country_event = {
 	id = spain.99
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
 	title = spain.99.t
 	desc = spain.99.d
-	picture = GFX_report_event_spain_civil_war_volunteers_01
-	fire_only_once = yes
 	trigger = {
 		NOT = {
 			has_global_flag = scw_over
@@ -4353,53 +5120,68 @@ country_event = {
 	option = {
 		name = spain.99.a
 		hidden_effect = {
-		load_focus_tree = SPR_war_avoided
+			load_focus_tree = SPR_war_avoided
 		}
 	}
 }
+
 ##SCW START OFFICIAL
+
 country_event = {
 	id = spain.100
+	picture = GFX_report_event_communist_leader
+	is_triggered_only = yes
+	 
+	hidden = yes
 	title = spain.100.t
 	desc = spain.100.d
-	picture = GFX_report_event_communist_leader
-	hidden = yes
-	fire_only_once = no
-	is_triggered_only = yes
 	option = {
-	SPN = {
-		declare_war_on = {
-					target = SPR
-					type = civil_war
-					generator = {
-						85
-					}
+		SPN = {
+			declare_war_on = {
+				target = SPR
+				type = civil_war
+				generator = {
+					85
 				}
 			}
+		}
 	}
 }
+
 ## Communist Revolution
+
 country_event = {
 	id = spain.101
+	picture = GFX_report_event_spain_civil_war_soldiers
+	is_triggered_only = yes
+	 
+	
 	title = spain.101.t
 	desc = spain.101.d
-	picture = GFX_report_event_spain_civil_war_soldiers
-	fire_only_once = yes
-	is_triggered_only = yes
 	immediate = {
-	hidden_effect = {
-		165 = { set_demilitarized_zone = yes }
-		167 = { set_demilitarized_zone = yes }
-		168 = { set_demilitarized_zone = yes }
-		166 = { set_demilitarized_zone = yes }
-		171 = { set_demilitarized_zone = yes }
-	}
-	CTL = {
-					set_cosmetic_tag = CTL_SCW
-				}
+		hidden_effect = {
+			165 = {
+				set_demilitarized_zone = yes
+			}
+			167 = {
+				set_demilitarized_zone = yes
+			}
+			168 = {
+				set_demilitarized_zone = yes
+			}
+			166 = {
+				set_demilitarized_zone = yes
+			}
+			171 = {
+				set_demilitarized_zone = yes
+			}
+		}
+		CTL = {
+			set_cosmetic_tag = CTL_SCW
+		}
 	}
 	option = {
-		#Support Communists
+		# Support Communists
 		name = spain.101.a
 		trigger = {
 			is_ai = no
@@ -4407,11 +5189,21 @@ country_event = {
 		custom_effect_tooltip = communists_chosen
 		set_global_flag = spanish_civil_war
 		hidden_effect = {
-		165 = { set_demilitarized_zone = no }
-		167 = { set_demilitarized_zone = no }
-		168 = { set_demilitarized_zone = no }
-		166 = { set_demilitarized_zone = no }
-		171 = { set_demilitarized_zone = no }
+			165 = {
+				set_demilitarized_zone = no
+			}
+			167 = {
+				set_demilitarized_zone = no
+			}
+			168 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			171 = {
+				set_demilitarized_zone = no
+			}
 			SPR = {
 				set_equipment_fraction = 0.8
 				set_stability = 0.9
@@ -4453,7 +5245,6 @@ country_event = {
 					popularity = 0.10
 				}
 			}
-
 			CTL = {
 				add_ideas = SPR_spanish_civil_war
 				add_ideas = SPR_militia_army_idea
@@ -4478,13 +5269,13 @@ country_event = {
 				}
 				CTL = {
 					add_popularity = {
-					ideology = communism
-					popularity = 0.35
-				}
-				set_politics = {
-				ruling_party = communism
-				elections_allowed = yes
-				}
+						ideology = communism
+						popularity = 0.35
+					}
+					set_politics = {
+						ruling_party = communism
+						elections_allowed = yes
+					}
 				}
 				declare_war_on = {
 					target = SPR
@@ -4496,22 +5287,22 @@ country_event = {
 			}
 			CTL = {
 				change_tag_from = SPR
-			}				
+			}
 			CTL = {
 				load_focus_tree = RevCatTree
 			}
-		}		
+		}
 	}
 	option = {
-		#Support Republicans
+		# Support Republicans
 		name = spain.101.b
 		hidden_effect = {
 			custom_effect_tooltip = anticom_chosen
 			set_global_flag = spanish_civil_war
 			news_event = {
-					hours = 6
-					id = news.63
-				}
+				hours = 6
+				id = news.63
+			}
 			SPR = {
 				CTL = {
 					transfer_state = 165
@@ -4528,7 +5319,7 @@ country_event = {
 				CTL = {
 					transfer_state = 166
 				}
-			}	
+			}
 			SPR = {
 				add_ideas = SPR_spanish_civil_war
 				set_equipment_fraction = 0.8
@@ -4544,11 +5335,21 @@ country_event = {
 					popularity = 0.10
 				}
 			}
-			165 = { set_demilitarized_zone = no }
-			167 = { set_demilitarized_zone = no }
-			168 = { set_demilitarized_zone = no }
-			166 = { set_demilitarized_zone = no }
-			171 = { set_demilitarized_zone = no }
+			165 = {
+				set_demilitarized_zone = no
+			}
+			167 = {
+				set_demilitarized_zone = no
+			}
+			168 = {
+				set_demilitarized_zone = no
+			}
+			166 = {
+				set_demilitarized_zone = no
+			}
+			171 = {
+				set_demilitarized_zone = no
+			}
 			CTL = {
 				load_focus_tree = RevCatTree
 				load_oob = CTL_civil_war
@@ -4577,8 +5378,8 @@ country_event = {
 					popularity = 0.35
 				}
 				set_politics = {
-				ruling_party = communism
-				elections_allowed = yes
+					ruling_party = communism
+					elections_allowed = yes
 				}
 				declare_war_on = {
 					target = SPR
@@ -4592,26 +5393,32 @@ country_event = {
 	}
 }
 
-#Communist Brigades
+# Communist Brigades
+
 country_event = {
 	id = spain.102
-	title = spain.102.t
-	desc = spain.102.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	 
+	
+	title = spain.102.t
+	desc = spain.102.d
 	option = {
 		name = spain.102.a
 		load_oob = "CTL_International_Brigades"
 	}
 }
 
-#Call For Help
+# Call For Help
+
 country_event = {
 	id = spain.103
-	title = spain.103.t
-	desc = spain.103.d
 	picture = GFX_report_event_spain_civil_war_volunteers_01
 	is_triggered_only = yes
+	 
+	
+	title = spain.103.t
+	desc = spain.103.d
 	trigger = {
 		has_civil_war = yes
 		original_tag = CTL
@@ -4625,21 +5432,21 @@ country_event = {
 					original_tag = CTL
 				}
 			}
-			country_event = {
-				id = spain.104
-				days = 1
-			}
+			country_event = { id = spain.104 days = 1 }
 		}
 	}
 }
 
 ## Communist Spain Wants Our Help
+
 country_event = {
 	id = spain.104
-	title = spain.104.t
-	desc = spain.104.d
 	picture = GFX_report_event_spain_civil_war_volunteers_02
 	is_triggered_only = yes
+	 
+	
+	title = spain.104.t
+	desc = spain.104.d
 	option = {
 		name = spain.104.a
 		set_country_flag = promised_help_republican_spain
@@ -4650,56 +5457,371 @@ country_event = {
 	}
 }
 
-#InWar Atrocities and Such
-#Guernica Don't Real
+# InWar Atrocities and Such
+# Guernica Don't Real
+
 country_event = {
 	id = spain.200
-	title = spain.200.t
-	desc = spain.200.d
 	picture = GFX_report_event_guernica
 	is_triggered_only = yes
+	 
+	
+	title = spain.200.t
+	desc = spain.200.d
 	option = {
 		name = spain.200.a
 	}
 }
 
-#Guernica is real, you stupid fuck
+# Guernica is real, you stupid fuck
+
 country_event = {
 	id = spain.201
-	title = spain.201.t
-	desc = spain.201.d
 	picture = GFX_report_event_guernica
 	is_triggered_only = yes
+	 
+	
+	title = spain.201.t
+	desc = spain.201.d
 	option = {
 		name = spain.201.a
-
 	}
 }
 
-#Denials and Replies
+# Nationalist Women Soldiers (the horror)
+country_event = {
+	id = spain.202
+	picture = GFX_report_event_falange_women
+	is_triggered_only = yes
+	 
+	
+	title = spain.202.t
+	desc = spain.202.d
+	option = {
+		name = spain.202.a
+	}
+	option = {
+		name = spain.202.b
+	}
+}
+
+# Denials and Replies
+
 country_event = {
 	id = spain.210
+	picture = GFX_report_hitler_handshake
+	is_triggered_only = yes
+	 
+	
 	title = spain.210.t
 	desc = spain.210.d
-	picture = GFX_report_hitler_handshake
-	is_triggered_only = yes
 	option = {
 		name = spain.210.a
-
 	}
 }
 
-#Denials and Replies
+# Denials and Replies
+
 country_event = {
 	id = spain.211
-	title = spain.211.t
-	desc = spain.211.d
 	picture = GFX_report_hitler_handshake
 	is_triggered_only = yes
+	 
+	
+	title = spain.211.t
+	desc = spain.211.d
 	option = {
 		name = spain.211.a
-
 	}
 }
 
+# Britain rejects advisors
 
+country_event = {
+	id = spain.212
+	picture = GFX_report_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.212.t
+	desc = spain.212.d
+	option = {
+		name = spain.212.a
+	}
+}
+
+# France rejects advisors
+
+country_event = {
+	id = spain.213
+	picture = GFX_report_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.213.t
+	desc = spain.213.d
+	option = {
+		name = spain.213.a
+	}
+}
+
+# Britain sends advisors
+
+country_event = {
+	id = spain.214
+	picture = GFX_report_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.214.t
+	desc = spain.214.d
+	option = {
+		name = spain.214.a
+	}
+}
+
+# France sends advisors
+
+country_event = {
+	id = spain.215
+	picture = GFX_report_hitler_handshake
+	is_triggered_only = yes
+	 
+	
+	title = spain.215.t
+	desc = spain.215.d
+	option = {
+		name = spain.215.a
+	}
+}
+
+# Mediterranean Economic Bloc - France
+
+country_event = {
+	id = spain.300
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 200
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 0
+			}
+	}
+}
+# Mediterranean Economic Bloc - Albania
+
+country_event = {
+	id = spain.301
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
+# Mediterranean Economic Bloc - United Kingdom
+
+country_event = {
+	id = spain.302
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
+# Mediterranean Economic Bloc - Italy
+
+country_event = {
+	id = spain.303
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
+# Mediterranean Economic Bloc - Greece
+country_event = {
+	id = spain.304
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
+# Mediterranean Economic Bloc - Turkey
+
+country_event = {
+	id = spain.305
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
+# Mediterranean Economic Bloc -  Yugoslavia
+
+country_event = {
+	id = spain.306
+	title = spain.93.t
+	desc = spain.93.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = spain.93.a
+		ai_chance = {
+			factor = 25
+			}
+		SPR = {
+			set_country_flag = MedTrade
+		}
+		add_to_variable = {
+			var = SPRMedTrade
+			value = 1
+		}
+		ROOT = {
+			set_country_flag = MedTrade
+		}
+		add_political_power = 5
+	}
+	option = {
+		name = spain.93.b
+		ai_chance = {
+			factor = 10
+			}
+	}
+}
