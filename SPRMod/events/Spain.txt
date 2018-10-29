@@ -4718,6 +4718,68 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
+#Spain adds country to Antifa
+country_event = {
+	id = spain.86
+	title = spain.86.t
+	desc = spain.86.d
+	picture = GFX_report_event_spain_civil_war_volunteers
+
+	is_triggered_only = yes
+
+	option = { #Enter alliance
+		name = spain.86.a
+		ai_chance = {
+			factor = 90
+		}
+		POL = {
+			add_to_faction = ROOT
+			ROOT = {
+				add_ai_strategy = {
+					type = alliance
+					id = "SPR"
+					value = 200
+				}
+			}
+			country_event = { id = spain.87 days = 1 }
+		}
+	}
+
+	option = {
+		name = spain.86.b
+		ai_chance = {
+			factor = 10
+		}
+		POL = {
+			country_event = { id = poland.88 days = 1 }
+		}
+	}
+}
+
+#Join Antifa
+country_event = {
+	id = spain.87
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	title = spain.87.t
+	desc = spain.87.d
+	option = {
+		name = spain.87.a
+	}
+}
+#Antifa are the real fascists
+country_event = {
+	id = spain.88
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes	
+	title = spain.88.t
+	desc = spain.88.d
+	option = {
+		name = spain.88.a
+}
+}
+
 ##Joining Allies
 
 country_event = {

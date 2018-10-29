@@ -21,17 +21,43 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected
+				}
+			}
+		}
 	}
 	# Focus for Spanish Foreign Policy
 	focus = {
 		id = SPR_spanish_foreign_policy
-		icon = GFX_goal_unknown
+		icon = GFX_forgotten_major
 		x = 28
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
 		}
 	}
 	# Focus for Appeal to the Western Allies
@@ -51,6 +77,20 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			FRA = {
+			add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_build_relations
+				}
+			}
+		ENG = {
+			add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_build_relations
+				}
+			}
+		}
 	}
 	# Focus for Latin Anti-Fascist Bloc
 	focus = {
@@ -69,6 +109,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			create_faction = "latin_anti_fascist_bloc"
+		}
 	}
 	# Focus for Intervene in the World War
 	focus = {
@@ -83,6 +126,15 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		SPR = {
+			declare_war_on = {
+				target = GER
+				type = puppet_wargoal_focus
+				generator = {
+					85
+				}
+			}
 		}
 	}
 	# Focus for Expand the Asturian Steel Industry
@@ -99,6 +151,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		174 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
 		}
 	}
 	# Focus for Expand Unionized Labor
@@ -129,6 +189,25 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		
+		random_owned_controlled_state = {
+				limit = {									
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = SPN_nationalized_military_1
+			}
 		}
 	}
 	# Focus for Moroccon Oil Refineries
@@ -179,6 +258,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 	# Focus for Industrialize the Nation
 	focus = {
@@ -190,6 +272,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
 		}
 	}
 	# Focus for Expansion of Public Works
@@ -206,6 +296,106 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 	}
 	# Focus for Increased Wages for Farm-Workers
 	focus = {
@@ -221,6 +411,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			remove_ideas = SPR_agrarian_crisis_idea					
 	}
 	# Focus for Spanish Agricultural Universities
 	focus = {
@@ -235,6 +427,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	# Focus for Repair the Broken Roads
@@ -371,11 +566,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		
+			remove_ideas = SPR_political_violence_idea
+		}
 	}
 	# Focus for The Mediterranean Economic Bloc
 	focus = {
 		id = SPR_the_mediterranean_economic_bloc_l
-		icon = GFX_focus_generic_the_giant_wakes
+		icon = GFX_med_trade_org_focus
 		x = 1
 		y = 4
 		cost = 10
@@ -385,6 +584,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = med_econ_bloc_tt
+			hidden_effect = {
+			SPR = {
+				country_event = spain.93
+			}
+			}
 		}
 	}
 	# Focus for Feed the Hungry
@@ -401,6 +608,29 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected
+				}
+			}
+		}
 	}
 	# Focus for Restoration of Democracy
 	focus = {
@@ -409,13 +639,37 @@ focus_tree = {
 		x = 4
 		y = 1
 		cost = 10
-		available_if_capitulated = yes
+		available_if_capitulated = yes	
 		prerequisite = {
 			focus = SPR_the_republic_enduring
 		}
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected
+				}
+			}
+		}
+		
 	}
 	# Focus for The Republic Enduring
 	focus = {
@@ -425,8 +679,17 @@ focus_tree = {
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
+		bypass = {
+			has_war = no
+		}
+		available = {
+			has_war = no
+		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPR_ruined_nation_idea
 		}
 	}
 	# Focus for Appeal the Monroe Doctrine
@@ -459,6 +722,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POR
+		}
+		}
 	}
 	# Focus for Commitment to Global Anti-Fascism
 	focus = {
@@ -474,6 +743,18 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+				}
+				add_opinion_modifier = {
+						target = SPR
+						modifier = SPR_european_antifascism
+					}
+			}
+			add_war_support = 0.10
+		}
 	}
 	# Focus for Join the Allies
 	focus = {
@@ -488,6 +769,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		ENG = {
+			country_event = {
+				id = spain.90
+				days = 2
+				}
+			}
 		}
 	}
 	# Focus for Invite our Mexican Friends
@@ -537,6 +826,129 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			ARG = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = ARG
+					}
+				}
+			}
+			BRA = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = BRA
+					}
+				}
+			}
+			BOL = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = BOL
+					}
+				}
+			}
+			COL = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = COL
+					}
+				}
+			}
+			CHL = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = CHL
+					}
+				}
+			}
+			URG = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = URG
+					}
+				}
+			}
+			PRU = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PRU
+					}
+				}
+			}
+			URG = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = URG
+					}
+				}
+			}
+			ECU = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = ECU
+					}
+				}
+			}
+			PAR = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PAR
+					}
+				}
+			}
+			VEN = {
+				if = {
+					limit = {
+						fascism > 0.2
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = VEN
+					}
+				}
+			}
+		}
 	}
 	# Focus for Request British Naval Advisors
 	focus = {
@@ -552,6 +964,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		ENG = {
+		country_event = {
+			id = spain.91
+			days = 1
+		}
+		}
+		}
 	}
 	# Focus for Request French Military Advisors
 	focus = {
@@ -566,6 +986,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		FRA = {
+		country_event = {
+			id = spain.92
+			days = 1
+		}
+		}
 		}
 	}
 	# Focus for End the Italian Threat
@@ -584,6 +1012,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ITA
+			}
 		}
 	}
 	# Focus for Sovereignty of the Air

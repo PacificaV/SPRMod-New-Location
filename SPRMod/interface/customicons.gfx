@@ -99,6 +99,10 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/GFX_med_trade_org_focus.dds" 
 	}
 	SpriteType = { 
+	name = "GFX_money_focus" 
+	texturefile = "gfx/interface/goals/GFX_money_focus.dds" 
+	}
+	SpriteType = { 
 	name = "GFX_alfonsists_focus" 
 	texturefile = "gfx/interface/goals/GFX_alfonsists_focus.dds" 
 	}

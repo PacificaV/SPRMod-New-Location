@@ -67,6 +67,10 @@
  SPR_new_republic_6_idea:0 "The New Republic"
  SPR_new_republic_7_idea:0 "The New Republic"
  SPR_stable_politics_idea:0 "Stable Politics"
+ SPR_ruined_nation_idea:0 "Ruined Nation"
+ SPR_ruined_nation_2_idea:0 "Ruined Nation"
+ SPR_ruined_nation_3_idea:0 "Ruined Nation"
+ SPR_republic_perfected:0 "The Republic Enduring"
  
  
  ###Advisors###
