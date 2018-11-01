@@ -1,0 +1,1138 @@
+focus_tree = { 
+id = PCETree
+country = { 
+factor = 0 
+modifier = { 
+add = 1
+tag = SPR 
+} 
+} 
+#Focus for Eliminate our Fascist Neighbor
+focus = { 
+id = SPR_eliminateourfascistneighbor
+icon = GFX_eliminateourfascistneighbor
+x = 28
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ministeriodepaz } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Upgrade the Mosin-Nagant
+focus = { 
+id = SPR_upgradethemosinnagant
+icon = GFX_goal_generic_small_arms
+x = 34
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ejrcitorojodelarepblica } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Spanish Collective Farms
+focus = { 
+id = SPR_spanishcollectivefarms
+icon = GFX_spanishcollectivefarms
+x = 5
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_everythingfortherevolution } 
+prerequisite = { focus = SPR_stampoutliberalism } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Revolution Unbroken
+focus = { 
+id = SPR_therevolutionunbroken
+icon = GFX_therevolutionunbroken
+x = 6
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+bypass = { 
+has_war = no
+ } 
+available = { 
+has_war = no
+ } 
+
+ } 
+
+#Focus for The Eighth World Congress
+focus = { 
+id = SPR_theeighthworldcongress
+icon = GFX_theeighthworldcongress
+x = 6
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_therevolutionunbroken } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Everything for the Revolution
+focus = { 
+id = SPR_everythingfortherevolution
+icon = GFX_goal_generic_war_with_comintern
+x = 6
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_statesupervisedunions focus = SPR_purgetheanarchists } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Joint Soviet Research Treaty
+focus = { 
+id = SPR_jointsovietresearchtreaty
+icon = GFX_goal_tfv_generic_tech_sharing
+x = 34
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_upgradethemosinnagant } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Begin Industry Nationalization
+focus = { 
+id = SPR_beginindustrynationalization
+icon = GFX_goal_generic_soviet_construction
+x = 6
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_theeighthworldcongress } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for State-Supervised Unions
+focus = { 
+id = SPR_statesupervisedunions
+icon = GFX_goal_generic_dangerous_deal
+x = 9
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_theeighthworldcongress } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Purge the Anarchists
+focus = { 
+id = SPR_purgetheanarchists
+icon = GFX_goal_generic_military_deal
+x = 3
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_theeighthworldcongress } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Stamp Out Liberalism
+focus = { 
+id = SPR_stampoutliberalism
+icon = GFX_stampoutliberalism
+x = 2
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_purgetheanarchists } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Revolutionary Mindset
+focus = { 
+id = SPR_revolutionarymindset
+icon = GFX_revolutionarymindset
+x = 10
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_statesupervisedunions } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand the Power of the Party
+focus = { 
+id = SPR_expandthepoweroftheparty
+icon = GFX_focus_generic_join_comintern
+x = 3
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_purgetheanarchists } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand Heavy Industry
+focus = { 
+id = SPR_expandheavyindustry
+icon = GFX_expandheavyindustry
+x = 1
+y = 6
+cost = 7
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_everythingfortherevolution } 
+prerequisite = { focus = SPR_stampoutliberalism } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Prioritize War Materiel
+focus = { 
+id = SPR_prioritizewarmateriel
+icon = GFX_goal_generic_construct_mil_factory
+x = 7
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_revolutionarymindset } 
+prerequisite = { focus = SPR_everythingfortherevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Global Revolutionary Committee
+focus = { 
+id = SPR_globalrevolutionarycommittee
+icon = GFX_globalrevolutionarycommittee
+x = 9
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_statesupervisedunions } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ministerio de la Verdad
+focus = { 
+id = SPR_ministeriodelaverdad
+icon = GFX_ministeriodelaverdad
+x = 11
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_everythingfortherevolution } 
+prerequisite = { focus = SPR_revolutionarymindset } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ministerio de Abundancia
+focus = { 
+id = SPR_ministeriodeabundancia
+icon = GFX_ministeriodeabundancia
+x = 18
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Public Housing Initiative
+focus = { 
+id = SPR_publichousinginitiative
+icon = GFX_publichousinginitiative
+x = 16
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ministeriodeabundancia } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Planned Economic Recovery
+focus = { 
+id = SPR_plannedeconomicrecovery
+icon = GFX_plannedeconomicrecovery
+x = 18
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_recoveryrationingprogram } 
+prerequisite = { focus = SPR_publichousinginitiative } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recovery Rationing Program
+focus = { 
+id = SPR_recoveryrationingprogram
+icon = GFX_recoveryrationingprogram
+x = 20
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ministeriodeabundancia } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The First Five Year Plan
+focus = { 
+id = SPR_thefirstfiveyearplan
+icon = GFX_goal_generic_soviet_construction
+x = 18
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_plannedeconomicrecovery } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Strategic Resources Program
+focus = { 
+id = SPR_strategicresourcesprogram
+icon = GFX_focus_generic_steel
+x = 22
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thefirstfiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Institute of Industrial Agriculture
+focus = { 
+id = SPR_instituteofindustrialagriculture
+icon = GFX_focus_research2
+x = 22
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_recoveryrationingprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for National Infrastructure Projects
+focus = { 
+id = SPR_nationalinfrastructureprojects
+icon = GFX_goal_generic_construct_infrastructure
+x = 14
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_publichousinginitiative } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Constitutional Worker's Rights
+focus = { 
+id = SPR_constitutionalworkersrights
+icon = GFX_focus_generic_treaty
+x = 14
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thefirstfiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Factory Expansion Program
+focus = { 
+id = SPR_factoryexpansionprogram
+icon = GFX_goal_generic_construct_civ_factory
+x = 18
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_thefirstfiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Streamlined Research Initiatives
+focus = { 
+id = SPR_streamlinedresearchinitiatives
+icon = GFX_focus_research2
+x = 18
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_factoryexpansionprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand Civilian Production
+focus = { 
+id = SPR_expandcivilianproduction
+icon = GFX_goal_generic_construct_civ_factory
+x = 16
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_factoryexpansionprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand Military Production
+focus = { 
+id = SPR_expandmilitaryproduction
+icon = GFX_goal_generic_construct_mil_factory
+x = 20
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_factoryexpansionprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ministerio de Paz
+focus = { 
+id = SPR_ministeriodepaz
+icon = GFX_ministeriodepaz
+x = 28
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Pyrenean Curtain
+focus = { 
+id = SPR_thepyreneancurtain
+icon = GFX_goal_generic_fortify_city
+x = 25
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ministeriodepaz } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Intervene in the Great Patriotic War
+focus = { 
+id = SPR_interveneinthegreatpatrioticwar
+icon = GFX_goal_generic_occupy_states_ongoing_war
+x = 31
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ministeriodepaz } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Subvert South America
+focus = { 
+id = SPR_subvertsouthamerica
+icon = GFX_subvertsouthamerica
+x = 26
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_eliminateourfascistneighbor } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Adopt the Portuguese Language
+focus = { 
+id = SPR_adopttheportugueselanguage
+icon = GFX_focus_generic_treaty
+x = 30
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_eliminateourfascistneighbor } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Secure a Free Africa
+focus = { 
+id = SPR_secureafreeafrica
+icon = GFX_secureafreeafrica
+x = 28
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_subvertsouthamerica } 
+prerequisite = { focus = SPR_adopttheportugueselanguage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Mexican Brotherhood
+focus = { 
+id = SPR_mexicanbrotherhood
+icon = GFX_mexicanbrotherhood
+x = 25
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_subvertsouthamerica } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Seize Gibraltar
+focus = { 
+id = SPR_seizegibraltar
+icon = GFX_goal_generic_attack_allies
+x = 31
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_adopttheportugueselanguage } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Upgrade the Fighter Wings
+focus = { 
+id = SPR_upgradethefighterwings
+icon = GFX_goal_generic_air_fighter2
+x = 49
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_anewapproach } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Updated CAS Designs
+focus = { 
+id = SPR_updatedcasdesigns
+icon = GFX_goal_generic_air_doctrine
+x = 47
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_supporttheredarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Northern Air Base Expansion
+focus = { 
+id = SPR_northernairbaseexpansion
+icon = GFX_goal_generic_air_production
+x = 45
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armadeaviacin } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Southern Air Base Expansion
+focus = { 
+id = SPR_southernairbaseexpansion
+icon = GFX_goal_generic_air_production
+x = 51
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armadeaviacin } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ground-Air Coordination
+focus = { 
+id = SPR_groundaircoordination
+icon = GFX_goal_generic_air_fighter2
+x = 47
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_updatedcasdesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Tactical Bomber Development Program
+focus = { 
+id = SPR_tacticalbomberdevelopmentprogram
+icon = GFX_goal_generic_air_bomber
+x = 49
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_upgradethefighterwings } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Experimental Weapon Division
+focus = { 
+id = SPR_experimentalweapondivision
+icon = GFX_goal_generic_secret_weapon
+x = 48
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_tacticalbomberdevelopmentprogram focus = SPR_groundaircoordination } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Support the Red Army
+focus = { 
+id = SPR_supporttheredarmy
+icon = GFX_goal_generic_CAS
+x = 47
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armadeaviacin } 
+mutually_exclusive = { focus = SPR_anewapproach } 
+mutually_exclusive = { focus = SPR_anewapproach } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A New Approach
+focus = { 
+id = SPR_anewapproach
+icon = GFX_goal_generic_air_fighter2
+x = 49
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armadeaviacin } 
+mutually_exclusive = { focus = SPR_supporttheredarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Arma de Aviación
+focus = { 
+id = SPR_armadeaviacin
+icon = GFX_armadeaviacin
+x = 48
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Flota Roja de la República Española
+focus = { 
+id = SPR_flotarojadelarepblicaespaola
+icon = GFX_flotarojadelarepblicaespaola
+x = 57
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Mobile Fotresses
+focus = { 
+id = SPR_mobilefotresses
+icon = GFX_goal_generic_army_tanks
+x = 40
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armoredwarfareprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Introduce Mechanized Infantry
+focus = { 
+id = SPR_introducemechanizedinfantry
+icon = GFX_goal_generic_army_motorized
+x = 36
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armoredwarfareprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Streamline Military Industry
+focus = { 
+id = SPR_streamlinemilitaryindustry
+icon = GFX_goal_generic_construct_mil_factory
+x = 38
+y = 6
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_armoredwarfareprogram } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Armored Warfare Program
+focus = { 
+id = SPR_armoredwarfareprogram
+icon = GFX_armoredwarfareprogram
+x = 38
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_massscaledecisionmaking focus = SPR_frontlinecommissars focus = SPR_improvedfirecoordination } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Frontline Commissars
+focus = { 
+id = SPR_frontlinecommissars
+icon = GFX_focus_generic_military_mission
+x = 40
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_standardizedinfantryequipment } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Improved Fire Coordination
+focus = { 
+id = SPR_improvedfirecoordination
+icon = GFX_goal_generic_army_doctrines
+x = 36
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_newartillerydesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Dedicated Corps of Engineers
+focus = { 
+id = SPR_dedicatedcorpsofengineers
+icon = GFX_goal_generic_construct_military
+x = 42
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_femalefrontlinecombatants } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Mass-Scale Decision Making
+focus = { 
+id = SPR_massscaledecisionmaking
+icon = GFX_focus_generic_military_academy
+x = 38
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_empoweredlogisticscompanies } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Female Frontline Combatants
+focus = { 
+id = SPR_femalefrontlinecombatants
+icon = GFX_femalefrontlinecombatants
+x = 42
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ejrcitorojodelarepblica } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for New Artillery Designs
+focus = { 
+id = SPR_newartillerydesigns
+icon = GFX_goal_generic_army_artillery2
+x = 36
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_adoptartillerydoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Empowered Logistics Companies
+focus = { 
+id = SPR_empoweredlogisticscompanies
+icon = GFX_goal_generic_build_tank
+x = 38
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_standwithrevolutionarytactics } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Standardized Infantry Equipment
+focus = { 
+id = SPR_standardizedinfantryequipment
+icon = GFX_goal_generic_production
+x = 40
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_peoplesmobilizationdoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Adopt Artillery Doctrines
+focus = { 
+id = SPR_adoptartillerydoctrines
+icon = GFX_goal_generic_army_artillery2
+x = 36
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ejrcitorojodelarepblica } 
+mutually_exclusive = { focus = SPR_standwithrevolutionarytactics } 
+mutually_exclusive = { focus = SPR_standwithrevolutionarytactics } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for People's Mobilization Doctrines
+focus = { 
+id = SPR_peoplesmobilizationdoctrines
+icon = GFX_focus_generic_little_entente
+x = 40
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ejrcitorojodelarepblica } 
+mutually_exclusive = { focus = SPR_standwithrevolutionarytactics } 
+mutually_exclusive = { focus = SPR_adoptartillerydoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Stand with Revolutionary Tactics
+focus = { 
+id = SPR_standwithrevolutionarytactics
+icon = GFX_goal_generic_position_armies
+x = 38
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_ejrcitorojodelarepblica } 
+mutually_exclusive = { focus = SPR_adoptartillerydoctrines } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Ejército Rojo de la República
+focus = { 
+id = SPR_ejrcitorojodelarepblica
+icon = GFX_ejrcitorojodelarepblica
+x = 38
+y = 1
+cost = 5
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bleed Capitalism Dry
+focus = { 
+id = SPR_bleedcapitalismdry
+icon = GFX_goal_generic_wolf_pack
+x = 56
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_flotarojadelarepblicaespaola } 
+mutually_exclusive = { focus = SPR_aredarmada } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for A Red Armada
+focus = { 
+id = SPR_aredarmada
+icon = GFX_goal_generic_navy_battleship
+x = 58
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_flotarojadelarepblicaespaola } 
+mutually_exclusive = { focus = SPR_bleedcapitalismdry } 
+mutually_exclusive = { focus = SPR_bleedcapitalismdry } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Standardized Pressure Hulls
+focus = { 
+id = SPR_standardizedpressurehulls
+icon = GFX_standardizedpressurehulls
+x = 56
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_bleedcapitalismdry } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Finalize Naval Doctrines
+focus = { 
+id = SPR_finalizenavaldoctrines
+icon = GFX_goal_generic_navy_doctrines_tactics
+x = 57
+y = 5
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_surfaceraidingtaskgroups focus = SPR_newbattleshipdesigns } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Air Defense Stratagems
+focus = { 
+id = SPR_airdefensestratagems
+icon = GFX_airdefensestratagems
+x = 58
+y = 3
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_aredarmada } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for New Battleship Designs
+focus = { 
+id = SPR_newbattleshipdesigns
+icon = GFX_goal_generic_navy_cruiser
+x = 58
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_airdefensestratagems } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Surface Raiding Task Groups
+focus = { 
+id = SPR_surfaceraidingtaskgroups
+icon = GFX_goal_generic_occupy_states_coastal
+x = 56
+y = 4
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_standardizedpressurehulls } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Experimental Aircraft Carrier
+focus = { 
+id = SPR_experimentalaircraftcarrier
+icon = GFX_goal_generic_navy_carrier
+x = 54
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_flotarojadelarepblicaespaola } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expand Dockyard Facilities
+focus = { 
+id = SPR_expanddockyardfacilities
+icon = GFX_goal_generic_construct_naval_dockyard
+x = 60
+y = 2
+cost = 5
+available_if_capitulated = yes 
+prerequisite = { focus = SPR_flotarojadelarepblicaespaola } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }

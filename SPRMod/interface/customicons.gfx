@@ -130,4 +130,100 @@ spriteTypes = {
 	name = "GFX_IndustrialDilemma" 
 	texturefile = "gfx/interface/goals/GFX_IndustrialDilemma.dds" 
 	}
+	SpriteType = { 
+	name = "GFX_eliminateourfascistneighbor" 
+	texturefile = "gfx/interface/goals/GFX_eliminateourfascistneighbor.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_spanishcollectivefarms" 
+	texturefile = "gfx/interface/goals/GFX_spanishcollectivefarms.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_therevolutionunbroken" 
+	texturefile = "gfx/interface/goals/GFX_therevolutionunbroken.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_theeighthworldcongress" 
+	texturefile = "gfx/interface/goals/GFX_theeighthworldcongress.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_stampoutliberalism" 
+	texturefile = "gfx/interface/goals/GFX_stampoutliberalism.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_revolutionarymindset" 
+	texturefile = "gfx/interface/goals/GFX_revolutionarymindset.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_expandheavyindustry" 
+	texturefile = "gfx/interface/goals/GFX_expandheavyindustry.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_globalrevolutionarycommittee" 
+	texturefile = "gfx/interface/goals/GFX_globalrevolutionarycommittee.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_ministeriodelaverdad" 
+	texturefile = "gfx/interface/goals/GFX_ministeriodelaverdad.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_ministeriodeabundancia" 
+	texturefile = "gfx/interface/goals/GFX_ministeriodeabundancia.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_publichousinginitiative" 
+	texturefile = "gfx/interface/goals/GFX_publichousinginitiative.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_plannedeconomicrecovery" 
+	texturefile = "gfx/interface/goals/GFX_plannedeconomicrecovery.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_recoveryrationingprogram" 
+	texturefile = "gfx/interface/goals/GFX_recoveryrationingprogram.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_ministeriodepaz" 
+	texturefile = "gfx/interface/goals/GFX_ministeriodepaz.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_subvertsouthamerica" 
+	texturefile = "gfx/interface/goals/GFX_subvertsouthamerica.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_secureafreeafrica" 
+	texturefile = "gfx/interface/goals/GFX_secureafreeafrica.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_mexicanbrotherhood" 
+	texturefile = "gfx/interface/goals/GFX_mexicanbrotherhood.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_armadeaviacin" 
+	texturefile = "gfx/interface/goals/GFX_armadeaviacin.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_flotarojadelarepblicaespaola" 
+	texturefile = "gfx/interface/goals/GFX_flotarojadelarepblicaespaola.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_armoredwarfareprogram" 
+	texturefile = "gfx/interface/goals/GFX_armoredwarfareprogram.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_femalefrontlinecombatants" 
+	texturefile = "gfx/interface/goals/GFX_femalefrontlinecombatants.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_ejrcitorojodelarepblica" 
+	texturefile = "gfx/interface/goals/GFX_ejrcitorojodelarepblica.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_standardizedpressurehulls" 
+	texturefile = "gfx/interface/goals/GFX_standardizedpressurehulls.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_airdefensestratagems" 
+	texturefile = "gfx/interface/goals/GFX_airdefensestratagems.tga" 
+	} 
  }
