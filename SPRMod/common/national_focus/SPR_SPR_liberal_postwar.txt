@@ -3,7 +3,7 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 1
+			add = 1000
 			tag = SPR
 		}
 	}
@@ -40,7 +40,7 @@ focus_tree = {
 				limit = { has_idea = SPR_ruined_nation_3_idea }
 				swap_ideas = {
 					remove_idea = SPR_ruined_nation_3_idea
-					add_idea = SPR_republic_perfected
+					add_idea = SPR_republic_perfected_idea
 				}
 			}
 		}
@@ -127,7 +127,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		SPR = {
 			declare_war_on = {
 				target = GER
 				type = puppet_wargoal_focus
@@ -135,7 +134,6 @@ focus_tree = {
 					85
 				}
 			}
-		}
 	}
 	# Focus for Expand the Asturian Steel Industry
 	focus = {
@@ -174,6 +172,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPR_power_to_the_unions_idea
 		}
 	}
 	# Focus for Expand Hispano-Suiza
@@ -224,6 +225,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			174 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+		}
 	}
 	# Focus for Industrialize Western Spain
 	focus = {
@@ -240,6 +249,41 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		
+		170 = {
+				limit = {									
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SPR_industrialized_state
+			}
+		169 = {
+				limit = {									
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = SPR_industrialized_state
+			}
 		}
 	}
 	# Focus for State-Sponsored Universities
@@ -414,6 +458,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = SPR_agrarian_crisis_idea					
 	}
+	}
 	# Focus for Spanish Agricultural Universities
 	focus = {
 		id = SPR_spanish_agricultural_universities_l
@@ -446,6 +491,116 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			166 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			176 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			170 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			169 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
 	# Focus for Expanded Industrial Investments
 	focus = {
@@ -461,6 +616,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		add_timed_idea = {
+			idea = SPR_industrial_investments_idea
+			days = 720
+		}
+	}
 	}
 	# Focus for Focus on Civilian Industry
 	focus = {
@@ -478,6 +639,98 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	# Focus for Focus on Military Industry
@@ -497,6 +750,98 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	# Focus for Endorse Collective Modes of Production
 	focus = {
@@ -511,6 +856,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			add_ideas = SPR_worker_coops_idea
 		}
 	}
 	# Focus for The Republic Perfected
@@ -533,6 +881,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		swap_ideas = {
+				remove_idea = SPR_republic_perfected_idea
+				add_idea = SPR_republic_perfected_2_idea
+			}
+		}
 	}
 	# Focus for Progressive Tenancy Systems
 	focus = {
@@ -547,6 +901,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SPR_republic_perfected_idea
+				add_idea = SPR_republic_perfected_2_idea
+			}
 		}
 	}
 	# Focus for Protect the Citizens
@@ -567,7 +927,6 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
-		
 			remove_ideas = SPR_political_violence_idea
 		}
 	}
@@ -627,7 +986,7 @@ focus_tree = {
 				limit = { has_idea = SPR_ruined_nation_3_idea }
 				swap_ideas = {
 					remove_idea = SPR_ruined_nation_3_idea
-					add_idea = SPR_republic_perfected
+					add_idea = SPR_republic_perfected_idea
 				}
 			}
 		}
@@ -665,7 +1024,7 @@ focus_tree = {
 				limit = { has_idea = SPR_ruined_nation_3_idea }
 				swap_ideas = {
 					remove_idea = SPR_ruined_nation_3_idea
-					add_idea = SPR_republic_perfected
+					add_idea = SPR_republic_perfected_idea
 				}
 			}
 		}
@@ -705,6 +1064,17 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+		USA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = SPR_build_relations
+				}
+				country_event = {
+					id = spain.72
+				}
+			}
 		}
 	}
 	# Focus for Break Salazar's Portugal
@@ -793,6 +1163,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+		MEX = {
+			country_event = {
+				id = spain.86
+				days = 2
+				}
+			}
+		}
 	}
 	# Focus for Invite the South American Democracies
 	focus = {
@@ -807,6 +1185,129 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = {
+			ARG = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			BRA = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			BOL = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			COL = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			CHL = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			URG = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			PRU = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			URG = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			ECU = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			PAR = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
+			VEN = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = {
+				id = spain.86
+				days = 2
+				}
+				}
+			}
 		}
 	}
 	# Focus for End Fascism in South America
@@ -1784,6 +2285,8 @@ focus_tree = {
 			}
 		}
 	}
+	}
 	# End of focuses
-}
+
+
 

@@ -3,7 +3,7 @@ id = PCETree
 country = { 
 factor = 0 
 modifier = { 
-add = 1
+add = 300
 tag = SPR 
 } 
 } 
@@ -19,7 +19,12 @@ prerequisite = { focus = SPR_ministeriodepaz }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = POR
+		}
+	}
  } 
 
 #Focus for Upgrade the Mosin-Nagant
@@ -34,9 +39,15 @@ prerequisite = { focus = SPR_ejrcitorojodelarepblica }
 ai_will_do = { 
  factor = 1
  } 
-
- } 
-
+completion_reward = {
+add_tech_bonus = {
+			    name = infantry_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+}
 #Focus for Spanish Collective Farms
 focus = { 
 id = SPR_spanishcollectivefarms
@@ -50,7 +61,9 @@ prerequisite = { focus = SPR_stampoutliberalism }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	remove_ideas = spr_agrarian_crisis_idea
+		}
  } 
 
 #Focus for The Revolution Unbroken
@@ -70,7 +83,8 @@ has_war = no
 available = { 
 has_war = no
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for The Eighth World Congress
@@ -85,10 +99,15 @@ prerequisite = { focus = SPR_therevolutionunbroken }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	news_event = {
+		id = spain.96
+		days = 1
+	}
+		}
  } 
 
-#Focus for Everything for the Revolution
+#Focus for Everything for the Revolution 
 focus = { 
 id = SPR_everythingfortherevolution
 icon = GFX_goal_generic_war_with_comintern
@@ -100,7 +119,9 @@ prerequisite = { focus = SPR_statesupervisedunions focus = SPR_purgetheanarchist
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	add_ideas = SPR_everything_for_revolution_idea
+		}
  } 
 
 #Focus for Joint Soviet Research Treaty
@@ -115,7 +136,11 @@ prerequisite = { focus = SPR_upgradethemosinnagant }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	SPR = {
+		add_to_tech_sharing_group = comintern_research
+	}
+		}
  } 
 
 #Focus for Begin Industry Nationalization
@@ -130,7 +155,29 @@ prerequisite = { focus = SPR_theeighthworldcongress }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected_idea
+				}
+			}
+	}
  } 
 
 #Focus for State-Supervised Unions
@@ -145,7 +192,8 @@ prerequisite = { focus = SPR_theeighthworldcongress }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Purge the Anarchists
@@ -160,7 +208,8 @@ prerequisite = { focus = SPR_theeighthworldcongress }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Stamp Out Liberalism
@@ -175,7 +224,8 @@ prerequisite = { focus = SPR_purgetheanarchists }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Revolutionary Mindset
@@ -190,7 +240,8 @@ prerequisite = { focus = SPR_statesupervisedunions }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Expand the Power of the Party
@@ -205,7 +256,8 @@ prerequisite = { focus = SPR_purgetheanarchists }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Expand Heavy Industry
@@ -221,7 +273,8 @@ prerequisite = { focus = SPR_stampoutliberalism }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Prioritize War Materiel
@@ -237,7 +290,8 @@ prerequisite = { focus = SPR_everythingfortherevolution }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Global Revolutionary Committee
@@ -252,7 +306,8 @@ prerequisite = { focus = SPR_statesupervisedunions }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Ministerio de la Verdad
@@ -268,7 +323,8 @@ prerequisite = { focus = SPR_revolutionarymindset }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Ministerio de Abundancia
@@ -282,7 +338,8 @@ available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Public Housing Initiative
@@ -297,7 +354,29 @@ prerequisite = { focus = SPR_ministeriodeabundancia }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+	if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected_idea
+				}
+			}
+		}
  } 
 
 #Focus for Planned Economic Recovery
@@ -313,7 +392,29 @@ prerequisite = { focus = SPR_publichousinginitiative }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		if = {
+				limit = { has_idea = SPR_ruined_nation_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_idea
+					add_idea = SPR_ruined_nation_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_2_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_2_idea
+					add_idea = SPR_ruined_nation_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = SPR_ruined_nation_3_idea }
+				swap_ideas = {
+					remove_idea = SPR_ruined_nation_3_idea
+					add_idea = SPR_republic_perfected_idea
+				}
+			}
+		}
  } 
 
 #Focus for Recovery Rationing Program
@@ -328,7 +429,8 @@ prerequisite = { focus = SPR_ministeriodeabundancia }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for The First Five Year Plan
@@ -343,7 +445,8 @@ prerequisite = { focus = SPR_plannedeconomicrecovery }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Strategic Resources Program
@@ -358,7 +461,8 @@ prerequisite = { focus = SPR_thefirstfiveyearplan }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Institute of Industrial Agriculture
@@ -373,7 +477,8 @@ prerequisite = { focus = SPR_recoveryrationingprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for National Infrastructure Projects
@@ -388,7 +493,8 @@ prerequisite = { focus = SPR_publichousinginitiative }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Constitutional Worker's Rights
@@ -403,7 +509,8 @@ prerequisite = { focus = SPR_thefirstfiveyearplan }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Factory Expansion Program
@@ -418,7 +525,8 @@ prerequisite = { focus = SPR_thefirstfiveyearplan }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Streamlined Research Initiatives
@@ -433,7 +541,8 @@ prerequisite = { focus = SPR_factoryexpansionprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Expand Civilian Production
@@ -448,7 +557,8 @@ prerequisite = { focus = SPR_factoryexpansionprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Expand Military Production
@@ -463,7 +573,8 @@ prerequisite = { focus = SPR_factoryexpansionprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Ministerio de Paz
@@ -477,7 +588,8 @@ available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for The Pyrenean Curtain
@@ -492,7 +604,8 @@ prerequisite = { focus = SPR_ministeriodepaz }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Intervene in the Great Patriotic War
@@ -507,7 +620,8 @@ prerequisite = { focus = SPR_ministeriodepaz }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Subvert South America
@@ -522,7 +636,8 @@ prerequisite = { focus = SPR_eliminateourfascistneighbor }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Adopt the Portuguese Language
@@ -537,7 +652,8 @@ prerequisite = { focus = SPR_eliminateourfascistneighbor }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Secure a Free Africa
@@ -553,7 +669,8 @@ prerequisite = { focus = SPR_adopttheportugueselanguage }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Mexican Brotherhood
@@ -568,7 +685,8 @@ prerequisite = { focus = SPR_subvertsouthamerica }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Seize Gibraltar
@@ -583,7 +701,8 @@ prerequisite = { focus = SPR_adopttheportugueselanguage }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Upgrade the Fighter Wings
@@ -598,7 +717,8 @@ prerequisite = { focus = SPR_anewapproach }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Updated CAS Designs
@@ -613,7 +733,8 @@ prerequisite = { focus = SPR_supporttheredarmy }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Northern Air Base Expansion
@@ -628,7 +749,8 @@ prerequisite = { focus = SPR_armadeaviacin }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Southern Air Base Expansion
@@ -643,7 +765,8 @@ prerequisite = { focus = SPR_armadeaviacin }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Ground-Air Coordination
@@ -658,7 +781,8 @@ prerequisite = { focus = SPR_updatedcasdesigns }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Tactical Bomber Development Program
@@ -673,7 +797,8 @@ prerequisite = { focus = SPR_upgradethefighterwings }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Experimental Weapon Division
@@ -688,7 +813,8 @@ prerequisite = { focus = SPR_tacticalbomberdevelopmentprogram focus = SPR_ground
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Support the Red Army
@@ -705,7 +831,8 @@ mutually_exclusive = { focus = SPR_anewapproach }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for A New Approach
@@ -721,7 +848,8 @@ mutually_exclusive = { focus = SPR_supporttheredarmy }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Arma de Aviación
@@ -735,7 +863,8 @@ available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Flota Roja de la República Española
@@ -749,7 +878,8 @@ available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Mobile Fotresses
@@ -764,7 +894,8 @@ prerequisite = { focus = SPR_armoredwarfareprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Introduce Mechanized Infantry
@@ -779,7 +910,8 @@ prerequisite = { focus = SPR_armoredwarfareprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Streamline Military Industry
@@ -794,7 +926,8 @@ prerequisite = { focus = SPR_armoredwarfareprogram }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Armored Warfare Program
@@ -809,7 +942,8 @@ prerequisite = { focus = SPR_massscaledecisionmaking focus = SPR_frontlinecommis
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Frontline Commissars
@@ -824,7 +958,8 @@ prerequisite = { focus = SPR_standardizedinfantryequipment }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Improved Fire Coordination
@@ -839,7 +974,8 @@ prerequisite = { focus = SPR_newartillerydesigns }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Dedicated Corps of Engineers
@@ -854,7 +990,8 @@ prerequisite = { focus = SPR_femalefrontlinecombatants }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Mass-Scale Decision Making
@@ -869,7 +1006,8 @@ prerequisite = { focus = SPR_empoweredlogisticscompanies }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Female Frontline Combatants
@@ -884,7 +1022,8 @@ prerequisite = { focus = SPR_ejrcitorojodelarepblica }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for New Artillery Designs
@@ -899,7 +1038,8 @@ prerequisite = { focus = SPR_adoptartillerydoctrines }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Empowered Logistics Companies
@@ -914,7 +1054,8 @@ prerequisite = { focus = SPR_standwithrevolutionarytactics }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Standardized Infantry Equipment
@@ -929,7 +1070,8 @@ prerequisite = { focus = SPR_peoplesmobilizationdoctrines }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Adopt Artillery Doctrines
@@ -946,7 +1088,8 @@ mutually_exclusive = { focus = SPR_standwithrevolutionarytactics }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for People's Mobilization Doctrines
@@ -963,7 +1106,8 @@ mutually_exclusive = { focus = SPR_adoptartillerydoctrines }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Stand with Revolutionary Tactics
@@ -979,7 +1123,8 @@ mutually_exclusive = { focus = SPR_adoptartillerydoctrines }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Ejército Rojo de la República
@@ -993,7 +1138,8 @@ available_if_capitulated = yes
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Bleed Capitalism Dry
@@ -1009,7 +1155,8 @@ mutually_exclusive = { focus = SPR_aredarmada }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for A Red Armada
@@ -1026,7 +1173,8 @@ mutually_exclusive = { focus = SPR_bleedcapitalismdry }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Standardized Pressure Hulls
@@ -1041,7 +1189,8 @@ prerequisite = { focus = SPR_bleedcapitalismdry }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Finalize Naval Doctrines
@@ -1056,7 +1205,8 @@ prerequisite = { focus = SPR_surfaceraidingtaskgroups focus = SPR_newbattleshipd
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Air Defense Stratagems
@@ -1071,7 +1221,8 @@ prerequisite = { focus = SPR_aredarmada }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for New Battleship Designs
@@ -1086,7 +1237,8 @@ prerequisite = { focus = SPR_airdefensestratagems }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Surface Raiding Task Groups
@@ -1101,7 +1253,8 @@ prerequisite = { focus = SPR_standardizedpressurehulls }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Experimental Aircraft Carrier
@@ -1116,7 +1269,8 @@ prerequisite = { focus = SPR_flotarojadelarepblicaespaola }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #Focus for Expand Dockyard Facilities
@@ -1131,7 +1285,8 @@ prerequisite = { focus = SPR_flotarojadelarepblicaespaola }
 ai_will_do = { 
  factor = 1
  } 
-
+completion_reward = {
+		}
  } 
 
 #End of focuses 

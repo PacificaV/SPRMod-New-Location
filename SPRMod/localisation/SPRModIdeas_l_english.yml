@@ -70,7 +70,9 @@
  SPR_ruined_nation_idea:0 "Ruined Nation"
  SPR_ruined_nation_2_idea:0 "Ruined Nation"
  SPR_ruined_nation_3_idea:0 "Ruined Nation"
- SPR_republic_perfected:0 "The Republic Enduring"
+ SPR_republic_perfected_idea:0 "The Republic Enduring"
+ SPR_worker_coops_idea:0 "Worker Cooperatives"
+ SPR_industrial_investment:0 "Investments in Industry"
  
  
  ###Advisors###

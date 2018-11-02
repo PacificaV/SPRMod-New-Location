@@ -70,6 +70,28 @@ ideas = {
 		
 		}
 		
+		SPR_nationalizing_industries_idea = {
+		
+			picture = FRA_matignon_agreements
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = 0.12
+				monthly_population = -0.15
+			}
+		
+		}
+		
 		SPR_agrarian_crisis_idea = {
 		
 			picture = spr_agrarian_crisis
@@ -435,6 +457,69 @@ ideas = {
 				research_time_factor = 0.10
 			}
 		
+		}
+		SPR_republic_perfected_2_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				monthly_population = 0.15
+				research_time_factor = 0.10
+			}
+		
+		}
+		SPR_republic_perfected_3_idea = {
+		
+			picture = spr_new_republic
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				monthly_population = 0.15
+				research_time_factor = 0.10
+				consumer_goods_factor = -0.05
+			}
+		
+		}
+		
+		SPR_everything_for_revolution_idea = {
+		picture = generic_goods_red_bonus
+						
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
 		}
 		SPR_british_advisors_idea = {
 			picture = generic_naval_bonus
@@ -917,6 +1002,42 @@ ideas = {
 				research_time_factor = -0.05
 				political_power_factor = -0.1
 				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		SPR_worker_coops_idea = {			
+			allowed = {
+				always = no
+			}			
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = spr_power_to_the_unions	
+			modifier = {
+				research_time_factor = -0.05
+				political_power_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+		
+		SPR_industrial_investments_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.10
+				
 			}
 		}
 		

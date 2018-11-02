@@ -2621,7 +2621,7 @@ country_event = {
 	desc = spain.32.d
 	trigger = {
 		tag = SPR
-		has_country_flag = Dem_power
+		has_country_flag = liberal_alignment
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
@@ -2634,6 +2634,7 @@ country_event = {
 		}
 		name = spain.32.a
 		set_capital = 41
+		hidden_effect = {
 		add_stability = 0.05
 		add_popularity = {
 			ideology = fascism
@@ -2647,6 +2648,10 @@ country_event = {
 		}
 		SPR = {
 			load_focus_tree = SPR_liberal_postwar
+		}
+		SPR = {
+			add_ideas = SPR_ruined_nation_idea
+		}
 		}
 	}
 }
@@ -2663,7 +2668,7 @@ country_event = {
 	desc = spain.33.d
 	trigger = {
 		tag = SPR
-		has_country_flag = CNT_power
+		has_country_flag = CNT_alignment
 		has_global_flag = republican_victory
 		owns_state = 41
 	}
@@ -2676,6 +2681,7 @@ country_event = {
 		}
 		name = spain.33.a
 		set_capital = 41
+		hidden_effect = {
 		add_stability = 0.05
 		add_popularity = {
 			ideology = fascism
@@ -2696,6 +2702,10 @@ country_event = {
 		SPR = {
 			load_focus_tree = SPR_CNT_postwar
 		}
+		SPR = {
+			add_ideas = SPR_ruined_nation_idea
+		}
+		}
 	}
 	option = {
 		ai_chance = {
@@ -2703,6 +2713,7 @@ country_event = {
 		}
 		name = spain.33.b
 		set_capital = 165
+		hidden_effect = {
 		add_stability = 0.05
 		add_popularity = {
 			ideology = fascism
@@ -2720,6 +2731,62 @@ country_event = {
 				transfer_troops = no
 			}
 		}
+		SPR = {
+			add_ideas = SPR_ruined_nation_idea
+		}
+		}
+	}
+}
+
+#PCE wins civil war
+country_event = {
+	id = spain.307
+	picture = GFX_report_event_spain_civil_war_volunteers_01
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	title = spain.307.t
+	desc = spain.307.d
+	trigger = {
+		tag = SPR
+		has_country_flag = soviet_alignment
+		has_global_flag = republican_victory
+		owns_state = 41
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		ai_chance = {
+			factor = 1
+		}
+		name = spain.307.a
+		set_capital = 41
+		hidden_effect = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
+		delete_unit_template_and_units = {
+			division_template = "Militia Column"
+		}
+		delete_unit_template_and_units = {
+			division_template = "Brigada Internacionales"
+		}
+		SPR = {
+			annex_country = {
+				target = SPN
+				transfer_troops = no
+			}
+		}
+		SPR = {
+			load_focus_tree = PCETree
+		}
+		SPR = {
+			add_ideas = SPR_ruined_nation_idea
+		}
+	}
 	}
 }
 
@@ -4733,7 +4800,7 @@ country_event = {
 		ai_chance = {
 			factor = 90
 		}
-		POL = {
+		SPR = {
 			add_to_faction = ROOT
 			ROOT = {
 				add_ai_strategy = {
@@ -4751,8 +4818,8 @@ country_event = {
 		ai_chance = {
 			factor = 10
 		}
-		POL = {
-			country_event = { id = poland.88 days = 1 }
+		SPR = {
+			country_event = { id = spain.88 days = 1 }
 		}
 	}
 }
@@ -5151,6 +5218,36 @@ country_event = {
 		ai_chance = {
 			factor = 5
 			}
+	}
+}
+
+# Eighth World Congress
+news_event = {
+	id = spain.96
+	picture = GFX_news_comcongress
+	is_triggered_only = yes	
+	major = yes
+	title = spain.96.t
+	desc = spain.96.d
+	option = {
+		name = spain.96.a
+		trigger = {
+			NOT = {
+				TAG = SOV
+				TAG = SPR
+			}
+		}
+	}
+	option = {
+		name = spain.96.b
+		trigger = { TAG = SOV }
+	}
+	option = {
+		name = spain.96.c
+		trigger = { TAG = SPR }
+		SOV = {
+			add_to_faction = SPR
+		}
 	}
 }
 

@@ -24,6 +24,11 @@ spriteTypes = {
 		name = "GFX_report_event_falange_women"
 		texturefile = "gfx/event_pictures/GFX_report_event_falange_women.dds"
 	}
+	spriteType = {
+		name = "GFX_news_comcongress"
+		texturefile = "gfx/event_pictures/GFX_news_comcongress.dds"
+	}
+	
 }
 	
 	

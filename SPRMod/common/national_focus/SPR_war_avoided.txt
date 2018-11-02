@@ -2676,7 +2676,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = artillery_bonus
+			    name = infantry_bonus
 				bonus = 0.5
 				uses = 1
 				category = infantry_weapons
@@ -2699,7 +2699,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
-				name = infantry_bonus
+				name = artillery_bonus
 				bonus = 0.5
 				uses = 1
 				category = artillery
